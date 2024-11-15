@@ -3,4 +3,4 @@ En primer lugar, he descargado git para Mac desde la línea de comandos. Una vez
 
 ##Creación de un par de claves SSH
 Utilizo el siguiente comando para crear el par de claves pública y privada de SSH:
-(proyecto-CC/docs/img/c1.png)
+![Imagen de ejemplo de la configuración](proyecto-CC/docs/img/c1.png)
