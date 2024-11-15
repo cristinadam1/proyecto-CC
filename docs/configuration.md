@@ -11,7 +11,7 @@ A continuación copio la clave pública
 
 Añado mi clave pública a GitHub (Settings > SSH and GPG keys > New SSH Key)
 
-![captura3](img/c3.png)
+<img src="img/c3.png" alt="captura3" width="300"/>
 
 ## Configuración de Git
 Configuro mi nombre y correo electrónico para que aparezca en los commits. 
