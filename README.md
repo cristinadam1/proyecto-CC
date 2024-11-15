@@ -3,7 +3,7 @@ SeniorCare es una aplicación para mejorar la calidad de vida de las personas ma
 
 # Licencia
 
-Este proyecto está distribuido bajo la licencia [MIT](LICENSE). Para más detalles, revisa el archivo ⁠(./LICENSE) .
+Este proyecto está distribuido bajo la licencia [MIT](LICENSE). Para más detalles, revisa el archivo ⁠[LICENSE](LICENSE).
 
 # Enlace a documentación adicional
 Información sobre la configuración del entorno en el archivo [configuración.md](docs/configuration.md).
