@@ -9,4 +9,4 @@ Este proyecto está distribuido bajo la licencia [MIT](LICENSE). Para más detal
 Información sobre la configuración del entorno en el archivo [configuración.md](docs/configuration.md).
 
 # Hitos
-### [hito1](README)
+### - [Hito 1](README.md)
