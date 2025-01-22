@@ -33,3 +33,18 @@ Este microservicio generará reportes detallados para la supervisión y análisi
 - Historial completo de medicamentos asignados y tomados.
 2. Historial de reportes:
 - Consultar y almacenar reportes previamente generados.
+
+## Servicios
+- Sistema de Logs.
+- API Gateway.
+- Sistema de configuración distribuida.
+
+## Bases de datos
+1. Base de datos de residentes y horarios de medicación: almacena información básica sobre los residentes y sus horarios de medicación.
+- residentes: ID, nombre, edad, contacto.
+- medicamentos: ID, nombre, dosis estándar, frecuencia.
+- horarios: ID, residente_id, medicamento_id, hora, frecuencia, estado (tomado/no tomado).
+
+2. Base de datos de reportes y adherencia: contiene los reportes generados y las métricas de adherencia.
+- reportes: ID, residente_id, medicamentos_tomados, fecha, observaciones.
+- estadisticas: ID, residente_id, porcentaje_cumplimiento, alertas_generadas
