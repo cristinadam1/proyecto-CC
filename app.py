@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
-from logic import Resident
+from src.logic import Resident
 
 app = Flask(__name__)
 api = Api(app)
 
-@app.route("/", methods=["GET"])
+@app.route("/z", methods=["GET"])
 def home():
     return jsonify({"message": "Bienvenido a la API de gestión de residentes"}), 200
 

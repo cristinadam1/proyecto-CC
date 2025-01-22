@@ -1,6 +1,5 @@
 # tests/test_logic.py
 
-
 from logic import Resident, generate_care_report
 import pytest
 
