@@ -1,7 +1,7 @@
 # tests/test_logic.py
-import sys
-sys.path.append('src')
-from src.logic import Resident, generate_care_report
+
+
+from logic import Resident, generate_care_report
 import pytest
 
 
