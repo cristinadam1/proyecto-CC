@@ -7,7 +7,7 @@ Este proyecto está distribuido bajo la licencia [MIT](LICENSE). Para más detal
 
 # Enlace a documentación adicional
 Información sobre la configuración del entorno en el archivo [configuración.md](docs/configuration.md).
-
+Información sobre entidades y atributos [aqui](docs/EA.md)
 # Hitos
 - [Hito 1](README.md)
 - [Hito 2](docs/hito2.md)
