@@ -30,7 +30,7 @@ Documento que permite llevar un registro del cumplimiento del tratamiento.
 - Observaciones: Notas adicionales sobre el estado del residente.
 
 ## Relaciones entre Entidades
-Un residente tiene varios medicamentos asignados.
-Un medicamento puede ser tomado por varios residentes.
-Cada horario de medicación pertenece a un único residente y a un único medicamento.
-Los reportes de medicación se generan para un residente y contienen información sobre los medicamentos tomados.
+- Un residente tiene varios medicamentos asignados.
+- Un medicamento puede ser tomado por varios residentes.
+- Cada horario de medicación pertenece a un único residente y a un único medicamento.
+- Los reportes de medicación se generan para un residente y contienen información sobre los medicamentos tomados.
