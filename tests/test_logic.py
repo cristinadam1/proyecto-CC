@@ -1,7 +1,8 @@
 # tests/test_logic.py
-
+import sys
+sys.path.append('src')
+from src.logic import Resident, generate_care_report
 import pytest
-from logic import Resident, generate_care_report
 
 
 # Test para verificar la creación de un residente

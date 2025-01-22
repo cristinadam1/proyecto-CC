@@ -1,4 +1,4 @@
-#Clase residente
+
 class Resident:
     def __init__(self, name, age, medication_schedule=None):
         if age < 0:
@@ -11,7 +11,7 @@ class Resident:
         if medication not in self.medication_schedule:
             self.medication_schedule.append(medication)
 
-#Generar reportes de cuidado
+
 def generate_care_report(residents):
     return[
         {"name": resident.name, "age": resident.age, "medications": resident.medication_schedule}
