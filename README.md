@@ -11,3 +11,4 @@ Información sobre la configuración del entorno en el archivo [configuración.m
 # Hitos
 - [Hito 1](README.md)
 - [Hito 2](docs/hito2.md)
+- [Hito 3](docs/hito3.md)
