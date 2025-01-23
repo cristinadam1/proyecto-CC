@@ -50,5 +50,5 @@ He usado la biblioteca estándar de Python `logging`. La configuración incluye:
 ### Ejemplos de Logs
 - Al añadir un residente:
   ```plaintext
-  2025-01-23 12:34:56,123 - INFO - Added resident: {'id': 1, 'name': 'John Doe', 'age': 30, 'contact': '123456789'}
+  2025-01-23 12:34:56,123 - INFO - Added resident: {'id': 1, 'name': 'Silvia Martin', 'age': 70, 'contact': '609690502'}
 

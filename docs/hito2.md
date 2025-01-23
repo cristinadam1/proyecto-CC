@@ -128,6 +128,9 @@ Al hacer un push a mi repositorio en GitHub, la integración continua se activa 
 Los tests que he implementado se encuentran en el directorio tests. Para estos tests, he creado el archivo logic.py que contiene la lógica de negocio y el archivo test_logic.py para realizar las pruebas. Para ejecutarlos, uso el siguiente comando:
 
     make test
+
+- (Análisis del dominio del problema) ["EA.md"]  
+- (Arquitectura)["arquitectura.md"]
     
 
 
