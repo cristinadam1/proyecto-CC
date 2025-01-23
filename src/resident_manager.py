@@ -1,10 +1,9 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Blueprint
+from flask_restful import Api, Resource
 import logging
-# Configuración básica de Flask
-app = Flask(__name__)
 
-# Configuración de logging
-#logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#app = Flask(__name__)
+app = Blueprint('residents', __name__)
 
 # Configuración avanzada de logs
 logging.basicConfig(
@@ -41,6 +40,12 @@ class ResidentManager:
 
     def get_residents(self):
         return list(self.residents.values())
+    
+    def exists_resident (self, id):
+        if id in self.residents:
+            return True
+        else:
+            return False
 
 # Instancia de ResidentManager
 resident_manager = ResidentManager()
@@ -92,5 +97,5 @@ def remove_resident(resident_id):
         logging.error(str(e))
         return jsonify({"error": str(e)}), 404
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+  #  app.run(debug=True)

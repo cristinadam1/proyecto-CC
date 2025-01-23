@@ -6,3 +6,209 @@
 2025-01-23 01:03:11,777 - INFO -  * Debugger PIN: 612-225-318
 2025-01-23 01:03:19,123 - INFO - Residente Sonia agregado con ID 1.
 2025-01-23 01:03:19,124 - INFO - 127.0.0.1 - - [23/Jan/2025 01:03:19] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 02:16:57,460 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 02:16:57,460 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 02:16:57,461 - INFO -  * Restarting with stat
+2025-01-23 02:16:57,553 - WARNING -  * Debugger is active!
+2025-01-23 02:16:57,558 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 02:17:00,832 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 02:17:00,833 - INFO - 127.0.0.1 - - [23/Jan/2025 02:17:00] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 02:17:07,736 - INFO - Obteniendo todos los residentes.
+2025-01-23 02:17:07,737 - INFO - 127.0.0.1 - - [23/Jan/2025 02:17:07] "GET /residents?id=1 HTTP/1.1" 200 -
+2025-01-23 02:19:38,968 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 02:19:39,003 - INFO -  * Restarting with stat
+2025-01-23 02:19:39,170 - WARNING -  * Debugger is active!
+2025-01-23 02:19:39,177 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 02:19:49,270 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 02:19:49,308 - INFO -  * Restarting with stat
+2025-01-23 13:53:33,392 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 13:53:33,392 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 13:53:33,393 - INFO -  * Restarting with stat
+2025-01-23 13:53:33,485 - WARNING -  * Debugger is active!
+2025-01-23 13:53:33,494 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 13:53:58,243 - INFO - 127.0.0.1 - - [23/Jan/2025 13:53:58] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 13:54:04,540 - INFO - 127.0.0.1 - - [23/Jan/2025 13:54:04] "[33mPOST /residents HTTP/1.1[0m" 404 -
+2025-01-23 13:54:05,548 - INFO - 127.0.0.1 - - [23/Jan/2025 13:54:05] "[33mPOST /residents HTTP/1.1[0m" 404 -
+2025-01-23 13:55:54,151 - INFO - 127.0.0.1 - - [23/Jan/2025 13:55:54] "[33mGET /residents?id=1 HTTP/1.1[0m" 404 -
+2025-01-23 13:56:04,896 - INFO - 127.0.0.1 - - [23/Jan/2025 13:56:04] "[33mGET /residents?id=1 HTTP/1.1[0m" 404 -
+2025-01-23 13:56:05,687 - INFO - 127.0.0.1 - - [23/Jan/2025 13:56:05] "[33mGET /residents?id=1 HTTP/1.1[0m" 404 -
+2025-01-23 13:56:09,887 - INFO - 127.0.0.1 - - [23/Jan/2025 13:56:09] "[33mGET /residents HTTP/1.1[0m" 404 -
+2025-01-23 13:56:14,144 - INFO - 127.0.0.1 - - [23/Jan/2025 13:56:14] "[33mPOST /residents HTTP/1.1[0m" 404 -
+2025-01-23 13:56:23,045 - INFO - 127.0.0.1 - - [23/Jan/2025 13:56:23] "[33mPOST / HTTP/1.1[0m" 404 -
+2025-01-23 13:59:22,846 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 13:59:22,892 - INFO -  * Restarting with stat
+2025-01-23 13:59:23,096 - WARNING -  * Debugger is active!
+2025-01-23 13:59:23,102 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 13:59:27,413 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 13:59:27,414 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 13:59:27,414 - INFO -  * Restarting with stat
+2025-01-23 13:59:27,503 - WARNING -  * Debugger is active!
+2025-01-23 13:59:27,507 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 13:59:32,085 - INFO - 127.0.0.1 - - [23/Jan/2025 13:59:32] "[33mPOST /residents HTTP/1.1[0m" 404 -
+2025-01-23 13:59:36,234 - INFO - 127.0.0.1 - - [23/Jan/2025 13:59:36] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 13:59:58,802 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 13:59:58,840 - INFO -  * Restarting with stat
+2025-01-23 13:59:58,998 - WARNING -  * Debugger is active!
+2025-01-23 13:59:59,003 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:00:01,496 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 14:00:01,496 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 14:00:01,497 - INFO -  * Restarting with stat
+2025-01-23 14:00:01,588 - WARNING -  * Debugger is active!
+2025-01-23 14:00:01,591 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:00:03,891 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 14:00:03,892 - INFO - 127.0.0.1 - - [23/Jan/2025 14:00:03] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 14:00:10,629 - INFO - 127.0.0.1 - - [23/Jan/2025 14:00:10] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 14:00:13,229 - INFO - 127.0.0.1 - - [23/Jan/2025 14:00:13] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-23 14:00:27,431 - INFO - Obteniendo todos los residentes.
+2025-01-23 14:00:27,432 - INFO - 127.0.0.1 - - [23/Jan/2025 14:00:27] "GET /residents HTTP/1.1" 200 -
+2025-01-23 14:01:19,170 - INFO - Obteniendo todos los residentes.
+2025-01-23 14:01:19,171 - INFO - 127.0.0.1 - - [23/Jan/2025 14:01:19] "GET /residents HTTP/1.1" 200 -
+2025-01-23 14:02:25,838 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 14:02:25,881 - INFO -  * Restarting with stat
+2025-01-23 14:02:26,038 - WARNING -  * Debugger is active!
+2025-01-23 14:02:26,044 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:03:50,849 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 14:03:50,891 - INFO -  * Restarting with stat
+2025-01-23 14:03:51,049 - WARNING -  * Debugger is active!
+2025-01-23 14:03:51,053 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:03:53,076 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 14:03:53,109 - INFO -  * Restarting with stat
+2025-01-23 14:03:53,214 - WARNING -  * Debugger is active!
+2025-01-23 14:03:53,218 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:04:09,370 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 14:04:09,408 - INFO -  * Restarting with stat
+2025-01-23 14:04:09,561 - WARNING -  * Debugger is active!
+2025-01-23 14:04:09,566 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:04:15,616 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/medication_manager.py', reloading
+2025-01-23 14:04:15,650 - INFO -  * Restarting with stat
+2025-01-23 14:04:15,792 - WARNING -  * Debugger is active!
+2025-01-23 14:04:15,796 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:04:19,840 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/report_manager.py', reloading
+2025-01-23 14:04:19,873 - INFO -  * Restarting with stat
+2025-01-23 14:04:19,977 - WARNING -  * Debugger is active!
+2025-01-23 14:04:19,981 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:04:29,058 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 14:04:29,093 - INFO -  * Restarting with stat
+2025-01-23 14:04:29,207 - WARNING -  * Debugger is active!
+2025-01-23 14:04:29,211 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 14:12:32,531 - INFO - 127.0.0.1 - - [23/Jan/2025 14:12:32] "GET /medication HTTP/1.1" 200 -
+2025-01-23 14:13:12,562 - INFO - 127.0.0.1 - - [23/Jan/2025 14:13:12] "[31m[1mPOST /medication HTTP/1.1[0m" 400 -
+2025-01-23 14:13:58,153 - INFO - 127.0.0.1 - - [23/Jan/2025 14:13:58] "[31m[1mPOST /medication?name=Aspirina&description=Tomar%20una%20vez%20al%20día&available_online=no HTTP/1.1[0m" 400 -
+2025-01-23 14:15:33,662 - INFO - 127.0.0.1 - - [23/Jan/2025 14:15:33] "[31m[1mPOST /medication HTTP/1.1[0m" 400 -
+2025-01-23 14:15:39,324 - INFO - Medicina añadida: Ibuprofeno, ID: 1.
+2025-01-23 14:15:39,325 - INFO - 127.0.0.1 - - [23/Jan/2025 14:15:39] "[35m[1mPOST /medication HTTP/1.1[0m" 201 -
+2025-01-23 14:15:46,891 - INFO - 127.0.0.1 - - [23/Jan/2025 14:15:46] "GET /medication HTTP/1.1" 200 -
+2025-01-23 14:34:15,840 - INFO - Obteniendo todos los residentes.
+2025-01-23 14:34:15,843 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:15] "GET /residents HTTP/1.1" 200 -
+2025-01-23 14:34:16,977 - INFO - Obteniendo todos los residentes.
+2025-01-23 14:34:16,977 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:16] "GET /residents HTTP/1.1" 200 -
+2025-01-23 14:34:19,445 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 14:34:19,445 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:19] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 14:34:22,041 - INFO - Obteniendo todos los residentes.
+2025-01-23 14:34:22,043 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:22] "GET /residents HTTP/1.1" 200 -
+2025-01-23 14:34:45,509 - INFO - Medicina añadida: Ibuprofeno, ID: 2.
+2025-01-23 14:34:45,510 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:45] "[35m[1mPOST /medication HTTP/1.1[0m" 201 -
+2025-01-23 14:34:48,209 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:48] "GET /medication HTTP/1.1" 200 -
+2025-01-23 14:34:54,110 - INFO - 127.0.0.1 - - [23/Jan/2025 14:34:54] "[33mGET /adherence HTTP/1.1[0m" 404 -
+2025-01-23 14:35:13,155 - INFO - 127.0.0.1 - - [23/Jan/2025 14:35:13] "[33mPOST /adherence HTTP/1.1[0m" 404 -
+2025-01-23 14:36:00,038 - INFO - 127.0.0.1 - - [23/Jan/2025 14:36:00] "GET /adherence/1 HTTP/1.1" 200 -
+2025-01-23 14:37:20,778 - INFO - Medicamento registrado para el residente 1.
+2025-01-23 14:37:20,780 - INFO - 127.0.0.1 - - [23/Jan/2025 14:37:20] "[35m[1mPOST /adherence/log HTTP/1.1[0m" 201 -
+2025-01-23 14:37:25,307 - INFO - 127.0.0.1 - - [23/Jan/2025 14:37:25] "GET /adherence/1 HTTP/1.1" 200 -
+2025-01-23 14:37:32,964 - INFO - Medicamento registrado para el residente 1.
+2025-01-23 14:37:32,964 - INFO - 127.0.0.1 - - [23/Jan/2025 14:37:32] "[35m[1mPOST /adherence/log HTTP/1.1[0m" 201 -
+2025-01-23 14:37:37,421 - INFO - 127.0.0.1 - - [23/Jan/2025 14:37:37] "GET /adherence/2 HTTP/1.1" 200 -
+2025-01-23 15:06:12,728 - INFO - Medicamento registrado para el residente 3.
+2025-01-23 15:06:12,729 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:12] "[35m[1mPOST /adherence/log HTTP/1.1[0m" 201 -
+2025-01-23 15:06:17,901 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:17] "GET /adherence/3 HTTP/1.1" 200 -
+2025-01-23 15:06:25,897 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:25] "GET /adherence/3 HTTP/1.1" 200 -
+2025-01-23 15:06:26,516 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:26] "GET /adherence/3 HTTP/1.1" 200 -
+2025-01-23 15:06:28,962 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:28] "GET /adherence/1 HTTP/1.1" 200 -
+2025-01-23 15:06:32,696 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:32] "GET /adherence/2 HTTP/1.1" 200 -
+2025-01-23 15:06:34,807 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:34] "[33mGET /adherence HTTP/1.1[0m" 404 -
+2025-01-23 15:06:44,059 - INFO - Obteniendo todos los residentes.
+2025-01-23 15:06:44,059 - INFO - 127.0.0.1 - - [23/Jan/2025 15:06:44] "GET /residents HTTP/1.1" 200 -
+2025-01-23 15:07:59,336 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:07:59,383 - INFO -  * Restarting with stat
+2025-01-23 15:07:59,584 - WARNING -  * Debugger is active!
+2025-01-23 15:07:59,590 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:09:17,306 - INFO - Adherencia registrada: {'resident_id': 1, 'medication_id': 10, 'taken': True, 'timestamp': '2025-01-23T14:30:00Z'}
+2025-01-23 15:09:17,308 - INFO - 127.0.0.1 - - [23/Jan/2025 15:09:17] "[35m[1mPOST /adherence HTTP/1.1[0m" 201 -
+2025-01-23 15:14:00,994 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:14:01,039 - INFO -  * Restarting with stat
+2025-01-23 15:14:01,229 - WARNING -  * Debugger is active!
+2025-01-23 15:14:01,234 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:14:23,725 - INFO - 127.0.0.1 - - [23/Jan/2025 15:14:23] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:14:37,638 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 15:14:37,639 - INFO - 127.0.0.1 - - [23/Jan/2025 15:14:37] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 15:14:41,783 - INFO - 127.0.0.1 - - [23/Jan/2025 15:14:41] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:15:14,990 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 15:15:15,028 - INFO -  * Restarting with stat
+2025-01-23 15:15:15,184 - WARNING -  * Debugger is active!
+2025-01-23 15:15:15,192 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:15:41,408 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:15:41,442 - INFO -  * Restarting with stat
+2025-01-23 15:15:41,590 - WARNING -  * Debugger is active!
+2025-01-23 15:15:41,598 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:24:03,494 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:24:03,534 - INFO -  * Restarting with stat
+2025-01-23 15:24:03,696 - WARNING -  * Debugger is active!
+2025-01-23 15:24:03,700 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:24:06,473 - INFO - 127.0.0.1 - - [23/Jan/2025 15:24:06] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:24:07,277 - INFO - 127.0.0.1 - - [23/Jan/2025 15:24:07] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:24:09,650 - INFO - 127.0.0.1 - - [23/Jan/2025 15:24:09] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:24:44,046 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:24:44,091 - INFO -  * Restarting with stat
+2025-01-23 15:24:44,256 - WARNING -  * Debugger is active!
+2025-01-23 15:24:44,261 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:27:03,954 - INFO - 127.0.0.1 - - [23/Jan/2025 15:27:03] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:29:09,554 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 15:29:09,602 - INFO -  * Restarting with stat
+2025-01-23 15:29:09,807 - WARNING -  * Debugger is active!
+2025-01-23 15:29:09,813 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:30:52,710 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:30:52,749 - INFO -  * Restarting with stat
+2025-01-23 15:30:52,911 - WARNING -  * Debugger is active!
+2025-01-23 15:30:52,918 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:31:47,382 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:31:47,417 - INFO -  * Restarting with stat
+2025-01-23 15:31:47,579 - WARNING -  * Debugger is active!
+2025-01-23 15:31:47,585 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:31:49,975 - INFO - 127.0.0.1 - - [23/Jan/2025 15:31:49] "[35m[1mPOST /adherence HTTP/1.1[0m" 500 -
+2025-01-23 15:32:03,515 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 15:32:03,516 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 15:32:03,516 - INFO -  * Restarting with stat
+2025-01-23 15:32:03,608 - WARNING -  * Debugger is active!
+2025-01-23 15:32:03,612 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:32:09,772 - INFO - 127.0.0.1 - - [23/Jan/2025 15:32:09] "[31m[1mGET /adherence HTTP/1.1[0m" 405 -
+2025-01-23 15:32:50,161 - INFO - 127.0.0.1 - - [23/Jan/2025 15:32:50] "GET /adherence/1 HTTP/1.1" 200 -
+2025-01-23 15:33:57,848 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 15:33:57,848 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 15:33:57,849 - INFO -  * Restarting with stat
+2025-01-23 15:33:57,940 - WARNING -  * Debugger is active!
+2025-01-23 15:33:57,944 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:34:00,286 - INFO - 127.0.0.1 - - [23/Jan/2025 15:34:00] "[35m[1mGET /adherence/1 HTTP/1.1[0m" 500 -
+2025-01-23 15:35:21,720 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/adherence_manager.py', reloading
+2025-01-23 15:35:21,758 - INFO -  * Restarting with stat
+2025-01-23 15:38:20,943 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 15:38:20,943 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 15:38:20,944 - INFO -  * Restarting with stat
+2025-01-23 15:38:21,035 - WARNING -  * Debugger is active!
+2025-01-23 15:38:21,040 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 15:38:23,222 - INFO - Adherencia registrada: {'resident_id': 1, 'medication_id': 10, 'taken': True, 'timestamp': '2025-01-23T14:30:00Z'}
+2025-01-23 15:38:23,222 - INFO - 127.0.0.1 - - [23/Jan/2025 15:38:23] "[35m[1mPOST /adherence HTTP/1.1[0m" 201 -
+2025-01-23 15:38:54,307 - INFO - 127.0.0.1 - - [23/Jan/2025 15:38:54] "GET /medication HTTP/1.1" 200 -
+2025-01-23 15:38:57,830 - INFO - Medicina añadida: Ibuprofeno, ID: 1.
+2025-01-23 15:38:57,831 - INFO - 127.0.0.1 - - [23/Jan/2025 15:38:57] "[35m[1mPOST /medication HTTP/1.1[0m" 201 -
+2025-01-23 15:39:00,656 - INFO - 127.0.0.1 - - [23/Jan/2025 15:39:00] "GET /medication HTTP/1.1" 200 -
+2025-01-23 15:39:08,873 - INFO - Medicina añadida: Aspirnia, ID: 2.
+2025-01-23 15:39:08,874 - INFO - 127.0.0.1 - - [23/Jan/2025 15:39:08] "[35m[1mPOST /medication HTTP/1.1[0m" 201 -
+2025-01-23 15:39:12,580 - INFO - 127.0.0.1 - - [23/Jan/2025 15:39:12] "GET /medication HTTP/1.1" 200 -
+2025-01-23 15:43:02,081 - INFO - 127.0.0.1 - - [23/Jan/2025 15:43:02] "[33mGET /apidocs/swagger HTTP/1.1[0m" 404 -
