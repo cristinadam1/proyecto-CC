@@ -1,66 +1,53 @@
-from flask import Flask, jsonify, request, Blueprint
-from flask_restful import Api, Resource
+import os
+from flask import Blueprint, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
 import logging
 
-#app = Flask(__name__)
-app = Blueprint('residents', __name__)
+# Inicializar SQLAlchemy
+db = SQLAlchemy()
+
+# Crear el Blueprint
+resident_app = Blueprint('residents', __name__)
 
 # Configuración avanzada de logs
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("logs/api_activity.log"),  # Guardar en un archivo
-        logging.StreamHandler()                  # Mostrar en la consola
+        logging.FileHandler("logs/api_activity.log"),  
+        logging.StreamHandler()                      
     ]
 )
 
-class ResidentManager:
-    def __init__(self):
-        self.residents = {}
-        self.next_id = 1
+# Modelo Resident
+class Resident(db.Model):
+    __tablename__ = 'residents'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(100), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+    contact = db.Column(db.String(100), nullable=False)
 
-    def add_resident(self, name, age, contact):
-        resident_id = self.next_id
-        self.residents[resident_id] = {"id": resident_id,"name": name, "age": age, "contact": contact}
-        self.next_id += 1
-        return resident_id
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "age": self.age,
+            "contact": self.contact,
+        }
 
-    def update_resident(self, resident_id, **updates):
-        if resident_id in self.residents:
-            self.residents[resident_id].update(updates)
-        else:
-            raise ValueError(f"Resident with ID {resident_id} does not exist.")
-
-    def remove_resident(self, resident_id):
-        if resident_id in self.residents:
-            del self.residents[resident_id]
-        else:
-            raise ValueError(f"Resident with ID {resident_id} does not exist.")
-
-    def get_residents(self):
-        return list(self.residents.values())
-    
-    def exists_resident (self, id):
-        if id in self.residents:
-            return True
-        else:
-            return False
-
-# Instancia de ResidentManager
-resident_manager = ResidentManager()
-
-# API de Flask
-@app.route('/residents', methods=['GET'])
+# Rutas del microservicio
+@resident_app.route('/residents', methods=['GET'])
 def get_residents():
-    """Ruta para obtener todos los residentes"""
-    logging.info("Obteniendo todos los residentes.")
-    residents = resident_manager.get_residents()
-    return jsonify(residents), 200
+    """Obtener todos los residentes"""
+    residents = Resident.query.all()
+    return jsonify([resident.to_dict() for resident in residents]), 200
 
-@app.route('/residents', methods=['POST'])
+@resident_app.route('/residents', methods=['POST'])
 def add_resident():
-    """Ruta para agregar un residente"""
+    """Agregar un nuevo residente"""
     data = request.get_json()
     name = data.get("name")
     age = data.get("age")
@@ -70,32 +57,44 @@ def add_resident():
         logging.error("Faltan datos en la petición.")
         return jsonify({"error": "Faltan datos"}), 400
 
-    resident_id = resident_manager.add_resident(name, age, contact)
-    logging.info(f"Residente {name} agregado con ID {resident_id}.")
-    return jsonify({"id": resident_id}), 201
+    new_resident = Resident(name=name, age=age, contact=contact)
+    db.session.add(new_resident)
+    db.session.commit()
 
-@app.route('/residents/<int:resident_id>', methods=['PUT'])
+    logging.info(f"Residente {name} agregado con ID {new_resident.id}.")
+    return jsonify({"id": new_resident.id}), 201
+
+@resident_app.route('/residents/<int:resident_id>', methods=['PUT'])
 def update_resident(resident_id):
-    """Ruta para modificar un residente"""
+    """Actualizar un residente"""
     data = request.get_json()
-    try:
-        resident_manager.update_resident(resident_id, **data)
-        logging.info(f"Residente con ID {resident_id} actualizado.")
-        return jsonify({"message": "Residente actualizado."}), 200
-    except ValueError as e:
-        logging.error(str(e))
-        return jsonify({"error": str(e)}), 404
+    resident = Resident.query.get(resident_id)
 
-@app.route('/residents/<int:resident_id>', methods=['DELETE'])
+    if not resident:
+        logging.error(f"Residente con ID {resident_id} no encontrado.")
+        return jsonify({"error": "Residente no encontrado"}), 404
+
+    if "name" in data:
+        resident.name = data["name"]
+    if "age" in data:
+        resident.age = data["age"]
+    if "contact" in data:
+        resident.contact = data["contact"]
+
+    db.session.commit()
+    logging.info(f"Residente con ID {resident_id} actualizado.")
+    return jsonify({"message": "Residente actualizado"}), 200
+
+@resident_app.route('/residents/<int:resident_id>', methods=['DELETE'])
 def remove_resident(resident_id):
-    """Ruta para eliminar un residente"""
-    try:
-        resident_manager.remove_resident(resident_id)
-        logging.info(f"Residente con ID {resident_id} eliminado.")
-        return jsonify({"message": "Residente eliminado."}), 200
-    except ValueError as e:
-        logging.error(str(e))
-        return jsonify({"error": str(e)}), 404
+    """Eliminar un residente"""
+    resident = Resident.query.get(resident_id)
 
-#if __name__ == '__main__':
-  #  app.run(debug=True)
+    if not resident:
+        logging.error(f"Residente con ID {resident_id} no encontrado.")
+        return jsonify({"error": "Residente no encontrado"}), 404
+
+    db.session.delete(resident)
+    db.session.commit()
+    logging.info(f"Residente con ID {resident_id} eliminado.")
+    return jsonify({"message": "Residente eliminado"}), 200

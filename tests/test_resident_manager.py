@@ -1,7 +1,7 @@
 import pytest
 import sys
 sys.path.append('src')
-from resident_manager import ResidentManager
+from resident_manager1 import ResidentManager
 
 @pytest.fixture
 def setup_resident_manager():

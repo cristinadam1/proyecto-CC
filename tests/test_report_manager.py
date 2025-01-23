@@ -3,7 +3,7 @@ import sys
 sys.path.append('src')
 from report_manager import ReportManager
 from adherence_manager import AdherenceManager
-from resident_manager import ResidentManager
+from resident_manager1 import ResidentManager
 from medication_manager import MedicationManager
 
 @pytest.fixture

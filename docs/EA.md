@@ -1,5 +1,5 @@
 # Análisis del dominio del problema
-## Entidades del Dominio del Problema
+## Entidades del dominio del problema
 ### Residente:
 Representa a una persona que recibe atención y tiene un horario de medicamentos asignado.
 - Identificador (ID): Código único que identifica al residente.

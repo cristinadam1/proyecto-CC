@@ -212,3 +212,186 @@
 2025-01-23 15:39:08,874 - INFO - 127.0.0.1 - - [23/Jan/2025 15:39:08] "[35m[1mPOST /medication HTTP/1.1[0m" 201 -
 2025-01-23 15:39:12,580 - INFO - 127.0.0.1 - - [23/Jan/2025 15:39:12] "GET /medication HTTP/1.1" 200 -
 2025-01-23 15:43:02,081 - INFO - 127.0.0.1 - - [23/Jan/2025 15:43:02] "[33mGET /apidocs/swagger HTTP/1.1[0m" 404 -
+2025-01-23 16:14:37,924 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 16:14:37,924 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 16:14:37,925 - INFO -  * Restarting with stat
+2025-01-23 16:14:38,098 - WARNING -  * Debugger is active!
+2025-01-23 16:14:38,104 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 19:28:08,430 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 19:28:08,431 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 19:28:08,431 - INFO -  * Restarting with stat
+2025-01-23 19:28:08,604 - WARNING -  * Debugger is active!
+2025-01-23 19:28:08,614 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 19:28:12,567 - INFO - Obteniendo todos los residentes.
+2025-01-23 19:28:12,569 - INFO - 127.0.0.1 - - [23/Jan/2025 19:28:12] "GET /residents HTTP/1.1" 200 -
+2025-01-23 19:28:16,723 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 19:28:16,724 - INFO - 127.0.0.1 - - [23/Jan/2025 19:28:16] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 19:28:49,027 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 19:28:49,111 - INFO -  * Restarting with stat
+2025-01-23 19:28:49,431 - WARNING -  * Debugger is active!
+2025-01-23 19:28:49,437 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 19:32:28,943 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager1.py', reloading
+2025-01-23 19:32:29,035 - INFO -  * Restarting with stat
+2025-01-23 19:32:29,347 - WARNING -  * Debugger is active!
+2025-01-23 19:32:29,353 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 19:32:38,455 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 19:32:38,529 - INFO -  * Restarting with stat
+2025-01-23 20:36:25,055 - INFO - BEGIN (implicit)
+2025-01-23 20:36:25,055 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:36:25,055 - INFO - [raw sql] ()
+2025-01-23 20:36:25,055 - INFO - PRAGMA temp.table_info("residents")
+2025-01-23 20:36:25,055 - INFO - [raw sql] ()
+2025-01-23 20:36:25,056 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 20:36:25,056 - INFO - [no key 0.00004s] ()
+2025-01-23 20:36:25,056 - INFO - COMMIT
+2025-01-23 20:36:25,086 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 20:36:25,086 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 20:36:25,087 - INFO -  * Restarting with stat
+2025-01-23 20:36:25,255 - INFO - BEGIN (implicit)
+2025-01-23 20:36:25,255 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:36:25,255 - INFO - [raw sql] ()
+2025-01-23 20:36:25,255 - INFO - COMMIT
+2025-01-23 20:36:25,267 - WARNING -  * Debugger is active!
+2025-01-23 20:36:25,272 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 20:36:30,077 - INFO - BEGIN (implicit)
+2025-01-23 20:36:30,079 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 20:36:30,079 - INFO - [generated in 0.00030s] ('Sonia', 60, '555-1234')
+2025-01-23 20:36:30,081 - INFO - COMMIT
+2025-01-23 20:36:30,082 - INFO - BEGIN (implicit)
+2025-01-23 20:36:30,085 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 20:36:30,085 - INFO - [generated in 0.00024s] (1,)
+2025-01-23 20:36:30,086 - INFO - Residente Sonia agregado con ID 1.
+2025-01-23 20:36:30,086 - INFO - ROLLBACK
+2025-01-23 20:36:30,087 - INFO - 127.0.0.1 - - [23/Jan/2025 20:36:30] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 20:36:35,240 - INFO - BEGIN (implicit)
+2025-01-23 20:36:35,241 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 20:36:35,241 - INFO - [generated in 0.00011s] ()
+2025-01-23 20:36:35,241 - INFO - ROLLBACK
+2025-01-23 20:36:35,242 - INFO - 127.0.0.1 - - [23/Jan/2025 20:36:35] "GET /residents HTTP/1.1" 200 -
+2025-01-23 20:37:38,226 - INFO - BEGIN (implicit)
+2025-01-23 20:37:38,228 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 20:37:38,228 - INFO - [cached since 68.15s ago] ('Juan', 70, '88888')
+2025-01-23 20:37:38,230 - INFO - COMMIT
+2025-01-23 20:37:38,232 - INFO - BEGIN (implicit)
+2025-01-23 20:37:38,232 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 20:37:38,233 - INFO - [cached since 68.15s ago] (2,)
+2025-01-23 20:37:38,233 - INFO - Residente Juan agregado con ID 2.
+2025-01-23 20:37:38,234 - INFO - ROLLBACK
+2025-01-23 20:37:38,234 - INFO - 127.0.0.1 - - [23/Jan/2025 20:37:38] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 20:37:40,765 - INFO - BEGIN (implicit)
+2025-01-23 20:37:40,766 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 20:37:40,767 - INFO - [cached since 65.53s ago] ()
+2025-01-23 20:37:40,768 - INFO - ROLLBACK
+2025-01-23 20:37:40,769 - INFO - 127.0.0.1 - - [23/Jan/2025 20:37:40] "GET /residents HTTP/1.1" 200 -
+2025-01-23 20:37:49,871 - INFO - BEGIN (implicit)
+2025-01-23 20:37:49,871 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:37:49,871 - INFO - [raw sql] ()
+2025-01-23 20:37:49,872 - INFO - COMMIT
+2025-01-23 20:37:49,901 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 20:37:49,901 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 20:37:49,901 - INFO -  * Restarting with stat
+2025-01-23 20:37:50,066 - INFO - BEGIN (implicit)
+2025-01-23 20:37:50,066 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:37:50,066 - INFO - [raw sql] ()
+2025-01-23 20:37:50,067 - INFO - COMMIT
+2025-01-23 20:37:50,079 - WARNING -  * Debugger is active!
+2025-01-23 20:37:50,086 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 20:37:53,601 - INFO - BEGIN (implicit)
+2025-01-23 20:37:53,604 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 20:37:53,605 - INFO - [generated in 0.00047s] ()
+2025-01-23 20:37:53,607 - INFO - ROLLBACK
+2025-01-23 20:37:53,607 - INFO - 127.0.0.1 - - [23/Jan/2025 20:37:53] "GET /residents HTTP/1.1" 200 -
+2025-01-23 20:38:39,432 - INFO - BEGIN (implicit)
+2025-01-23 20:38:39,433 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:38:39,433 - INFO - [raw sql] ()
+2025-01-23 20:38:39,433 - INFO - COMMIT
+2025-01-23 20:38:39,454 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 20:38:39,454 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 20:38:39,455 - INFO -  * Restarting with stat
+2025-01-23 20:38:39,617 - INFO - BEGIN (implicit)
+2025-01-23 20:38:39,617 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:38:39,617 - INFO - [raw sql] ()
+2025-01-23 20:38:39,617 - INFO - COMMIT
+2025-01-23 20:38:39,629 - WARNING -  * Debugger is active!
+2025-01-23 20:38:39,635 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 20:38:42,832 - INFO - BEGIN (implicit)
+2025-01-23 20:38:42,836 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 20:38:42,837 - INFO - [generated in 0.00054s] ()
+2025-01-23 20:38:42,838 - INFO - ROLLBACK
+2025-01-23 20:38:42,838 - INFO - 127.0.0.1 - - [23/Jan/2025 20:38:42] "GET /residents HTTP/1.1" 200 -
+2025-01-23 20:44:32,960 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 20:44:33,060 - INFO -  * Restarting with stat
+2025-01-23 20:44:33,401 - INFO - BEGIN (implicit)
+2025-01-23 20:44:33,401 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:44:33,401 - INFO - [raw sql] ()
+2025-01-23 20:44:33,402 - INFO - COMMIT
+2025-01-23 20:44:33,425 - WARNING -  * Debugger is active!
+2025-01-23 20:44:33,430 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 20:50:14,351 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/medication_manager.py', reloading
+2025-01-23 20:50:14,426 - INFO -  * Restarting with stat
+2025-01-23 20:50:14,729 - INFO - BEGIN (implicit)
+2025-01-23 20:50:14,729 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 20:50:14,729 - INFO - [raw sql] ()
+2025-01-23 20:50:14,730 - INFO - COMMIT
+2025-01-23 20:50:14,752 - WARNING -  * Debugger is active!
+2025-01-23 20:50:14,757 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:16:55,795 - INFO - BEGIN (implicit)
+2025-01-23 21:16:55,795 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:16:55,795 - INFO - [raw sql] ()
+2025-01-23 21:16:55,796 - INFO - COMMIT
+2025-01-23 21:16:55,823 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:16:55,823 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:16:55,824 - INFO -  * Restarting with stat
+2025-01-23 21:16:55,988 - INFO - BEGIN (implicit)
+2025-01-23 21:16:55,988 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:16:55,989 - INFO - [raw sql] ()
+2025-01-23 21:16:55,989 - INFO - COMMIT
+2025-01-23 21:16:56,001 - WARNING -  * Debugger is active!
+2025-01-23 21:16:56,010 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:17:00,134 - INFO - BEGIN (implicit)
+2025-01-23 21:17:00,137 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:17:00,137 - INFO - [generated in 0.00032s] ()
+2025-01-23 21:17:00,139 - INFO - ROLLBACK
+2025-01-23 21:17:00,139 - INFO - 127.0.0.1 - - [23/Jan/2025 21:17:00] "GET /residents HTTP/1.1" 200 -
+2025-01-23 21:17:09,137 - INFO - BEGIN (implicit)
+2025-01-23 21:17:09,140 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 21:17:09,140 - INFO - [generated in 0.00041s] ('Alberto', 50, '88888')
+2025-01-23 21:17:09,141 - INFO - COMMIT
+2025-01-23 21:17:09,143 - INFO - BEGIN (implicit)
+2025-01-23 21:17:09,144 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 21:17:09,145 - INFO - [generated in 0.00026s] (3,)
+2025-01-23 21:17:09,145 - INFO - Residente Alberto agregado con ID 3.
+2025-01-23 21:17:09,145 - INFO - ROLLBACK
+2025-01-23 21:17:09,146 - INFO - 127.0.0.1 - - [23/Jan/2025 21:17:09] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 21:17:11,687 - INFO - BEGIN (implicit)
+2025-01-23 21:17:11,688 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:17:11,688 - INFO - [cached since 11.55s ago] ()
+2025-01-23 21:17:11,688 - INFO - ROLLBACK
+2025-01-23 21:17:11,689 - INFO - 127.0.0.1 - - [23/Jan/2025 21:17:11] "GET /residents HTTP/1.1" 200 -

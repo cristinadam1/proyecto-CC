@@ -88,4 +88,3 @@ def remove_medication(medication_id):
     except ValueError as e:
         logging.error(str(e))
         return jsonify({"error": str(e)}), 404
-

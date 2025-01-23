@@ -1,31 +1,39 @@
 from flask import Flask
-import sys
-sys.path.append('src')
-from resident_manager import app as resident_app
-from adherence_manager import app as adherence_app
-from medication_manager import app as medication_app
-from report_manager import app as report_app
-import logging
+from flask_sqlalchemy import SQLAlchemy
+import os
+from resident_manager import resident_app, db
 
-# Aplicación principal
+# Crear la app Flask
 app = Flask(__name__)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/api_activity.log"),  # Guardar en un archivo
-        logging.StreamHandler()                  # Mostrar en la consola
-    ]
-)
+# Configuración de la base de datos
+db_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'db')
+if not os.path.exists(db_folder):
+    os.makedirs(db_folder)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(db_folder, "microservices.db")}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ECHO'] = True  # Para depurar las consultas SQL
+
+# Inicializar la base de datos
+db.init_app(app)
+
+# Registrar el Blueprint de residentes
 app.register_blueprint(resident_app)
-app.register_blueprint(adherence_app)
-app.register_blueprint(medication_app)
-app.register_blueprint(report_app)
 
+# Crear las tablas en la base de datos
+def create_db():
+    with app.app_context():
+        print("Creando las tablas en la base de datos...")
+        db.create_all()
+        print("Tablas creadas correctamente.")
+
+# Ruta principal
+@app.route('/')
 def index():
     return "Servidor Flask funcionando correctamente con todos los microservicios."
 
+# Crear la base de datos y ejecutar el servidor
 if __name__ == '__main__':
+    create_db()
     app.run(debug=True, port=5000)
