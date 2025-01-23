@@ -4,7 +4,17 @@ import logging
 app = Flask(__name__)
 
 # Configuración de logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+#logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Configuración avanzada de logs
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/api_activity.log"),  # Guardar en un archivo
+        logging.StreamHandler()                  # Mostrar en la consola
+    ]
+)
 
 class ResidentManager:
     def __init__(self):
@@ -82,6 +92,5 @@ def remove_resident(resident_id):
         logging.error(str(e))
         return jsonify({"error": str(e)}), 404
 
-# Ejecutar la API (solo si no se importa como módulo)
 if __name__ == '__main__':
     app.run(debug=True)
