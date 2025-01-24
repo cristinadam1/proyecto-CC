@@ -395,3 +395,1725 @@ FROM residents
 2025-01-23 21:17:11,688 - INFO - [cached since 11.55s ago] ()
 2025-01-23 21:17:11,688 - INFO - ROLLBACK
 2025-01-23 21:17:11,689 - INFO - 127.0.0.1 - - [23/Jan/2025 21:17:11] "GET /residents HTTP/1.1" 200 -
+2025-01-23 21:28:08,669 - INFO - BEGIN (implicit)
+2025-01-23 21:28:08,669 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:28:08,669 - INFO - [raw sql] ()
+2025-01-23 21:28:08,670 - INFO - COMMIT
+2025-01-23 21:28:08,694 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:28:08,694 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:28:08,694 - INFO -  * Restarting with stat
+2025-01-23 21:28:08,852 - INFO - BEGIN (implicit)
+2025-01-23 21:28:08,852 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:28:08,852 - INFO - [raw sql] ()
+2025-01-23 21:28:08,852 - INFO - COMMIT
+2025-01-23 21:28:08,864 - WARNING -  * Debugger is active!
+2025-01-23 21:28:08,872 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:41:44,107 - INFO - BEGIN (implicit)
+2025-01-23 21:41:44,107 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:41:44,107 - INFO - [raw sql] ()
+2025-01-23 21:41:44,108 - INFO - COMMIT
+2025-01-23 21:41:44,139 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:41:44,140 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:41:44,140 - INFO -  * Restarting with stat
+2025-01-23 21:41:44,300 - INFO - BEGIN (implicit)
+2025-01-23 21:41:44,300 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:41:44,300 - INFO - [raw sql] ()
+2025-01-23 21:41:44,300 - INFO - COMMIT
+2025-01-23 21:41:44,312 - WARNING -  * Debugger is active!
+2025-01-23 21:41:44,318 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:41:48,292 - INFO - BEGIN (implicit)
+2025-01-23 21:41:48,295 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:41:48,295 - INFO - [generated in 0.00030s] ()
+2025-01-23 21:41:48,296 - INFO - ROLLBACK
+2025-01-23 21:41:48,297 - INFO - 127.0.0.1 - - [23/Jan/2025 21:41:48] "GET /residents HTTP/1.1" 200 -
+2025-01-23 21:52:05,802 - INFO - BEGIN (implicit)
+2025-01-23 21:52:05,802 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:52:05,802 - INFO - [raw sql] ()
+2025-01-23 21:52:05,803 - INFO - COMMIT
+2025-01-23 21:52:05,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 21:52:05,897 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 21:52:05,898 - INFO -  * Restarting with stat
+2025-01-23 21:52:06,299 - INFO - BEGIN (implicit)
+2025-01-23 21:52:06,299 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:52:06,299 - INFO - [raw sql] ()
+2025-01-23 21:52:06,299 - INFO - COMMIT
+2025-01-23 21:52:06,366 - WARNING -  * Debugger is active!
+2025-01-23 21:52:06,393 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:52:28,318 - INFO - BEGIN (implicit)
+2025-01-23 21:52:28,323 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:52:28,323 - INFO - [generated in 0.00108s] ()
+2025-01-23 21:52:28,326 - INFO - ROLLBACK
+2025-01-23 21:52:28,327 - INFO - 127.0.0.1 - - [23/Jan/2025 21:52:28] "GET /residents HTTP/1.1" 200 -
+2025-01-23 21:52:31,262 - INFO - BEGIN (implicit)
+2025-01-23 21:52:31,266 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 21:52:31,267 - INFO - [generated in 0.00048s] ('Alberto', 50, '88888')
+2025-01-23 21:52:31,267 - INFO - ROLLBACK
+2025-01-23 21:52:31,296 - INFO - 127.0.0.1 - - [23/Jan/2025 21:52:31] "[35m[1mPOST /residents HTTP/1.1[0m" 500 -
+2025-01-23 21:52:55,962 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 21:52:56,043 - INFO -  * Restarting with stat
+2025-01-23 21:52:56,327 - INFO - BEGIN (implicit)
+2025-01-23 21:52:56,327 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 21:52:56,327 - INFO - [raw sql] ()
+2025-01-23 21:52:56,327 - INFO - PRAGMA temp.table_info("residents")
+2025-01-23 21:52:56,327 - INFO - [raw sql] ()
+2025-01-23 21:52:56,327 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 21:52:56,327 - INFO - [no key 0.00004s] ()
+2025-01-23 21:52:56,328 - INFO - COMMIT
+2025-01-23 21:52:56,355 - WARNING -  * Debugger is active!
+2025-01-23 21:52:56,364 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 21:53:01,465 - INFO - BEGIN (implicit)
+2025-01-23 21:53:01,468 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 21:53:01,468 - INFO - [generated in 0.00037s] ('Alberto', 50, '88888')
+2025-01-23 21:53:01,469 - INFO - COMMIT
+2025-01-23 21:53:01,471 - INFO - BEGIN (implicit)
+2025-01-23 21:53:01,473 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 21:53:01,473 - INFO - [generated in 0.00027s] (1,)
+2025-01-23 21:53:01,474 - INFO - Residente Alberto agregado con ID 1.
+2025-01-23 21:53:01,475 - INFO - ROLLBACK
+2025-01-23 21:53:01,475 - INFO - 127.0.0.1 - - [23/Jan/2025 21:53:01] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 21:53:14,888 - INFO - BEGIN (implicit)
+2025-01-23 21:53:14,891 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:53:14,891 - INFO - [generated in 0.00039s] ()
+2025-01-23 21:53:14,892 - INFO - ROLLBACK
+2025-01-23 21:53:14,893 - INFO - 127.0.0.1 - - [23/Jan/2025 21:53:14] "GET /residents HTTP/1.1" 200 -
+2025-01-23 21:53:21,897 - INFO - BEGIN (implicit)
+2025-01-23 21:53:21,898 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 21:53:21,899 - INFO - [cached since 20.43s ago] ('Sonia', 50, '88888')
+2025-01-23 21:53:21,900 - INFO - COMMIT
+2025-01-23 21:53:21,902 - INFO - BEGIN (implicit)
+2025-01-23 21:53:21,903 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 21:53:21,903 - INFO - [cached since 20.43s ago] (2,)
+2025-01-23 21:53:21,903 - INFO - Residente Sonia agregado con ID 2.
+2025-01-23 21:53:21,904 - INFO - ROLLBACK
+2025-01-23 21:53:21,904 - INFO - 127.0.0.1 - - [23/Jan/2025 21:53:21] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 21:53:26,877 - INFO - BEGIN (implicit)
+2025-01-23 21:53:26,878 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 21:53:26,878 - INFO - [cached since 25.41s ago] ('Silvia', 50, '88888')
+2025-01-23 21:53:26,879 - INFO - COMMIT
+2025-01-23 21:53:26,880 - INFO - BEGIN (implicit)
+2025-01-23 21:53:26,880 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 21:53:26,881 - INFO - [cached since 25.41s ago] (3,)
+2025-01-23 21:53:26,881 - INFO - Residente Silvia agregado con ID 3.
+2025-01-23 21:53:26,881 - INFO - ROLLBACK
+2025-01-23 21:53:26,881 - INFO - 127.0.0.1 - - [23/Jan/2025 21:53:26] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 21:53:29,593 - INFO - BEGIN (implicit)
+2025-01-23 21:53:29,594 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 21:53:29,594 - INFO - [cached since 14.7s ago] ()
+2025-01-23 21:53:29,595 - INFO - ROLLBACK
+2025-01-23 21:53:29,595 - INFO - 127.0.0.1 - - [23/Jan/2025 21:53:29] "GET /residents HTTP/1.1" 200 -
+2025-01-23 22:07:07,886 - INFO - BEGIN (implicit)
+2025-01-23 22:07:07,887 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:07:07,887 - INFO - [raw sql] ()
+2025-01-23 22:07:07,887 - INFO - COMMIT
+2025-01-23 22:07:07,887 - INFO - BEGIN (implicit)
+2025-01-23 22:07:07,887 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:07:07,887 - INFO - [raw sql] ()
+2025-01-23 22:07:07,887 - INFO - PRAGMA temp.table_info("medications")
+2025-01-23 22:07:07,888 - INFO - [raw sql] ()
+2025-01-23 22:07:07,888 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:07:07,888 - INFO - [no key 0.00004s] ()
+2025-01-23 22:07:07,888 - INFO - COMMIT
+2025-01-23 22:09:54,547 - INFO - BEGIN (implicit)
+2025-01-23 22:09:54,548 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:09:54,548 - INFO - [raw sql] ()
+2025-01-23 22:09:54,548 - INFO - COMMIT
+2025-01-23 22:09:54,548 - INFO - BEGIN (implicit)
+2025-01-23 22:09:54,548 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:09:54,548 - INFO - [raw sql] ()
+2025-01-23 22:09:54,549 - INFO - COMMIT
+2025-01-23 22:10:22,406 - INFO - BEGIN (implicit)
+2025-01-23 22:10:22,406 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:10:22,406 - INFO - [raw sql] ()
+2025-01-23 22:10:22,407 - INFO - COMMIT
+2025-01-23 22:10:22,407 - INFO - BEGIN (implicit)
+2025-01-23 22:10:22,407 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:10:22,407 - INFO - [raw sql] ()
+2025-01-23 22:10:22,407 - INFO - COMMIT
+2025-01-23 22:10:59,864 - INFO - BEGIN (implicit)
+2025-01-23 22:10:59,865 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:10:59,865 - INFO - [raw sql] ()
+2025-01-23 22:10:59,865 - INFO - COMMIT
+2025-01-23 22:10:59,865 - INFO - BEGIN (implicit)
+2025-01-23 22:10:59,865 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:10:59,865 - INFO - [raw sql] ()
+2025-01-23 22:10:59,866 - INFO - COMMIT
+2025-01-23 22:14:24,485 - INFO - BEGIN (implicit)
+2025-01-23 22:14:24,485 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:14:24,485 - INFO - [raw sql] ()
+2025-01-23 22:14:24,486 - INFO - COMMIT
+2025-01-23 22:14:24,486 - INFO - BEGIN (implicit)
+2025-01-23 22:14:24,486 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:14:24,486 - INFO - [raw sql] ()
+2025-01-23 22:14:24,486 - INFO - COMMIT
+2025-01-23 22:17:01,045 - INFO - BEGIN (implicit)
+2025-01-23 22:17:01,045 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:17:01,045 - INFO - [raw sql] ()
+2025-01-23 22:17:01,046 - INFO - COMMIT
+2025-01-23 22:17:01,046 - INFO - BEGIN (implicit)
+2025-01-23 22:17:01,046 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:17:01,046 - INFO - [raw sql] ()
+2025-01-23 22:17:01,046 - INFO - COMMIT
+2025-01-23 22:17:20,526 - INFO - BEGIN (implicit)
+2025-01-23 22:17:20,527 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:17:20,527 - INFO - [raw sql] ()
+2025-01-23 22:17:20,527 - INFO - COMMIT
+2025-01-23 22:17:20,528 - INFO - BEGIN (implicit)
+2025-01-23 22:17:20,528 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:17:20,528 - INFO - [raw sql] ()
+2025-01-23 22:17:20,528 - INFO - PRAGMA temp.table_info("medications")
+2025-01-23 22:17:20,528 - INFO - [raw sql] ()
+2025-01-23 22:17:20,528 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:17:20,528 - INFO - [no key 0.00004s] ()
+2025-01-23 22:17:20,529 - INFO - COMMIT
+2025-01-23 22:18:14,543 - INFO - BEGIN (implicit)
+2025-01-23 22:18:14,543 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:18:14,543 - INFO - [raw sql] ()
+2025-01-23 22:18:14,544 - INFO - COMMIT
+2025-01-23 22:18:14,544 - INFO - BEGIN (implicit)
+2025-01-23 22:18:14,544 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:18:14,544 - INFO - [raw sql] ()
+2025-01-23 22:18:14,544 - INFO - COMMIT
+2025-01-23 22:19:06,101 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,101 - INFO - COMMIT
+2025-01-23 22:19:06,101 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,101 - INFO - COMMIT
+2025-01-23 22:19:06,102 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,102 - INFO - COMMIT
+2025-01-23 22:19:06,131 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:19:06,131 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:19:06,132 - INFO -  * Restarting with stat
+2025-01-23 22:19:06,297 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,297 - INFO - COMMIT
+2025-01-23 22:19:06,297 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,297 - INFO - COMMIT
+2025-01-23 22:19:06,297 - INFO - BEGIN (implicit)
+2025-01-23 22:19:06,297 - INFO - COMMIT
+2025-01-23 22:19:06,309 - WARNING -  * Debugger is active!
+2025-01-23 22:19:06,316 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:19:20,231 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,231 - INFO - COMMIT
+2025-01-23 22:19:20,231 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,231 - INFO - COMMIT
+2025-01-23 22:19:20,231 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,231 - INFO - COMMIT
+2025-01-23 22:19:20,251 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:19:20,251 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:19:20,251 - INFO -  * Restarting with stat
+2025-01-23 22:19:20,414 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,414 - INFO - COMMIT
+2025-01-23 22:19:20,414 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,414 - INFO - COMMIT
+2025-01-23 22:19:20,414 - INFO - BEGIN (implicit)
+2025-01-23 22:19:20,414 - INFO - COMMIT
+2025-01-23 22:19:20,426 - WARNING -  * Debugger is active!
+2025-01-23 22:19:20,430 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:19:25,723 - INFO - 127.0.0.1 - - [23/Jan/2025 22:19:25] "[35m[1mGET /residents HTTP/1.1[0m" 500 -
+2025-01-23 22:19:50,992 - INFO - BEGIN (implicit)
+2025-01-23 22:19:50,992 - INFO - COMMIT
+2025-01-23 22:19:50,993 - INFO - BEGIN (implicit)
+2025-01-23 22:19:50,993 - INFO - COMMIT
+2025-01-23 22:19:50,993 - INFO - BEGIN (implicit)
+2025-01-23 22:19:50,993 - INFO - COMMIT
+2025-01-23 22:19:51,011 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:19:51,011 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:19:51,012 - INFO -  * Restarting with stat
+2025-01-23 22:19:51,173 - INFO - BEGIN (implicit)
+2025-01-23 22:19:51,173 - INFO - COMMIT
+2025-01-23 22:19:51,174 - INFO - BEGIN (implicit)
+2025-01-23 22:19:51,174 - INFO - COMMIT
+2025-01-23 22:19:51,174 - INFO - BEGIN (implicit)
+2025-01-23 22:19:51,174 - INFO - COMMIT
+2025-01-23 22:19:51,185 - WARNING -  * Debugger is active!
+2025-01-23 22:19:51,190 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:19:54,945 - INFO - 127.0.0.1 - - [23/Jan/2025 22:19:54] "[35m[1mPOST /residents HTTP/1.1[0m" 500 -
+2025-01-23 22:21:42,373 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 22:21:42,433 - INFO -  * Restarting with stat
+2025-01-23 22:21:42,689 - INFO - BEGIN (implicit)
+2025-01-23 22:21:42,690 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:42,690 - INFO - [raw sql] ()
+2025-01-23 22:21:42,691 - INFO - COMMIT
+2025-01-23 22:21:42,691 - INFO - BEGIN (implicit)
+2025-01-23 22:21:42,691 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:21:42,691 - INFO - [raw sql] ()
+2025-01-23 22:21:42,691 - INFO - PRAGMA temp.table_info("medications")
+2025-01-23 22:21:42,691 - INFO - [raw sql] ()
+2025-01-23 22:21:42,691 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:21:42,691 - INFO - [no key 0.00004s] ()
+2025-01-23 22:21:42,692 - INFO - COMMIT
+2025-01-23 22:21:42,692 - INFO - BEGIN (implicit)
+2025-01-23 22:21:42,692 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:42,692 - INFO - [raw sql] ()
+2025-01-23 22:21:42,692 - INFO - PRAGMA temp.table_info("residents")
+2025-01-23 22:21:42,692 - INFO - [raw sql] ()
+2025-01-23 22:21:42,692 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:21:42,692 - INFO - [no key 0.00003s] ()
+2025-01-23 22:21:42,693 - INFO - COMMIT
+2025-01-23 22:21:42,711 - WARNING -  * Debugger is active!
+2025-01-23 22:21:42,716 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:21:48,183 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,183 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:48,183 - INFO - [raw sql] ()
+2025-01-23 22:21:48,183 - INFO - COMMIT
+2025-01-23 22:21:48,184 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,184 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:21:48,184 - INFO - [raw sql] ()
+2025-01-23 22:21:48,184 - INFO - COMMIT
+2025-01-23 22:21:48,184 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,184 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:48,184 - INFO - [raw sql] ()
+2025-01-23 22:21:48,184 - INFO - COMMIT
+2025-01-23 22:21:48,204 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:21:48,204 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:21:48,204 - INFO -  * Restarting with stat
+2025-01-23 22:21:48,399 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,399 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:48,399 - INFO - [raw sql] ()
+2025-01-23 22:21:48,399 - INFO - COMMIT
+2025-01-23 22:21:48,399 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,399 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:21:48,399 - INFO - [raw sql] ()
+2025-01-23 22:21:48,400 - INFO - COMMIT
+2025-01-23 22:21:48,400 - INFO - BEGIN (implicit)
+2025-01-23 22:21:48,400 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:21:48,400 - INFO - [raw sql] ()
+2025-01-23 22:21:48,400 - INFO - COMMIT
+2025-01-23 22:21:48,414 - WARNING -  * Debugger is active!
+2025-01-23 22:21:48,418 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:21:51,666 - INFO - BEGIN (implicit)
+2025-01-23 22:21:51,667 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 22:21:51,667 - INFO - [generated in 0.00018s] ('Silvia', 50, '88888')
+2025-01-23 22:21:51,668 - INFO - COMMIT
+2025-01-23 22:21:51,669 - INFO - BEGIN (implicit)
+2025-01-23 22:21:51,670 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 22:21:51,670 - INFO - [generated in 0.00009s] (4,)
+2025-01-23 22:21:51,671 - INFO - Residente Silvia agregado con ID 4.
+2025-01-23 22:21:51,671 - INFO - ROLLBACK
+2025-01-23 22:21:51,671 - INFO - 127.0.0.1 - - [23/Jan/2025 22:21:51] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 22:21:54,610 - INFO - BEGIN (implicit)
+2025-01-23 22:21:54,612 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 22:21:54,612 - INFO - [generated in 0.00022s] ()
+2025-01-23 22:21:54,613 - INFO - ROLLBACK
+2025-01-23 22:21:54,613 - INFO - 127.0.0.1 - - [23/Jan/2025 22:21:54] "GET /residents HTTP/1.1" 200 -
+2025-01-23 22:21:59,124 - INFO - 127.0.0.1 - - [23/Jan/2025 22:21:59] "[33mPOST /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:22:58,183 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/medication_manager.py', reloading
+2025-01-23 22:22:58,267 - INFO -  * Restarting with stat
+2025-01-23 22:22:58,562 - INFO - BEGIN (implicit)
+2025-01-23 22:22:58,562 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:22:58,562 - INFO - [raw sql] ()
+2025-01-23 22:22:58,563 - INFO - COMMIT
+2025-01-23 22:22:58,563 - INFO - BEGIN (implicit)
+2025-01-23 22:22:58,563 - INFO - COMMIT
+2025-01-23 22:22:58,563 - INFO - BEGIN (implicit)
+2025-01-23 22:22:58,563 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:22:58,563 - INFO - [raw sql] ()
+2025-01-23 22:22:58,563 - INFO - COMMIT
+2025-01-23 22:22:58,584 - WARNING -  * Debugger is active!
+2025-01-23 22:22:58,590 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:23:09,709 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/resident_manager.py', reloading
+2025-01-23 22:23:09,786 - INFO -  * Restarting with stat
+2025-01-23 22:23:10,030 - INFO - BEGIN (implicit)
+2025-01-23 22:23:10,030 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:10,030 - INFO - [raw sql] ()
+2025-01-23 22:23:10,030 - INFO - COMMIT
+2025-01-23 22:23:10,030 - INFO - BEGIN (implicit)
+2025-01-23 22:23:10,030 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:23:10,030 - INFO - [raw sql] ()
+2025-01-23 22:23:10,030 - INFO - COMMIT
+2025-01-23 22:23:10,031 - INFO - BEGIN (implicit)
+2025-01-23 22:23:10,031 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:10,031 - INFO - [raw sql] ()
+2025-01-23 22:23:10,031 - INFO - COMMIT
+2025-01-23 22:23:10,047 - WARNING -  * Debugger is active!
+2025-01-23 22:23:10,053 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:23:20,163 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 22:23:20,224 - INFO -  * Restarting with stat
+2025-01-23 22:23:20,467 - INFO - BEGIN (implicit)
+2025-01-23 22:23:20,467 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:20,467 - INFO - [raw sql] ()
+2025-01-23 22:23:20,467 - INFO - COMMIT
+2025-01-23 22:23:20,467 - INFO - BEGIN (implicit)
+2025-01-23 22:23:20,468 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:23:20,468 - INFO - [raw sql] ()
+2025-01-23 22:23:20,468 - INFO - COMMIT
+2025-01-23 22:23:20,468 - INFO - BEGIN (implicit)
+2025-01-23 22:23:20,468 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:20,468 - INFO - [raw sql] ()
+2025-01-23 22:23:20,468 - INFO - COMMIT
+2025-01-23 22:23:20,484 - WARNING -  * Debugger is active!
+2025-01-23 22:23:20,488 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:23:24,350 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,350 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:24,350 - INFO - [raw sql] ()
+2025-01-23 22:23:24,350 - INFO - COMMIT
+2025-01-23 22:23:24,350 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,351 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:23:24,351 - INFO - [raw sql] ()
+2025-01-23 22:23:24,351 - INFO - COMMIT
+2025-01-23 22:23:24,351 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,351 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:24,351 - INFO - [raw sql] ()
+2025-01-23 22:23:24,351 - INFO - COMMIT
+2025-01-23 22:23:24,366 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:23:24,366 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:23:24,367 - INFO -  * Restarting with stat
+2025-01-23 22:23:24,531 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,531 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:24,531 - INFO - [raw sql] ()
+2025-01-23 22:23:24,531 - INFO - COMMIT
+2025-01-23 22:23:24,531 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,531 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:23:24,531 - INFO - [raw sql] ()
+2025-01-23 22:23:24,531 - INFO - COMMIT
+2025-01-23 22:23:24,532 - INFO - BEGIN (implicit)
+2025-01-23 22:23:24,532 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:23:24,532 - INFO - [raw sql] ()
+2025-01-23 22:23:24,532 - INFO - COMMIT
+2025-01-23 22:23:24,544 - WARNING -  * Debugger is active!
+2025-01-23 22:23:24,549 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:23:27,295 - INFO - 127.0.0.1 - - [23/Jan/2025 22:23:27] "[33mPOST /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:23:30,807 - INFO - BEGIN (implicit)
+2025-01-23 22:23:30,811 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 22:23:30,811 - INFO - [generated in 0.00042s] ('Silvia', 50, '88888')
+2025-01-23 22:23:30,814 - INFO - COMMIT
+2025-01-23 22:23:30,819 - INFO - BEGIN (implicit)
+2025-01-23 22:23:30,823 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 22:23:30,823 - INFO - [generated in 0.00013s] (5,)
+2025-01-23 22:23:30,823 - INFO - Residente Silvia agregado con ID 5.
+2025-01-23 22:23:30,824 - INFO - ROLLBACK
+2025-01-23 22:23:30,824 - INFO - 127.0.0.1 - - [23/Jan/2025 22:23:30] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 22:23:35,320 - INFO - 127.0.0.1 - - [23/Jan/2025 22:23:35] "[33mPOST /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:24:32,324 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,325 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:32,325 - INFO - [raw sql] ()
+2025-01-23 22:24:32,325 - INFO - COMMIT
+2025-01-23 22:24:32,325 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,325 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:24:32,325 - INFO - [raw sql] ()
+2025-01-23 22:24:32,325 - INFO - COMMIT
+2025-01-23 22:24:32,325 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,326 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:32,326 - INFO - [raw sql] ()
+2025-01-23 22:24:32,326 - INFO - COMMIT
+2025-01-23 22:24:32,346 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:24:32,346 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:24:32,347 - INFO -  * Restarting with stat
+2025-01-23 22:24:32,507 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,508 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:32,508 - INFO - [raw sql] ()
+2025-01-23 22:24:32,508 - INFO - COMMIT
+2025-01-23 22:24:32,508 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,508 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:24:32,508 - INFO - [raw sql] ()
+2025-01-23 22:24:32,508 - INFO - COMMIT
+2025-01-23 22:24:32,508 - INFO - BEGIN (implicit)
+2025-01-23 22:24:32,509 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:32,509 - INFO - [raw sql] ()
+2025-01-23 22:24:32,509 - INFO - COMMIT
+2025-01-23 22:24:32,520 - WARNING -  * Debugger is active!
+2025-01-23 22:24:32,525 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:24:54,777 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/db.py', reloading
+2025-01-23 22:24:54,833 - INFO -  * Restarting with stat
+2025-01-23 22:24:55,073 - INFO - BEGIN (implicit)
+2025-01-23 22:24:55,073 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:55,073 - INFO - [raw sql] ()
+2025-01-23 22:24:55,073 - INFO - COMMIT
+2025-01-23 22:24:55,073 - INFO - BEGIN (implicit)
+2025-01-23 22:24:55,074 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:24:55,074 - INFO - [raw sql] ()
+2025-01-23 22:24:55,074 - INFO - COMMIT
+2025-01-23 22:24:55,074 - INFO - BEGIN (implicit)
+2025-01-23 22:24:55,074 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:55,074 - INFO - [raw sql] ()
+2025-01-23 22:24:55,074 - INFO - COMMIT
+2025-01-23 22:24:55,094 - WARNING -  * Debugger is active!
+2025-01-23 22:24:55,099 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:24:56,119 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/db.py', reloading
+2025-01-23 22:24:56,177 - INFO -  * Restarting with stat
+2025-01-23 22:24:56,348 - INFO - BEGIN (implicit)
+2025-01-23 22:24:56,348 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:56,348 - INFO - [raw sql] ()
+2025-01-23 22:24:56,348 - INFO - COMMIT
+2025-01-23 22:24:56,348 - INFO - BEGIN (implicit)
+2025-01-23 22:24:56,348 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:24:56,348 - INFO - [raw sql] ()
+2025-01-23 22:24:56,348 - INFO - COMMIT
+2025-01-23 22:24:56,349 - INFO - BEGIN (implicit)
+2025-01-23 22:24:56,349 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:24:56,349 - INFO - [raw sql] ()
+2025-01-23 22:24:56,349 - INFO - COMMIT
+2025-01-23 22:24:56,363 - WARNING -  * Debugger is active!
+2025-01-23 22:24:56,367 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:26:05,110 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 22:26:05,157 - INFO -  * Restarting with stat
+2025-01-23 22:26:05,410 - INFO - BEGIN (implicit)
+2025-01-23 22:26:05,410 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:26:05,410 - INFO - [raw sql] ()
+2025-01-23 22:26:05,410 - INFO - COMMIT
+2025-01-23 22:26:32,364 - INFO - BEGIN (implicit)
+2025-01-23 22:26:32,364 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:26:32,364 - INFO - [raw sql] ()
+2025-01-23 22:26:32,365 - INFO - COMMIT
+2025-01-23 22:27:26,491 - INFO - BEGIN (implicit)
+2025-01-23 22:27:26,492 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:27:26,492 - INFO - [raw sql] ()
+2025-01-23 22:27:26,492 - INFO - PRAGMA temp.table_info("residents")
+2025-01-23 22:27:26,492 - INFO - [raw sql] ()
+2025-01-23 22:27:26,492 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:27:26,493 - INFO - [no key 0.00004s] ()
+2025-01-23 22:27:26,494 - INFO - COMMIT
+2025-01-23 22:27:32,305 - INFO - BEGIN (implicit)
+2025-01-23 22:27:32,305 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:27:32,305 - INFO - [raw sql] ()
+2025-01-23 22:27:32,305 - INFO - COMMIT
+2025-01-23 22:28:57,254 - INFO - BEGIN (implicit)
+2025-01-23 22:28:57,255 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:28:57,255 - INFO - [raw sql] ()
+2025-01-23 22:28:57,255 - INFO - COMMIT
+2025-01-23 22:29:12,675 - INFO - BEGIN (implicit)
+2025-01-23 22:29:12,675 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:29:12,675 - INFO - [raw sql] ()
+2025-01-23 22:29:12,676 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:29:12,676 - INFO - [raw sql] ()
+2025-01-23 22:29:12,676 - INFO - PRAGMA temp.table_info("medications")
+2025-01-23 22:29:12,676 - INFO - [raw sql] ()
+2025-01-23 22:29:12,676 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 22:29:12,676 - INFO - [no key 0.00004s] ()
+2025-01-23 22:29:12,676 - INFO - COMMIT
+2025-01-23 22:29:12,700 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:29:12,700 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:29:12,701 - INFO -  * Restarting with stat
+2025-01-23 22:29:12,870 - INFO - BEGIN (implicit)
+2025-01-23 22:29:12,870 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:29:12,870 - INFO - [raw sql] ()
+2025-01-23 22:29:12,870 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:29:12,870 - INFO - [raw sql] ()
+2025-01-23 22:29:12,870 - INFO - COMMIT
+2025-01-23 22:29:12,881 - WARNING -  * Debugger is active!
+2025-01-23 22:29:12,886 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:29:17,063 - INFO - BEGIN (implicit)
+2025-01-23 22:29:17,066 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 22:29:17,066 - INFO - [generated in 0.00041s] ('Silvia', 50, '88888')
+2025-01-23 22:29:17,067 - INFO - COMMIT
+2025-01-23 22:29:17,070 - INFO - BEGIN (implicit)
+2025-01-23 22:29:17,075 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 22:29:17,075 - INFO - [generated in 0.00018s] (1,)
+2025-01-23 22:29:17,076 - INFO - Residente Silvia agregado con ID 1.
+2025-01-23 22:29:17,076 - INFO - ROLLBACK
+2025-01-23 22:29:17,077 - INFO - 127.0.0.1 - - [23/Jan/2025 22:29:17] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 22:29:19,506 - INFO - 127.0.0.1 - - [23/Jan/2025 22:29:19] "[33mPOST /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:29:21,983 - INFO - 127.0.0.1 - - [23/Jan/2025 22:29:21] "[33mPOST /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:29:37,116 - INFO - BEGIN (implicit)
+2025-01-23 22:29:37,120 - INFO - ROLLBACK
+2025-01-23 22:29:37,146 - INFO - 127.0.0.1 - - [23/Jan/2025 22:29:37] "[35m[1mPOST /medications HTTP/1.1[0m" 500 -
+2025-01-23 22:30:42,695 - INFO - BEGIN (implicit)
+2025-01-23 22:30:42,699 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-23 22:30:42,700 - INFO - [cached since 65.56s ago] ('Aspirnia', 'Medicamento antiinflamatorio', 0)
+2025-01-23 22:30:42,709 - INFO - COMMIT
+2025-01-23 22:30:42,711 - INFO - BEGIN (implicit)
+2025-01-23 22:30:42,712 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-23 22:30:42,712 - INFO - [generated in 0.00014s] (1,)
+2025-01-23 22:30:42,712 - INFO - Medicación Aspirnia agregada con ID 1.
+2025-01-23 22:30:42,713 - INFO - ROLLBACK
+2025-01-23 22:30:42,713 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:42] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-23 22:30:46,517 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:46] "[33mGET /medication HTTP/1.1[0m" 404 -
+2025-01-23 22:30:49,979 - INFO - BEGIN (implicit)
+2025-01-23 22:30:49,981 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 22:30:49,981 - INFO - [generated in 0.00024s] ()
+2025-01-23 22:30:49,982 - INFO - ROLLBACK
+2025-01-23 22:30:49,982 - INFO - 127.0.0.1 - - [23/Jan/2025 22:30:49] "GET /medications HTTP/1.1" 200 -
+2025-01-23 22:31:34,523 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 22:31:34,582 - INFO -  * Restarting with stat
+2025-01-23 22:31:34,839 - INFO - BEGIN (implicit)
+2025-01-23 22:31:34,839 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:31:34,839 - INFO - [raw sql] ()
+2025-01-23 22:31:34,840 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:31:34,840 - INFO - [raw sql] ()
+2025-01-23 22:31:34,840 - INFO - COMMIT
+2025-01-23 22:31:34,855 - WARNING -  * Debugger is active!
+2025-01-23 22:31:34,859 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:31:39,273 - INFO - BEGIN (implicit)
+2025-01-23 22:31:39,273 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:31:39,274 - INFO - [raw sql] ()
+2025-01-23 22:31:39,274 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:31:39,274 - INFO - [raw sql] ()
+2025-01-23 22:31:39,274 - INFO - COMMIT
+2025-01-23 22:31:39,289 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 22:31:39,289 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 22:31:39,290 - INFO -  * Restarting with stat
+2025-01-23 22:31:39,452 - INFO - BEGIN (implicit)
+2025-01-23 22:31:39,452 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:31:39,452 - INFO - [raw sql] ()
+2025-01-23 22:31:39,452 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:31:39,452 - INFO - [raw sql] ()
+2025-01-23 22:31:39,452 - INFO - COMMIT
+2025-01-23 22:31:39,463 - WARNING -  * Debugger is active!
+2025-01-23 22:31:39,467 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 22:31:43,220 - INFO - BEGIN (implicit)
+2025-01-23 22:31:43,222 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 22:31:43,222 - INFO - [generated in 0.00021s] ()
+2025-01-23 22:31:43,223 - INFO - ROLLBACK
+2025-01-23 22:31:43,223 - INFO - 127.0.0.1 - - [23/Jan/2025 22:31:43] "GET /medications HTTP/1.1" 200 -
+2025-01-23 22:31:45,507 - INFO - BEGIN (implicit)
+2025-01-23 22:31:45,509 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 22:31:45,509 - INFO - [generated in 0.00023s] ()
+2025-01-23 22:31:45,511 - INFO - ROLLBACK
+2025-01-23 22:31:45,511 - INFO - 127.0.0.1 - - [23/Jan/2025 22:31:45] "GET /residents HTTP/1.1" 200 -
+2025-01-23 22:32:30,071 - INFO - BEGIN (implicit)
+2025-01-23 22:32:30,072 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 22:32:30,072 - INFO - [cached since 44.56s ago] ()
+2025-01-23 22:32:30,074 - INFO - ROLLBACK
+2025-01-23 22:32:30,074 - INFO - 127.0.0.1 - - [23/Jan/2025 22:32:30] "GET /residents HTTP/1.1" 200 -
+2025-01-23 22:32:40,393 - INFO - BEGIN (implicit)
+2025-01-23 22:32:40,397 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 22:32:40,397 - INFO - [generated in 0.00029s] ('Jose', 70, '88888')
+2025-01-23 22:32:40,398 - INFO - COMMIT
+2025-01-23 22:32:40,402 - INFO - BEGIN (implicit)
+2025-01-23 22:32:40,403 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 22:32:40,404 - INFO - [generated in 0.00038s] (2,)
+2025-01-23 22:32:40,405 - INFO - Residente Jose agregado con ID 2.
+2025-01-23 22:32:40,405 - INFO - ROLLBACK
+2025-01-23 22:32:40,405 - INFO - 127.0.0.1 - - [23/Jan/2025 22:32:40] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 22:32:43,832 - INFO - BEGIN (implicit)
+2025-01-23 22:32:43,832 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 22:32:43,833 - INFO - [cached since 58.32s ago] ()
+2025-01-23 22:32:43,833 - INFO - ROLLBACK
+2025-01-23 22:32:43,833 - INFO - 127.0.0.1 - - [23/Jan/2025 22:32:43] "GET /residents HTTP/1.1" 200 -
+2025-01-23 22:32:55,348 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-23 22:32:55,413 - INFO -  * Restarting with stat
+2025-01-23 22:32:55,667 - INFO - BEGIN (implicit)
+2025-01-23 22:32:55,667 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 22:32:55,667 - INFO - [raw sql] ()
+2025-01-23 22:32:55,667 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 22:32:55,667 - INFO - [raw sql] ()
+2025-01-23 22:32:55,668 - INFO - COMMIT
+2025-01-23 22:32:55,683 - WARNING -  * Debugger is active!
+2025-01-23 22:32:55,688 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 23:07:13,445 - INFO - BEGIN (implicit)
+2025-01-23 23:07:13,445 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:07:13,445 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - PRAGMA temp.table_info("residents")
+2025-01-23 23:07:13,446 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:07:13,446 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - PRAGMA temp.table_info("medications")
+2025-01-23 23:07:13,446 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:07:13,446 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-23 23:07:13,446 - INFO - [raw sql] ()
+2025-01-23 23:07:13,446 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 23:07:13,446 - INFO - [no key 0.00004s] ()
+2025-01-23 23:07:13,447 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-23 23:07:13,447 - INFO - [no key 0.00004s] ()
+2025-01-23 23:07:13,448 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dose VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	duration VARCHAR(100) NOT NULL, 
+	start_date DATETIME, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-23 23:07:13,448 - INFO - [no key 0.00004s] ()
+2025-01-23 23:07:13,448 - INFO - COMMIT
+2025-01-23 23:07:13,477 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 23:07:13,477 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 23:07:13,477 - INFO -  * Restarting with stat
+2025-01-23 23:07:13,637 - INFO - BEGIN (implicit)
+2025-01-23 23:07:13,637 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:07:13,637 - INFO - [raw sql] ()
+2025-01-23 23:07:13,637 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:07:13,637 - INFO - [raw sql] ()
+2025-01-23 23:07:13,637 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:07:13,637 - INFO - [raw sql] ()
+2025-01-23 23:07:13,638 - INFO - COMMIT
+2025-01-23 23:07:13,651 - WARNING -  * Debugger is active!
+2025-01-23 23:07:13,656 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 23:07:17,742 - INFO - BEGIN (implicit)
+2025-01-23 23:07:17,745 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 23:07:17,745 - INFO - [generated in 0.00041s] ()
+2025-01-23 23:07:17,746 - INFO - ROLLBACK
+2025-01-23 23:07:17,746 - INFO - 127.0.0.1 - - [23/Jan/2025 23:07:17] "GET /residents HTTP/1.1" 200 -
+2025-01-23 23:07:38,441 - INFO - BEGIN (implicit)
+2025-01-23 23:07:38,444 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 23:07:38,444 - INFO - [generated in 0.00038s] ()
+2025-01-23 23:07:38,446 - INFO - ROLLBACK
+2025-01-23 23:07:38,446 - INFO - 127.0.0.1 - - [23/Jan/2025 23:07:38] "GET /medications HTTP/1.1" 200 -
+2025-01-23 23:07:56,968 - INFO - BEGIN (implicit)
+2025-01-23 23:07:56,972 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 23:07:56,973 - INFO - [generated in 0.00036s] ('Jose', 70, '609456782')
+2025-01-23 23:07:56,974 - INFO - COMMIT
+2025-01-23 23:07:56,976 - INFO - BEGIN (implicit)
+2025-01-23 23:07:56,978 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 23:07:56,978 - INFO - [generated in 0.00021s] (1,)
+2025-01-23 23:07:56,978 - INFO - Residente Jose agregado con ID 1.
+2025-01-23 23:07:56,978 - INFO - ROLLBACK
+2025-01-23 23:07:56,979 - INFO - 127.0.0.1 - - [23/Jan/2025 23:07:56] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 23:08:02,945 - INFO - BEGIN (implicit)
+2025-01-23 23:08:02,946 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 23:08:02,947 - INFO - [cached since 5.974s ago] ('MAria', 70, '609456782')
+2025-01-23 23:08:02,948 - INFO - COMMIT
+2025-01-23 23:08:02,951 - INFO - BEGIN (implicit)
+2025-01-23 23:08:02,952 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 23:08:02,952 - INFO - [cached since 5.974s ago] (2,)
+2025-01-23 23:08:02,955 - INFO - Residente MAria agregado con ID 2.
+2025-01-23 23:08:02,956 - INFO - ROLLBACK
+2025-01-23 23:08:02,957 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:02] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 23:08:10,798 - INFO - BEGIN (implicit)
+2025-01-23 23:08:10,800 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-23 23:08:10,800 - INFO - [cached since 13.83s ago] ('Sonia', 50, '609456782')
+2025-01-23 23:08:10,801 - INFO - COMMIT
+2025-01-23 23:08:10,803 - INFO - BEGIN (implicit)
+2025-01-23 23:08:10,804 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-23 23:08:10,804 - INFO - [cached since 13.83s ago] (3,)
+2025-01-23 23:08:10,805 - INFO - Residente Sonia agregado con ID 3.
+2025-01-23 23:08:10,805 - INFO - ROLLBACK
+2025-01-23 23:08:10,806 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:10] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-23 23:08:13,933 - INFO - BEGIN (implicit)
+2025-01-23 23:08:13,934 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 23:08:13,934 - INFO - [cached since 56.19s ago] ()
+2025-01-23 23:08:13,939 - INFO - ROLLBACK
+2025-01-23 23:08:13,941 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:13] "GET /residents HTTP/1.1" 200 -
+2025-01-23 23:08:20,329 - INFO - BEGIN (implicit)
+2025-01-23 23:08:20,332 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-23 23:08:20,332 - INFO - [generated in 0.00040s] ('Aspirnia', 'Medicamento antiinflamatorio', 0)
+2025-01-23 23:08:20,333 - INFO - COMMIT
+2025-01-23 23:08:20,335 - INFO - BEGIN (implicit)
+2025-01-23 23:08:20,336 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-23 23:08:20,336 - INFO - [generated in 0.00035s] (1,)
+2025-01-23 23:08:20,337 - INFO - Medicación Aspirnia agregada con ID 1.
+2025-01-23 23:08:20,337 - INFO - ROLLBACK
+2025-01-23 23:08:20,338 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:20] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-23 23:08:34,989 - INFO - BEGIN (implicit)
+2025-01-23 23:08:34,990 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-23 23:08:34,990 - INFO - [cached since 14.66s ago] ('AIbuprofeno', 'Para el dolor', 0)
+2025-01-23 23:08:34,991 - INFO - COMMIT
+2025-01-23 23:08:34,992 - INFO - BEGIN (implicit)
+2025-01-23 23:08:34,993 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-23 23:08:34,993 - INFO - [cached since 14.66s ago] (2,)
+2025-01-23 23:08:34,993 - INFO - Medicación AIbuprofeno agregada con ID 2.
+2025-01-23 23:08:34,993 - INFO - ROLLBACK
+2025-01-23 23:08:34,993 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:34] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-23 23:08:37,363 - INFO - BEGIN (implicit)
+2025-01-23 23:08:37,364 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 23:08:37,364 - INFO - [cached since 58.92s ago] ()
+2025-01-23 23:08:37,365 - INFO - ROLLBACK
+2025-01-23 23:08:37,365 - INFO - 127.0.0.1 - - [23/Jan/2025 23:08:37] "GET /medications HTTP/1.1" 200 -
+2025-01-23 23:18:56,552 - INFO - BEGIN (implicit)
+2025-01-23 23:18:56,552 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:18:56,552 - INFO - [raw sql] ()
+2025-01-23 23:18:56,553 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:18:56,553 - INFO - [raw sql] ()
+2025-01-23 23:18:56,553 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:18:56,553 - INFO - [raw sql] ()
+2025-01-23 23:18:56,553 - INFO - COMMIT
+2025-01-23 23:18:56,581 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 23:18:56,581 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 23:18:56,581 - INFO -  * Restarting with stat
+2025-01-23 23:18:56,747 - INFO - BEGIN (implicit)
+2025-01-23 23:18:56,747 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:18:56,747 - INFO - [raw sql] ()
+2025-01-23 23:18:56,747 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:18:56,747 - INFO - [raw sql] ()
+2025-01-23 23:18:56,747 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:18:56,747 - INFO - [raw sql] ()
+2025-01-23 23:18:56,747 - INFO - COMMIT
+2025-01-23 23:18:56,759 - WARNING -  * Debugger is active!
+2025-01-23 23:18:56,768 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 23:19:02,386 - INFO - BEGIN (implicit)
+2025-01-23 23:19:02,388 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-23 23:19:02,388 - INFO - [generated in 0.00043s] ()
+2025-01-23 23:19:02,389 - INFO - ROLLBACK
+2025-01-23 23:19:02,389 - INFO - 127.0.0.1 - - [23/Jan/2025 23:19:02] "GET /residents HTTP/1.1" 200 -
+2025-01-23 23:19:06,198 - INFO - BEGIN (implicit)
+2025-01-23 23:19:06,200 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 23:19:06,200 - INFO - [generated in 0.00044s] ()
+2025-01-23 23:19:06,202 - INFO - ROLLBACK
+2025-01-23 23:19:06,202 - INFO - 127.0.0.1 - - [23/Jan/2025 23:19:06] "GET /medications HTTP/1.1" 200 -
+2025-01-23 23:30:26,245 - INFO - BEGIN (implicit)
+2025-01-23 23:30:26,245 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:30:26,245 - INFO - [raw sql] ()
+2025-01-23 23:30:26,246 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:30:26,246 - INFO - [raw sql] ()
+2025-01-23 23:30:26,246 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:30:26,246 - INFO - [raw sql] ()
+2025-01-23 23:30:26,246 - INFO - COMMIT
+2025-01-23 23:30:26,272 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 23:30:26,272 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 23:30:26,272 - INFO -  * Restarting with stat
+2025-01-23 23:30:26,436 - INFO - BEGIN (implicit)
+2025-01-23 23:30:26,436 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:30:26,436 - INFO - [raw sql] ()
+2025-01-23 23:30:26,436 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:30:26,436 - INFO - [raw sql] ()
+2025-01-23 23:30:26,436 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:30:26,436 - INFO - [raw sql] ()
+2025-01-23 23:30:26,437 - INFO - COMMIT
+2025-01-23 23:30:26,449 - WARNING -  * Debugger is active!
+2025-01-23 23:30:26,455 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 23:30:34,541 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-23 23:30:34,596 - INFO -  * Restarting with stat
+2025-01-23 23:30:34,773 - INFO - BEGIN (implicit)
+2025-01-23 23:30:34,773 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:30:34,773 - INFO - [raw sql] ()
+2025-01-23 23:30:34,773 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:30:34,773 - INFO - [raw sql] ()
+2025-01-23 23:30:34,773 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:30:34,773 - INFO - [raw sql] ()
+2025-01-23 23:30:34,773 - INFO - COMMIT
+2025-01-23 23:30:34,785 - WARNING -  * Debugger is active!
+2025-01-23 23:30:34,789 - INFO -  * Debugger PIN: 612-225-318
+2025-01-23 23:30:38,246 - INFO - BEGIN (implicit)
+2025-01-23 23:30:38,249 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-23 23:30:38,249 - INFO - [generated in 0.00056s] ()
+2025-01-23 23:30:38,250 - INFO - ROLLBACK
+2025-01-23 23:30:38,250 - INFO - 127.0.0.1 - - [23/Jan/2025 23:30:38] "GET /medications HTTP/1.1" 200 -
+2025-01-23 23:33:25,483 - INFO - BEGIN (implicit)
+2025-01-23 23:33:25,484 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:33:25,484 - INFO - [raw sql] ()
+2025-01-23 23:33:25,484 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:33:25,484 - INFO - [raw sql] ()
+2025-01-23 23:33:25,484 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:33:25,484 - INFO - [raw sql] ()
+2025-01-23 23:33:25,484 - INFO - COMMIT
+2025-01-23 23:33:25,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 23:33:25,506 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-23 23:33:25,506 - INFO -  * Restarting with stat
+2025-01-23 23:33:25,670 - INFO - BEGIN (implicit)
+2025-01-23 23:33:25,670 - INFO - PRAGMA main.table_info("residents")
+2025-01-23 23:33:25,670 - INFO - [raw sql] ()
+2025-01-23 23:33:25,671 - INFO - PRAGMA main.table_info("medications")
+2025-01-23 23:33:25,671 - INFO - [raw sql] ()
+2025-01-23 23:33:25,671 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-23 23:33:25,671 - INFO - [raw sql] ()
+2025-01-23 23:33:25,671 - INFO - COMMIT
+2025-01-23 23:33:25,682 - WARNING -  * Debugger is active!
+2025-01-23 23:33:25,690 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:25:07,374 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-24 00:25:07,474 - INFO -  * Restarting with stat
+2025-01-24 00:34:40,217 - INFO - BEGIN (implicit)
+2025-01-24 00:34:40,218 - INFO - COMMIT
+2025-01-24 00:34:50,720 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,721 - INFO - COMMIT
+2025-01-24 00:34:50,721 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,721 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:34:50,721 - INFO - [raw sql] ()
+2025-01-24 00:34:50,721 - INFO - COMMIT
+2025-01-24 00:34:50,721 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,721 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:34:50,721 - INFO - [raw sql] ()
+2025-01-24 00:34:50,721 - INFO - COMMIT
+2025-01-24 00:34:50,722 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,722 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:34:50,722 - INFO - [raw sql] ()
+2025-01-24 00:34:50,722 - INFO - COMMIT
+2025-01-24 00:34:50,749 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:34:50,749 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:34:50,750 - INFO -  * Restarting with stat
+2025-01-24 00:34:50,957 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,957 - INFO - COMMIT
+2025-01-24 00:34:50,957 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,957 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:34:50,957 - INFO - [raw sql] ()
+2025-01-24 00:34:50,957 - INFO - COMMIT
+2025-01-24 00:34:50,957 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,957 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:34:50,957 - INFO - [raw sql] ()
+2025-01-24 00:34:50,958 - INFO - COMMIT
+2025-01-24 00:34:50,958 - INFO - BEGIN (implicit)
+2025-01-24 00:34:50,958 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:34:50,958 - INFO - [raw sql] ()
+2025-01-24 00:34:50,958 - INFO - COMMIT
+2025-01-24 00:34:50,969 - WARNING -  * Debugger is active!
+2025-01-24 00:34:50,982 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:35:01,406 - INFO - 127.0.0.1 - - [24/Jan/2025 00:35:01] "[35m[1mGET /residents HTTP/1.1[0m" 500 -
+2025-01-24 00:35:10,114 - INFO - 127.0.0.1 - - [24/Jan/2025 00:35:10] "[35m[1mGET /medications HTTP/1.1[0m" 500 -
+2025-01-24 00:35:17,275 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-24 00:35:17,332 - INFO -  * Restarting with stat
+2025-01-24 00:35:17,596 - INFO - BEGIN (implicit)
+2025-01-24 00:35:17,596 - INFO - COMMIT
+2025-01-24 00:35:25,376 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,376 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:35:25,376 - INFO - [raw sql] ()
+2025-01-24 00:35:25,377 - INFO - COMMIT
+2025-01-24 00:35:25,377 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,377 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:35:25,377 - INFO - [raw sql] ()
+2025-01-24 00:35:25,377 - INFO - COMMIT
+2025-01-24 00:35:25,377 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,377 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:35:25,377 - INFO - [raw sql] ()
+2025-01-24 00:35:25,377 - INFO - COMMIT
+2025-01-24 00:35:25,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:35:25,402 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:35:25,403 - INFO -  * Restarting with stat
+2025-01-24 00:35:25,572 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,572 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:35:25,572 - INFO - [raw sql] ()
+2025-01-24 00:35:25,573 - INFO - COMMIT
+2025-01-24 00:35:25,573 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,573 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:35:25,573 - INFO - [raw sql] ()
+2025-01-24 00:35:25,573 - INFO - COMMIT
+2025-01-24 00:35:25,573 - INFO - BEGIN (implicit)
+2025-01-24 00:35:25,573 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:35:25,573 - INFO - [raw sql] ()
+2025-01-24 00:35:25,573 - INFO - COMMIT
+2025-01-24 00:35:25,586 - WARNING -  * Debugger is active!
+2025-01-24 00:35:25,591 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:35:29,783 - INFO - 127.0.0.1 - - [24/Jan/2025 00:35:29] "[35m[1mGET /medications HTTP/1.1[0m" 500 -
+2025-01-24 00:35:33,175 - INFO - 127.0.0.1 - - [24/Jan/2025 00:35:33] "[35m[1mPOST /medications HTTP/1.1[0m" 500 -
+2025-01-24 00:36:15,171 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:36:15,243 - INFO -  * Restarting with stat
+2025-01-24 00:36:15,503 - INFO - BEGIN (implicit)
+2025-01-24 00:36:15,503 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:36:15,504 - INFO - [raw sql] ()
+2025-01-24 00:36:15,504 - INFO - COMMIT
+2025-01-24 00:36:15,504 - INFO - BEGIN (implicit)
+2025-01-24 00:36:15,504 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:36:15,504 - INFO - [raw sql] ()
+2025-01-24 00:36:15,504 - INFO - COMMIT
+2025-01-24 00:36:15,504 - INFO - BEGIN (implicit)
+2025-01-24 00:36:15,504 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:36:15,504 - INFO - [raw sql] ()
+2025-01-24 00:36:15,505 - INFO - COMMIT
+2025-01-24 00:36:15,520 - WARNING -  * Debugger is active!
+2025-01-24 00:36:15,530 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:36:16,549 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:36:16,605 - INFO -  * Restarting with stat
+2025-01-24 00:36:16,774 - INFO - BEGIN (implicit)
+2025-01-24 00:36:16,774 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:36:16,774 - INFO - [raw sql] ()
+2025-01-24 00:36:16,774 - INFO - COMMIT
+2025-01-24 00:36:16,774 - INFO - BEGIN (implicit)
+2025-01-24 00:36:16,774 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:36:16,775 - INFO - [raw sql] ()
+2025-01-24 00:36:16,775 - INFO - COMMIT
+2025-01-24 00:36:16,775 - INFO - BEGIN (implicit)
+2025-01-24 00:36:16,775 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:36:16,775 - INFO - [raw sql] ()
+2025-01-24 00:36:16,775 - INFO - COMMIT
+2025-01-24 00:36:16,788 - WARNING -  * Debugger is active!
+2025-01-24 00:36:16,792 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:36:19,409 - INFO - 127.0.0.1 - - [24/Jan/2025 00:36:19] "[35m[1mPOST /medications HTTP/1.1[0m" 500 -
+2025-01-24 00:40:22,727 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:40:22,803 - INFO -  * Restarting with stat
+2025-01-24 00:42:42,291 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,292 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:42:42,292 - INFO - [raw sql] ()
+2025-01-24 00:42:42,292 - INFO - COMMIT
+2025-01-24 00:42:42,293 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,293 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:42:42,293 - INFO - [raw sql] ()
+2025-01-24 00:42:42,293 - INFO - COMMIT
+2025-01-24 00:42:42,293 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,293 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:42:42,293 - INFO - [raw sql] ()
+2025-01-24 00:42:42,293 - INFO - COMMIT
+2025-01-24 00:42:42,319 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:42:42,319 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:42:42,320 - INFO -  * Restarting with stat
+2025-01-24 00:42:42,490 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,490 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:42:42,490 - INFO - [raw sql] ()
+2025-01-24 00:42:42,490 - INFO - COMMIT
+2025-01-24 00:42:42,491 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,491 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:42:42,491 - INFO - [raw sql] ()
+2025-01-24 00:42:42,491 - INFO - COMMIT
+2025-01-24 00:42:42,491 - INFO - BEGIN (implicit)
+2025-01-24 00:42:42,491 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:42:42,491 - INFO - [raw sql] ()
+2025-01-24 00:42:42,491 - INFO - COMMIT
+2025-01-24 00:42:42,503 - WARNING -  * Debugger is active!
+2025-01-24 00:42:42,509 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:42:45,846 - INFO - 127.0.0.1 - - [24/Jan/2025 00:42:45] "[35m[1mPOST /residents HTTP/1.1[0m" 500 -
+2025-01-24 00:45:30,359 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/medication_manager.py', reloading
+2025-01-24 00:45:30,420 - INFO -  * Restarting with stat
+2025-01-24 00:45:30,677 - INFO - BEGIN (implicit)
+2025-01-24 00:45:30,677 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:45:30,677 - INFO - [raw sql] ()
+2025-01-24 00:45:30,678 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:45:30,678 - INFO - [raw sql] ()
+2025-01-24 00:45:30,678 - INFO - PRAGMA temp.table_info("medications")
+2025-01-24 00:45:30,678 - INFO - [raw sql] ()
+2025-01-24 00:45:30,678 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-24 00:45:30,679 - INFO - [no key 0.00004s] ()
+2025-01-24 00:45:30,679 - INFO - COMMIT
+2025-01-24 00:45:30,680 - INFO - BEGIN (implicit)
+2025-01-24 00:45:30,680 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:45:30,680 - INFO - [raw sql] ()
+2025-01-24 00:45:30,680 - INFO - COMMIT
+2025-01-24 00:45:30,680 - INFO - BEGIN (implicit)
+2025-01-24 00:45:30,680 - INFO - COMMIT
+2025-01-24 00:45:30,697 - WARNING -  * Debugger is active!
+2025-01-24 00:45:30,702 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:45:48,879 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:45:48,939 - INFO -  * Restarting with stat
+2025-01-24 00:45:49,175 - INFO - BEGIN (implicit)
+2025-01-24 00:45:49,175 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:45:49,175 - INFO - [raw sql] ()
+2025-01-24 00:45:49,176 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:45:49,176 - INFO - [raw sql] ()
+2025-01-24 00:45:49,176 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:45:49,176 - INFO - [raw sql] ()
+2025-01-24 00:45:49,176 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-24 00:45:49,176 - INFO - [raw sql] ()
+2025-01-24 00:45:49,176 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-24 00:45:49,176 - INFO - [no key 0.00005s] ()
+2025-01-24 00:45:49,177 - INFO - COMMIT
+2025-01-24 00:45:49,177 - INFO - BEGIN (implicit)
+2025-01-24 00:45:49,177 - INFO - COMMIT
+2025-01-24 00:45:49,177 - INFO - BEGIN (implicit)
+2025-01-24 00:45:49,177 - INFO - COMMIT
+2025-01-24 00:45:49,191 - WARNING -  * Debugger is active!
+2025-01-24 00:45:49,196 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:45:50,214 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:45:50,272 - INFO -  * Restarting with stat
+2025-01-24 00:45:50,442 - INFO - BEGIN (implicit)
+2025-01-24 00:45:50,442 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:45:50,442 - INFO - [raw sql] ()
+2025-01-24 00:45:50,443 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:45:50,443 - INFO - [raw sql] ()
+2025-01-24 00:45:50,443 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:45:50,443 - INFO - [raw sql] ()
+2025-01-24 00:45:50,443 - INFO - COMMIT
+2025-01-24 00:45:50,443 - INFO - BEGIN (implicit)
+2025-01-24 00:45:50,443 - INFO - COMMIT
+2025-01-24 00:45:50,443 - INFO - BEGIN (implicit)
+2025-01-24 00:45:50,443 - INFO - COMMIT
+2025-01-24 00:45:50,454 - WARNING -  * Debugger is active!
+2025-01-24 00:45:50,458 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:46:02,588 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-24 00:46:02,651 - INFO -  * Restarting with stat
+2025-01-24 00:46:02,910 - INFO - BEGIN (implicit)
+2025-01-24 00:46:02,910 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:46:02,910 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - PRAGMA temp.table_info("residents")
+2025-01-24 00:46:02,911 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:46:02,911 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - PRAGMA temp.table_info("medications")
+2025-01-24 00:46:02,911 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:46:02,911 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-24 00:46:02,911 - INFO - [raw sql] ()
+2025-01-24 00:46:02,911 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-24 00:46:02,911 - INFO - [no key 0.00004s] ()
+2025-01-24 00:46:02,912 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-24 00:46:02,912 - INFO - [no key 0.00004s] ()
+2025-01-24 00:46:02,912 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-24 00:46:02,912 - INFO - [no key 0.00004s] ()
+2025-01-24 00:46:02,913 - INFO - COMMIT
+2025-01-24 00:46:02,929 - WARNING -  * Debugger is active!
+2025-01-24 00:46:02,933 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:46:22,050 - INFO - BEGIN (implicit)
+2025-01-24 00:46:22,052 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 00:46:22,052 - INFO - [generated in 0.00023s] ('Sonia', 50, '609456782')
+2025-01-24 00:46:22,052 - INFO - COMMIT
+2025-01-24 00:46:22,054 - INFO - BEGIN (implicit)
+2025-01-24 00:46:22,056 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 00:46:22,056 - INFO - [generated in 0.00020s] (1,)
+2025-01-24 00:46:22,057 - INFO - Residente Sonia agregado con ID 1.
+2025-01-24 00:46:22,057 - INFO - ROLLBACK
+2025-01-24 00:46:22,058 - INFO - 127.0.0.1 - - [24/Jan/2025 00:46:22] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 00:46:26,197 - INFO - BEGIN (implicit)
+2025-01-24 00:46:26,199 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-24 00:46:26,200 - INFO - [generated in 0.00173s] ()
+2025-01-24 00:46:26,203 - INFO - ROLLBACK
+2025-01-24 00:46:26,205 - INFO - 127.0.0.1 - - [24/Jan/2025 00:46:26] "GET /residents HTTP/1.1" 200 -
+2025-01-24 00:46:31,096 - INFO - BEGIN (implicit)
+2025-01-24 00:46:31,100 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-24 00:46:31,100 - INFO - [generated in 0.00042s] ('AIbuprofeno', 'Para el dolor', 0)
+2025-01-24 00:46:31,101 - INFO - COMMIT
+2025-01-24 00:46:31,102 - INFO - BEGIN (implicit)
+2025-01-24 00:46:31,103 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 00:46:31,103 - INFO - [generated in 0.00022s] (1,)
+2025-01-24 00:46:31,104 - INFO - Medicación AIbuprofeno agregada con ID 1.
+2025-01-24 00:46:31,104 - INFO - ROLLBACK
+2025-01-24 00:46:31,104 - INFO - 127.0.0.1 - - [24/Jan/2025 00:46:31] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-24 00:46:33,968 - INFO - BEGIN (implicit)
+2025-01-24 00:46:33,969 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-24 00:46:33,970 - INFO - [generated in 0.00035s] ()
+2025-01-24 00:46:33,971 - INFO - ROLLBACK
+2025-01-24 00:46:33,971 - INFO - 127.0.0.1 - - [24/Jan/2025 00:46:33] "GET /medications HTTP/1.1" 200 -
+2025-01-24 00:47:51,238 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-24 00:47:51,341 - INFO -  * Restarting with stat
+2025-01-24 00:47:51,664 - INFO - BEGIN (implicit)
+2025-01-24 00:47:51,664 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:47:51,664 - INFO - [raw sql] ()
+2025-01-24 00:47:51,664 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:47:51,664 - INFO - [raw sql] ()
+2025-01-24 00:47:51,664 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:47:51,664 - INFO - [raw sql] ()
+2025-01-24 00:47:51,664 - INFO - COMMIT
+2025-01-24 00:47:51,680 - WARNING -  * Debugger is active!
+2025-01-24 00:47:51,686 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:48:09,966 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-24 00:48:10,020 - INFO -  * Restarting with stat
+2025-01-24 00:48:10,259 - INFO - BEGIN (implicit)
+2025-01-24 00:48:10,259 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:48:10,259 - INFO - [raw sql] ()
+2025-01-24 00:48:10,260 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:48:10,260 - INFO - [raw sql] ()
+2025-01-24 00:48:10,260 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:48:10,260 - INFO - [raw sql] ()
+2025-01-24 00:48:10,260 - INFO - COMMIT
+2025-01-24 00:48:10,274 - WARNING -  * Debugger is active!
+2025-01-24 00:48:10,282 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:50:50,473 - INFO - BEGIN (implicit)
+2025-01-24 00:50:50,474 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:50:50,474 - INFO - [raw sql] ()
+2025-01-24 00:50:50,474 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:50:50,474 - INFO - [raw sql] ()
+2025-01-24 00:50:50,474 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:50:50,474 - INFO - [raw sql] ()
+2025-01-24 00:50:50,474 - INFO - COMMIT
+2025-01-24 00:50:50,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:50:50,502 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:50:50,502 - INFO -  * Restarting with stat
+2025-01-24 00:50:50,665 - INFO - BEGIN (implicit)
+2025-01-24 00:50:50,665 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:50:50,665 - INFO - [raw sql] ()
+2025-01-24 00:50:50,665 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:50:50,665 - INFO - [raw sql] ()
+2025-01-24 00:50:50,666 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:50:50,666 - INFO - [raw sql] ()
+2025-01-24 00:50:50,666 - INFO - COMMIT
+2025-01-24 00:50:50,677 - WARNING -  * Debugger is active!
+2025-01-24 00:50:50,682 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:50:55,252 - INFO - BEGIN (implicit)
+2025-01-24 00:50:55,255 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 00:50:55,255 - INFO - [generated in 0.00185s] ('Sonia', 50, '609456782')
+2025-01-24 00:50:55,257 - INFO - COMMIT
+2025-01-24 00:50:55,259 - INFO - BEGIN (implicit)
+2025-01-24 00:50:55,262 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 00:50:55,262 - INFO - [generated in 0.00019s] (2,)
+2025-01-24 00:50:55,262 - INFO - Residente Sonia agregado con ID 2.
+2025-01-24 00:50:55,263 - INFO - ROLLBACK
+2025-01-24 00:50:55,263 - INFO - 127.0.0.1 - - [24/Jan/2025 00:50:55] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 00:50:57,787 - INFO - BEGIN (implicit)
+2025-01-24 00:50:57,788 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-24 00:50:57,788 - INFO - [generated in 0.00020s] ()
+2025-01-24 00:50:57,789 - INFO - ROLLBACK
+2025-01-24 00:50:57,789 - INFO - 127.0.0.1 - - [24/Jan/2025 00:50:57] "GET /residents HTTP/1.1" 200 -
+2025-01-24 00:51:22,169 - INFO - BEGIN (implicit)
+2025-01-24 00:51:22,169 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:51:22,169 - INFO - [raw sql] ()
+2025-01-24 00:51:22,170 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:51:22,170 - INFO - [raw sql] ()
+2025-01-24 00:51:22,170 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:51:22,170 - INFO - [raw sql] ()
+2025-01-24 00:51:22,170 - INFO - COMMIT
+2025-01-24 00:51:22,199 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:51:22,199 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:51:22,200 - INFO -  * Restarting with stat
+2025-01-24 00:51:22,362 - INFO - BEGIN (implicit)
+2025-01-24 00:51:22,362 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:51:22,362 - INFO - [raw sql] ()
+2025-01-24 00:51:22,363 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:51:22,363 - INFO - [raw sql] ()
+2025-01-24 00:51:22,363 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:51:22,363 - INFO - [raw sql] ()
+2025-01-24 00:51:22,363 - INFO - COMMIT
+2025-01-24 00:51:22,374 - WARNING -  * Debugger is active!
+2025-01-24 00:51:22,379 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:55:11,012 - INFO - BEGIN (implicit)
+2025-01-24 00:55:11,013 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:55:11,013 - INFO - [raw sql] ()
+2025-01-24 00:55:11,013 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:55:11,013 - INFO - [raw sql] ()
+2025-01-24 00:55:11,013 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:55:11,013 - INFO - [raw sql] ()
+2025-01-24 00:55:11,013 - INFO - COMMIT
+2025-01-24 00:55:11,039 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:55:11,039 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:55:11,040 - INFO -  * Restarting with stat
+2025-01-24 00:55:11,203 - INFO - BEGIN (implicit)
+2025-01-24 00:55:11,203 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:55:11,203 - INFO - [raw sql] ()
+2025-01-24 00:55:11,203 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:55:11,203 - INFO - [raw sql] ()
+2025-01-24 00:55:11,203 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:55:11,204 - INFO - [raw sql] ()
+2025-01-24 00:55:11,204 - INFO - COMMIT
+2025-01-24 00:55:11,222 - WARNING -  * Debugger is active!
+2025-01-24 00:55:11,228 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:56:55,395 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:56:55,459 - INFO -  * Restarting with stat
+2025-01-24 00:56:55,714 - INFO - BEGIN (implicit)
+2025-01-24 00:56:55,714 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:56:55,714 - INFO - [raw sql] ()
+2025-01-24 00:56:55,715 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:56:55,715 - INFO - [raw sql] ()
+2025-01-24 00:56:55,715 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:56:55,715 - INFO - [raw sql] ()
+2025-01-24 00:56:55,715 - INFO - COMMIT
+2025-01-24 00:56:55,733 - WARNING -  * Debugger is active!
+2025-01-24 00:56:55,738 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:57:02,883 - INFO - BEGIN (implicit)
+2025-01-24 00:57:02,883 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:57:02,883 - INFO - [raw sql] ()
+2025-01-24 00:57:02,883 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:57:02,883 - INFO - [raw sql] ()
+2025-01-24 00:57:02,883 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:57:02,883 - INFO - [raw sql] ()
+2025-01-24 00:57:02,883 - INFO - COMMIT
+2025-01-24 00:57:02,902 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:57:02,902 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:57:02,903 - INFO -  * Restarting with stat
+2025-01-24 00:57:03,061 - INFO - BEGIN (implicit)
+2025-01-24 00:57:03,061 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:57:03,061 - INFO - [raw sql] ()
+2025-01-24 00:57:03,062 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:57:03,062 - INFO - [raw sql] ()
+2025-01-24 00:57:03,062 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:57:03,062 - INFO - [raw sql] ()
+2025-01-24 00:57:03,062 - INFO - COMMIT
+2025-01-24 00:57:03,073 - WARNING -  * Debugger is active!
+2025-01-24 00:57:03,077 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:57:11,018 - INFO - BEGIN (implicit)
+2025-01-24 00:57:11,021 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 00:57:11,021 - INFO - [generated in 0.00033s] ('Sonia', 50, '609456782')
+2025-01-24 00:57:11,022 - INFO - COMMIT
+2025-01-24 00:57:11,023 - INFO - BEGIN (implicit)
+2025-01-24 00:57:11,025 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 00:57:11,025 - INFO - [generated in 0.00029s] (3,)
+2025-01-24 00:57:11,026 - INFO - Residente Sonia agregado con ID 3.
+2025-01-24 00:57:11,026 - INFO - ROLLBACK
+2025-01-24 00:57:11,027 - INFO - 127.0.0.1 - - [24/Jan/2025 00:57:11] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 00:59:03,979 - INFO - BEGIN (implicit)
+2025-01-24 00:59:03,983 - INFO - INSERT INTO prescriptions (resident_id, medication_id, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)
+2025-01-24 00:59:03,983 - INFO - [generated in 0.00039s] (1, 2, '500mg', 'Cada 8 horas', '2025-01-25', '2025-02-25')
+2025-01-24 00:59:03,985 - INFO - COMMIT
+2025-01-24 00:59:03,986 - INFO - BEGIN (implicit)
+2025-01-24 00:59:03,988 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions 
+WHERE prescriptions.id = ?
+2025-01-24 00:59:03,988 - INFO - [generated in 0.00032s] (1,)
+2025-01-24 00:59:03,989 - INFO - Prescripción con ID 1 agregada.
+2025-01-24 00:59:03,990 - INFO - ROLLBACK
+2025-01-24 00:59:03,990 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:03] "[35m[1mPOST /prescriptions HTTP/1.1[0m" 201 -
+2025-01-24 00:59:07,987 - INFO - BEGIN (implicit)
+2025-01-24 00:59:07,988 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions
+2025-01-24 00:59:07,988 - INFO - [generated in 0.00022s] ()
+2025-01-24 00:59:07,989 - INFO - ROLLBACK
+2025-01-24 00:59:07,989 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:07] "GET /prescriptions HTTP/1.1" 200 -
+2025-01-24 00:59:19,618 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/prescription_manager.py', reloading
+2025-01-24 00:59:19,671 - INFO -  * Restarting with stat
+2025-01-24 00:59:20,017 - INFO - BEGIN (implicit)
+2025-01-24 00:59:20,017 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:59:20,017 - INFO - [raw sql] ()
+2025-01-24 00:59:20,017 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:59:20,017 - INFO - [raw sql] ()
+2025-01-24 00:59:20,018 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:59:20,018 - INFO - [raw sql] ()
+2025-01-24 00:59:20,018 - INFO - COMMIT
+2025-01-24 00:59:20,034 - WARNING -  * Debugger is active!
+2025-01-24 00:59:20,040 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:59:27,880 - INFO - BEGIN (implicit)
+2025-01-24 00:59:27,880 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:59:27,881 - INFO - [raw sql] ()
+2025-01-24 00:59:27,881 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:59:27,881 - INFO - [raw sql] ()
+2025-01-24 00:59:27,881 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:59:27,881 - INFO - [raw sql] ()
+2025-01-24 00:59:27,881 - INFO - COMMIT
+2025-01-24 00:59:27,900 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 00:59:27,900 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 00:59:27,900 - INFO -  * Restarting with stat
+2025-01-24 00:59:28,145 - INFO - BEGIN (implicit)
+2025-01-24 00:59:28,145 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 00:59:28,145 - INFO - [raw sql] ()
+2025-01-24 00:59:28,145 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 00:59:28,145 - INFO - [raw sql] ()
+2025-01-24 00:59:28,145 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 00:59:28,145 - INFO - [raw sql] ()
+2025-01-24 00:59:28,145 - INFO - COMMIT
+2025-01-24 00:59:28,155 - WARNING -  * Debugger is active!
+2025-01-24 00:59:28,159 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 00:59:34,762 - INFO - BEGIN (implicit)
+2025-01-24 00:59:34,764 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-24 00:59:34,765 - INFO - [generated in 0.00027s] ()
+2025-01-24 00:59:34,766 - INFO - ROLLBACK
+2025-01-24 00:59:34,766 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:34] "GET /medications HTTP/1.1" 200 -
+2025-01-24 00:59:37,323 - INFO - BEGIN (implicit)
+2025-01-24 00:59:37,325 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-24 00:59:37,325 - INFO - [generated in 0.00024s] ()
+2025-01-24 00:59:37,326 - INFO - ROLLBACK
+2025-01-24 00:59:37,327 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:37] "GET /residents HTTP/1.1" 200 -
+2025-01-24 00:59:44,815 - INFO - BEGIN (implicit)
+2025-01-24 00:59:44,818 - INFO - INSERT INTO prescriptions (resident_id, medication_id, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)
+2025-01-24 00:59:44,818 - INFO - [generated in 0.00027s] (1, 2, '500mg', 'Cada 8 horas', '2025-01-25', '2025-02-25')
+2025-01-24 00:59:44,819 - INFO - COMMIT
+2025-01-24 00:59:44,823 - INFO - BEGIN (implicit)
+2025-01-24 00:59:44,826 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions 
+WHERE prescriptions.id = ?
+2025-01-24 00:59:44,826 - INFO - [generated in 0.00029s] (2,)
+2025-01-24 00:59:44,826 - INFO - Prescripción agregada con ID 2.
+2025-01-24 00:59:44,827 - INFO - ROLLBACK
+2025-01-24 00:59:44,827 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:44] "[35m[1mPOST /prescriptions HTTP/1.1[0m" 201 -
+2025-01-24 00:59:48,156 - INFO - BEGIN (implicit)
+2025-01-24 00:59:48,158 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions
+2025-01-24 00:59:48,158 - INFO - [generated in 0.00037s] ()
+2025-01-24 00:59:48,160 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 00:59:48,160 - INFO - [generated in 0.00022s] (1,)
+2025-01-24 00:59:48,162 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 00:59:48,162 - INFO - [generated in 0.00032s] (2,)
+2025-01-24 00:59:48,162 - INFO - ROLLBACK
+2025-01-24 00:59:48,175 - INFO - 127.0.0.1 - - [24/Jan/2025 00:59:48] "[35m[1mGET /prescriptions HTTP/1.1[0m" 500 -
+2025-01-24 01:00:08,126 - INFO - BEGIN (implicit)
+2025-01-24 01:00:08,130 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-24 01:00:08,130 - INFO - [generated in 0.00048s] ('AIbuprofeno', 'Para el dolor', 0)
+2025-01-24 01:00:08,131 - INFO - COMMIT
+2025-01-24 01:00:08,134 - INFO - BEGIN (implicit)
+2025-01-24 01:00:08,135 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 01:00:08,135 - INFO - [generated in 0.00026s] (2,)
+2025-01-24 01:00:08,135 - INFO - Medicación AIbuprofeno agregada con ID 2.
+2025-01-24 01:00:08,136 - INFO - ROLLBACK
+2025-01-24 01:00:08,136 - INFO - 127.0.0.1 - - [24/Jan/2025 01:00:08] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-24 01:00:10,883 - INFO - BEGIN (implicit)
+2025-01-24 01:00:10,884 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-24 01:00:10,884 - INFO - [cached since 36.12s ago] ()
+2025-01-24 01:00:10,885 - INFO - ROLLBACK
+2025-01-24 01:00:10,885 - INFO - 127.0.0.1 - - [24/Jan/2025 01:00:10] "GET /medications HTTP/1.1" 200 -
+2025-01-24 01:00:13,726 - INFO - BEGIN (implicit)
+2025-01-24 01:00:13,727 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions
+2025-01-24 01:00:13,727 - INFO - [cached since 25.57s ago] ()
+2025-01-24 01:00:13,728 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:00:13,728 - INFO - [cached since 25.57s ago] (1,)
+2025-01-24 01:00:13,729 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 01:00:13,729 - INFO - [cached since 25.57s ago] (2,)
+2025-01-24 01:00:13,730 - INFO - ROLLBACK
+2025-01-24 01:00:13,730 - INFO - 127.0.0.1 - - [24/Jan/2025 01:00:13] "GET /prescriptions HTTP/1.1" 200 -
+2025-01-24 01:01:09,549 - INFO - BEGIN (implicit)
+2025-01-24 01:01:09,549 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 01:01:09,549 - INFO - [raw sql] ()
+2025-01-24 01:01:09,549 - INFO - PRAGMA temp.table_info("residents")
+2025-01-24 01:01:09,549 - INFO - [raw sql] ()
+2025-01-24 01:01:09,549 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 01:01:09,549 - INFO - [raw sql] ()
+2025-01-24 01:01:09,549 - INFO - PRAGMA temp.table_info("medications")
+2025-01-24 01:01:09,549 - INFO - [raw sql] ()
+2025-01-24 01:01:09,550 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 01:01:09,550 - INFO - [raw sql] ()
+2025-01-24 01:01:09,550 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-24 01:01:09,550 - INFO - [raw sql] ()
+2025-01-24 01:01:09,550 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-24 01:01:09,550 - INFO - [no key 0.00005s] ()
+2025-01-24 01:01:09,551 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-24 01:01:09,551 - INFO - [no key 0.00006s] ()
+2025-01-24 01:01:09,552 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-24 01:01:09,552 - INFO - [no key 0.00005s] ()
+2025-01-24 01:01:09,552 - INFO - COMMIT
+2025-01-24 01:01:09,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-24 01:01:09,576 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-24 01:01:09,576 - INFO -  * Restarting with stat
+2025-01-24 01:01:09,738 - INFO - BEGIN (implicit)
+2025-01-24 01:01:09,738 - INFO - PRAGMA main.table_info("residents")
+2025-01-24 01:01:09,738 - INFO - [raw sql] ()
+2025-01-24 01:01:09,739 - INFO - PRAGMA main.table_info("medications")
+2025-01-24 01:01:09,739 - INFO - [raw sql] ()
+2025-01-24 01:01:09,739 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-24 01:01:09,739 - INFO - [raw sql] ()
+2025-01-24 01:01:09,739 - INFO - COMMIT
+2025-01-24 01:01:09,752 - WARNING -  * Debugger is active!
+2025-01-24 01:01:09,757 - INFO -  * Debugger PIN: 612-225-318
+2025-01-24 01:02:24,927 - INFO - BEGIN (implicit)
+2025-01-24 01:02:24,930 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 01:02:24,931 - INFO - [generated in 0.00038s] ('Juan Pérez', 75, 'juanperez@example.com')
+2025-01-24 01:02:24,931 - INFO - COMMIT
+2025-01-24 01:02:24,933 - INFO - BEGIN (implicit)
+2025-01-24 01:02:24,935 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:02:24,935 - INFO - [generated in 0.00012s] (1,)
+2025-01-24 01:02:24,935 - INFO - Residente Juan Pérez agregado con ID 1.
+2025-01-24 01:02:24,936 - INFO - ROLLBACK
+2025-01-24 01:02:24,936 - INFO - 127.0.0.1 - - [24/Jan/2025 01:02:24] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 01:02:44,381 - INFO - BEGIN (implicit)
+2025-01-24 01:02:44,382 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 01:02:44,382 - INFO - [cached since 19.45s ago] ('Sonia Ruiz', 85, '722690304')
+2025-01-24 01:02:44,383 - INFO - COMMIT
+2025-01-24 01:02:44,385 - INFO - BEGIN (implicit)
+2025-01-24 01:02:44,385 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:02:44,385 - INFO - [cached since 19.45s ago] (2,)
+2025-01-24 01:02:44,386 - INFO - Residente Sonia Ruiz agregado con ID 2.
+2025-01-24 01:02:44,386 - INFO - ROLLBACK
+2025-01-24 01:02:44,387 - INFO - 127.0.0.1 - - [24/Jan/2025 01:02:44] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 01:03:05,116 - INFO - BEGIN (implicit)
+2025-01-24 01:03:05,119 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-24 01:03:05,119 - INFO - [generated in 0.00035s] ()
+2025-01-24 01:03:05,120 - INFO - ROLLBACK
+2025-01-24 01:03:05,120 - INFO - 127.0.0.1 - - [24/Jan/2025 01:03:05] "GET /residents HTTP/1.1" 200 -
+2025-01-24 01:03:20,182 - INFO - BEGIN (implicit)
+2025-01-24 01:03:20,184 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 01:03:20,184 - INFO - [cached since 55.25s ago] ('Isabel Ruiz', 69, '609947214')
+2025-01-24 01:03:20,185 - INFO - COMMIT
+2025-01-24 01:03:20,186 - INFO - BEGIN (implicit)
+2025-01-24 01:03:20,187 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:03:20,187 - INFO - [cached since 55.25s ago] (3,)
+2025-01-24 01:03:20,187 - INFO - Residente Isabel Ruiz agregado con ID 3.
+2025-01-24 01:03:20,187 - INFO - ROLLBACK
+2025-01-24 01:03:20,188 - INFO - 127.0.0.1 - - [24/Jan/2025 01:03:20] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 01:03:40,048 - INFO - BEGIN (implicit)
+2025-01-24 01:03:40,050 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 01:03:40,050 - INFO - [cached since 75.12s ago] ('Marcelo Sanchez', 80, '609876234')
+2025-01-24 01:03:40,052 - INFO - COMMIT
+2025-01-24 01:03:40,054 - INFO - BEGIN (implicit)
+2025-01-24 01:03:40,054 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:03:40,054 - INFO - [cached since 75.12s ago] (4,)
+2025-01-24 01:03:40,055 - INFO - Residente Marcelo Sanchez agregado con ID 4.
+2025-01-24 01:03:40,056 - INFO - ROLLBACK
+2025-01-24 01:03:40,056 - INFO - 127.0.0.1 - - [24/Jan/2025 01:03:40] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 01:03:56,631 - INFO - BEGIN (implicit)
+2025-01-24 01:03:56,633 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-24 01:03:56,633 - INFO - [cached since 91.7s ago] ('Susana Gomez', 90, '609267183')
+2025-01-24 01:03:56,634 - INFO - COMMIT
+2025-01-24 01:03:56,636 - INFO - BEGIN (implicit)
+2025-01-24 01:03:56,636 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:03:56,636 - INFO - [cached since 91.7s ago] (5,)
+2025-01-24 01:03:56,637 - INFO - Residente Susana Gomez agregado con ID 5.
+2025-01-24 01:03:56,637 - INFO - ROLLBACK
+2025-01-24 01:03:56,638 - INFO - 127.0.0.1 - - [24/Jan/2025 01:03:56] "[35m[1mPOST /residents HTTP/1.1[0m" 201 -
+2025-01-24 01:03:59,562 - INFO - BEGIN (implicit)
+2025-01-24 01:03:59,563 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-24 01:03:59,563 - INFO - [cached since 54.44s ago] ()
+2025-01-24 01:03:59,564 - INFO - ROLLBACK
+2025-01-24 01:03:59,564 - INFO - 127.0.0.1 - - [24/Jan/2025 01:03:59] "GET /residents HTTP/1.1" 200 -
+2025-01-24 01:04:49,535 - INFO - BEGIN (implicit)
+2025-01-24 01:04:49,539 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-24 01:04:49,539 - INFO - [generated in 0.00047s] ('Ibuprofeno', 'Analgésico y antiinflamatorio', 1)
+2025-01-24 01:04:49,541 - INFO - COMMIT
+2025-01-24 01:04:49,543 - INFO - BEGIN (implicit)
+2025-01-24 01:04:49,544 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 01:04:49,544 - INFO - [generated in 0.00029s] (1,)
+2025-01-24 01:04:49,545 - INFO - Medicación Ibuprofeno agregada con ID 1.
+2025-01-24 01:04:49,546 - INFO - ROLLBACK
+2025-01-24 01:04:49,546 - INFO - 127.0.0.1 - - [24/Jan/2025 01:04:49] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-24 01:05:07,446 - INFO - BEGIN (implicit)
+2025-01-24 01:05:07,448 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-24 01:05:07,448 - INFO - [cached since 17.91s ago] ('Paracetamol', 'Analgésico y antipirético', 1)
+2025-01-24 01:05:07,449 - INFO - COMMIT
+2025-01-24 01:05:07,451 - INFO - BEGIN (implicit)
+2025-01-24 01:05:07,452 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 01:05:07,452 - INFO - [cached since 17.91s ago] (2,)
+2025-01-24 01:05:07,452 - INFO - Medicación Paracetamol agregada con ID 2.
+2025-01-24 01:05:07,453 - INFO - ROLLBACK
+2025-01-24 01:05:07,453 - INFO - 127.0.0.1 - - [24/Jan/2025 01:05:07] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -
+2025-01-24 01:05:24,191 - INFO - BEGIN (implicit)
+2025-01-24 01:05:24,193 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-24 01:05:24,193 - INFO - [generated in 0.00025s] ()
+2025-01-24 01:05:24,194 - INFO - ROLLBACK
+2025-01-24 01:05:24,194 - INFO - 127.0.0.1 - - [24/Jan/2025 01:05:24] "GET /medications HTTP/1.1" 200 -
+2025-01-24 01:06:00,042 - INFO - BEGIN (implicit)
+2025-01-24 01:06:00,046 - INFO - INSERT INTO prescriptions (resident_id, medication_id, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)
+2025-01-24 01:06:00,046 - INFO - [generated in 0.00047s] (1, 1, '500mg', 'Cada 8 horas', '2025-01-25', '2025-02-25')
+2025-01-24 01:06:00,048 - INFO - COMMIT
+2025-01-24 01:06:00,050 - INFO - BEGIN (implicit)
+2025-01-24 01:06:00,051 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions 
+WHERE prescriptions.id = ?
+2025-01-24 01:06:00,051 - INFO - [generated in 0.00019s] (1,)
+2025-01-24 01:06:00,052 - INFO - Prescripción agregada con ID 1.
+2025-01-24 01:06:00,053 - INFO - ROLLBACK
+2025-01-24 01:06:00,053 - INFO - 127.0.0.1 - - [24/Jan/2025 01:06:00] "[35m[1mPOST /prescriptions HTTP/1.1[0m" 201 -
+2025-01-24 01:06:12,664 - INFO - BEGIN (implicit)
+2025-01-24 01:06:12,666 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions
+2025-01-24 01:06:12,666 - INFO - [generated in 0.00022s] ()
+2025-01-24 01:06:12,669 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-24 01:06:12,669 - INFO - [generated in 0.00032s] (1,)
+2025-01-24 01:06:12,670 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-24 01:06:12,670 - INFO - [generated in 0.00017s] (1,)
+2025-01-24 01:06:12,671 - INFO - ROLLBACK
+2025-01-24 01:06:12,671 - INFO - 127.0.0.1 - - [24/Jan/2025 01:06:12] "GET /prescriptions HTTP/1.1" 200 -

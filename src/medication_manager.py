@@ -1,90 +1,90 @@
-# src/medication_manager.py
-from flask import Flask, jsonify, request, Blueprint
+from flask import Blueprint, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
 import logging
+from db import db
 
-# Configuración básica de Flask
-#app = Flask(__name__)
-app = Blueprint('medication', __name__)
+medication_app = Blueprint('medications', __name__)
 
 # Configuración de logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", handlers=[
+    logging.FileHandler("logs/api_activity.log"),  
+    logging.StreamHandler()
+])
 
+# Modelo Medication
+class Medication(db.Model):
+    #__bind_key__ = 'medications'
+    __tablename__ = 'medications'
 
-class MedicationManager:
-    def __init__(self):
-        self.medications = {}
-        self.next_id = 1
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(255), nullable=True)
+    available_online = db.Column(db.Boolean, default=False)
 
-    def add_medication(self, name, description, available_online):
-        medication_id = self.next_id
-        self.medications[medication_id] = {
-            "name": name,
-            "description": description,
-            "available_online": available_online,
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "available_online": self.available_online
         }
-        self.next_id += 1
-        return medication_id
 
-    def update_medication(self, medication_id, **updates):
-        if medication_id in self.medications:
-            self.medications[medication_id].update(updates)
-        else:
-            raise ValueError(f"Medication with ID {medication_id} does not exist.")
-
-    def remove_medication(self, medication_id):
-        if medication_id in self.medications:
-            del self.medications[medication_id]
-        else:
-            raise ValueError(f"Medication with ID {medication_id} does not exist.")
-
-    def get_medications(self):
-        return list(self.medications.values())
-
-
-####### API ########
-medication_manager = MedicationManager()
-
-# API de Flask
-@app.route('/medication', methods=['GET'])
+# Rutas de la API para medicamentos (igual que antes)
+@medication_app.route('/medications', methods=['GET'])
 def get_medications():
-    """Ruta para obtener todas las medicinas registradas"""
-    medications = medication_manager.get_medications()
-    return jsonify(medications), 200
+    medications = Medication.query.all()
+    return jsonify([medication.to_dict() for medication in medications]), 200
 
-@app.route('/medication', methods=['POST'])
+
+@medication_app.route('/medications', methods=['POST'])
 def add_medication():
-    """Ruta para añadir una nueva medicina"""
     data = request.get_json()
     name = data.get("name")
     description = data.get("description")
     available_online = data.get("available_online")
 
     if not name or not description or available_online is None:
-        return jsonify({"error": "Datos inválidos"}), 400
+        logging.error("Faltan datos en la petición.")
+        return jsonify({"error": "Faltan datos"}), 400
 
-    medication_id = medication_manager.add_medication(name, description, available_online)
-    logging.info(f"Medicina añadida: {name}, ID: {medication_id}.")
-    return jsonify({"message": "Medicina añadida exitosamente.", "medication_id": medication_id}), 201
+    new_medication = Medication(name=name, description=description, available_online=available_online)
+    db.session.add(new_medication)
+    db.session.commit()
 
-@app.route('/medication/<int:medication_id>', methods=['PUT'])
+    logging.info(f"Medicación {name} agregada con ID {new_medication.id}.")
+    return jsonify({"id": new_medication.id}), 201
+
+
+@medication_app.route('/medications/<int:medication_id>', methods=['PUT'])
 def update_medication(medication_id):
-    """Ruta para actualizar los detalles de una medicina"""
     data = request.get_json()
-    updates = {key: value for key, value in data.items() if value is not None}
-    
-    try:
-        medication_manager.update_medication(medication_id, **updates)
-        return jsonify({"message": "Medicina actualizada exitosamente."}), 200
-    except ValueError as e:
-        logging.error(str(e))
-        return jsonify({"error": str(e)}), 404
+    medication = Medication.query.get(medication_id)
 
-@app.route('/medication/<int:medication_id>', methods=['DELETE'])
+    if not medication:
+        logging.error(f"Medicación con ID {medication_id} no encontrada.")
+        return jsonify({"error": "Medicación no encontrada"}), 404
+
+    if "name" in data:
+        medication.name = data["name"]
+    if "description" in data:
+        medication.description = data["description"]
+    if "available_online" in data:
+        medication.available_online = data["available_online"]
+
+    db.session.commit()
+    logging.info(f"Medicación con ID {medication_id} actualizada.")
+    return jsonify({"message": "Medicación actualizada"}), 200
+
+
+@medication_app.route('/medications/<int:medication_id>', methods=['DELETE'])
 def remove_medication(medication_id):
-    """Ruta para eliminar una medicina"""
-    try:
-        medication_manager.remove_medication(medication_id)
-        return jsonify({"message": "Medicina eliminada exitosamente."}), 200
-    except ValueError as e:
-        logging.error(str(e))
-        return jsonify({"error": str(e)}), 404
+    medication = Medication.query.get(medication_id)
+
+    if not medication:
+        logging.error(f"Medicación con ID {medication_id} no encontrada.")
+        return jsonify({"error": "Medicación no encontrada"}), 404
+
+    db.session.delete(medication)
+    db.session.commit()
+    logging.info(f"Medicación con ID {medication_id} eliminada.")
+    return jsonify({"message": "Medicación eliminada"}), 200

@@ -4,7 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 
 # Inicializar SQLAlchemy
-db = SQLAlchemy()
+from db import db
+#db = SQLAlchemy()
 
 # Crear el Blueprint
 resident_app = Blueprint('residents', __name__)
@@ -24,6 +25,7 @@ logging.basicConfig(
 
 # Modelo Resident
 class Resident(db.Model):
+   # __bind_key__ = 'residents'
     __tablename__ = 'residents'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100), nullable=False)
