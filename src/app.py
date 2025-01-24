@@ -4,11 +4,13 @@ import os
 from resident_manager import resident_app
 from medication_manager import medication_app
 from prescription_manager import prescription_app
+from activity_manager import activity_app
+from wellness_manager import wellness_app
 from db import db
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/prescriptions/*": {"origins": "*"}})
+#CORS(app, resources={r"/prescriptions/*": {"origins": "*"}})
 
 
 db_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'db')
@@ -26,7 +28,8 @@ db.init_app(app)
 app.register_blueprint(resident_app)
 app.register_blueprint(medication_app)
 app.register_blueprint(prescription_app)
-
+app.register_blueprint(activity_app)
+app.register_blueprint(wellness_app)
 # Crear las tablas en la base de datos
 def create_db():
     with app.app_context():
