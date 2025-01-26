@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
-from resident_manager import resident_app
-from medication_manager import medication_app
-from prescription_manager import prescription_app
-from activity_manager import activity_app
-from wellness_manager import wellness_app
+from services.resident_service import resident_app
+from services.wellness_service import wellness_app
+from services.medication_service import medication_app
+from services.prescription_service import prescription_app
+from services.activity_service import activity_app
 from db import db
 from flask_cors import CORS
 
@@ -30,6 +30,7 @@ app.register_blueprint(medication_app)
 app.register_blueprint(prescription_app)
 app.register_blueprint(activity_app)
 app.register_blueprint(wellness_app)
+
 # Crear las tablas en la base de datos
 def create_db():
     with app.app_context():
@@ -46,3 +47,8 @@ def index():
 if __name__ == '__main__':
     create_db()
     app.run(debug=True, port=5000)
+
+# 1. TESTS
+# 3. Redactar todo
+# 4. Hitos 4 y 5 
+# 5. Cambiar logs

@@ -2653,3 +2653,243 @@ FROM wellness_tracking
 2025-01-24 02:00:16,304 - INFO - [generated in 0.00023s] ()
 2025-01-24 02:00:16,304 - INFO - ROLLBACK
 2025-01-24 02:00:16,305 - INFO - 127.0.0.1 - - [24/Jan/2025 02:00:16] "GET /wellness HTTP/1.1" 200 -
+2025-01-26 12:34:56,699 - INFO - BEGIN (implicit)
+2025-01-26 12:34:56,700 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:34:56,700 - INFO - [raw sql] ()
+2025-01-26 12:34:56,700 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:34:56,700 - INFO - [raw sql] ()
+2025-01-26 12:34:56,700 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:34:56,700 - INFO - [raw sql] ()
+2025-01-26 12:34:56,700 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:34:56,700 - INFO - [raw sql] ()
+2025-01-26 12:34:56,700 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:34:56,701 - INFO - [raw sql] ()
+2025-01-26 12:34:56,701 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:34:56,701 - INFO - [raw sql] ()
+2025-01-26 12:34:56,701 - INFO - COMMIT
+2025-01-26 12:34:56,734 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-26 12:34:56,735 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 12:34:56,735 - INFO -  * Restarting with stat
+2025-01-26 12:34:56,916 - INFO - BEGIN (implicit)
+2025-01-26 12:34:56,916 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:34:56,916 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:34:56,917 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:34:56,917 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:34:56,917 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:34:56,917 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:34:56,917 - INFO - [raw sql] ()
+2025-01-26 12:34:56,917 - INFO - COMMIT
+2025-01-26 12:34:56,929 - WARNING -  * Debugger is active!
+2025-01-26 12:34:56,937 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 12:35:08,904 - INFO - BEGIN (implicit)
+2025-01-26 12:35:08,916 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities
+2025-01-26 12:35:08,916 - INFO - [generated in 0.00335s] ()
+2025-01-26 12:35:08,920 - INFO - ROLLBACK
+2025-01-26 12:35:08,921 - INFO - 127.0.0.1 - - [26/Jan/2025 12:35:08] "GET /activities HTTP/1.1" 200 -
+2025-01-26 12:48:46,622 - INFO - BEGIN (implicit)
+2025-01-26 12:48:46,622 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:48:46,623 - INFO - [raw sql] ()
+2025-01-26 12:48:46,623 - INFO - COMMIT
+2025-01-26 12:48:46,650 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-26 12:48:46,650 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 12:48:46,650 - INFO -  * Restarting with stat
+2025-01-26 12:48:46,811 - INFO - BEGIN (implicit)
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:48:46,812 - INFO - [raw sql] ()
+2025-01-26 12:48:46,812 - INFO - COMMIT
+2025-01-26 12:48:46,831 - WARNING -  * Debugger is active!
+2025-01-26 12:48:46,838 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 12:48:54,551 - INFO - BEGIN (implicit)
+2025-01-26 12:48:54,553 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents
+2025-01-26 12:48:54,553 - INFO - [generated in 0.00042s] ()
+2025-01-26 12:48:54,554 - INFO - ROLLBACK
+2025-01-26 12:48:54,554 - INFO - 127.0.0.1 - - [26/Jan/2025 12:48:54] "GET /residents HTTP/1.1" 200 -
+2025-01-26 12:59:20,571 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/models/wellness.py', reloading
+2025-01-26 12:59:20,662 - INFO -  * Restarting with stat
+2025-01-26 12:59:20,956 - INFO - BEGIN (implicit)
+2025-01-26 12:59:20,956 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:59:20,956 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:59:20,957 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:59:20,957 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:59:20,957 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:59:20,957 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:59:20,957 - INFO - [raw sql] ()
+2025-01-26 12:59:20,957 - INFO - COMMIT
+2025-01-26 12:59:20,978 - WARNING -  * Debugger is active!
+2025-01-26 12:59:20,986 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 12:59:47,292 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/services/wellness_service.py', reloading
+2025-01-26 12:59:47,370 - INFO -  * Restarting with stat
+2025-01-26 12:59:47,607 - INFO - BEGIN (implicit)
+2025-01-26 12:59:47,607 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 12:59:47,607 - INFO - [raw sql] ()
+2025-01-26 12:59:47,607 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 12:59:47,607 - INFO - [raw sql] ()
+2025-01-26 12:59:47,607 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 12:59:47,607 - INFO - [raw sql] ()
+2025-01-26 12:59:47,607 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 12:59:47,608 - INFO - [raw sql] ()
+2025-01-26 12:59:47,608 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 12:59:47,608 - INFO - [raw sql] ()
+2025-01-26 12:59:47,608 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 12:59:47,608 - INFO - [raw sql] ()
+2025-01-26 12:59:47,608 - INFO - COMMIT
+2025-01-26 12:59:47,623 - WARNING -  * Debugger is active!
+2025-01-26 12:59:47,628 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 13:01:31,702 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/services/wellness_service.py', reloading
+2025-01-26 13:01:31,786 - INFO -  * Restarting with stat
+2025-01-26 13:01:32,054 - INFO - BEGIN (implicit)
+2025-01-26 13:01:32,054 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 13:01:32,054 - INFO - [raw sql] ()
+2025-01-26 13:01:32,054 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 13:01:32,054 - INFO - [raw sql] ()
+2025-01-26 13:01:32,054 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 13:01:32,054 - INFO - [raw sql] ()
+2025-01-26 13:01:32,055 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 13:01:32,055 - INFO - [raw sql] ()
+2025-01-26 13:01:32,055 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 13:01:32,055 - INFO - [raw sql] ()
+2025-01-26 13:01:32,055 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 13:01:32,055 - INFO - [raw sql] ()
+2025-01-26 13:01:32,055 - INFO - COMMIT
+2025-01-26 13:01:32,071 - WARNING -  * Debugger is active!
+2025-01-26 13:01:32,078 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 13:01:33,093 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/services/wellness_service.py', reloading
+2025-01-26 13:01:33,142 - INFO -  * Restarting with stat
+2025-01-26 13:01:33,309 - INFO - BEGIN (implicit)
+2025-01-26 13:01:33,309 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 13:01:33,309 - INFO - [raw sql] ()
+2025-01-26 13:01:33,309 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 13:01:33,309 - INFO - [raw sql] ()
+2025-01-26 13:01:33,310 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 13:01:33,310 - INFO - [raw sql] ()
+2025-01-26 13:01:33,310 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 13:01:33,310 - INFO - [raw sql] ()
+2025-01-26 13:01:33,310 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 13:01:33,310 - INFO - [raw sql] ()
+2025-01-26 13:01:33,310 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 13:01:33,310 - INFO - [raw sql] ()
+2025-01-26 13:01:33,310 - INFO - COMMIT
+2025-01-26 13:01:33,322 - WARNING -  * Debugger is active!
+2025-01-26 13:01:33,327 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 13:02:02,680 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/services/wellness_service.py', reloading
+2025-01-26 13:02:02,726 - INFO -  * Restarting with stat
+2025-01-26 13:02:02,995 - INFO - BEGIN (implicit)
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 13:02:02,995 - INFO - [raw sql] ()
+2025-01-26 13:02:02,995 - INFO - COMMIT
+2025-01-26 13:02:03,011 - WARNING -  * Debugger is active!
+2025-01-26 13:02:03,017 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 13:02:40,418 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/app.py', reloading
+2025-01-26 13:02:40,494 - INFO -  * Restarting with stat
+2025-01-26 13:02:40,750 - INFO - BEGIN (implicit)
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 13:02:40,751 - INFO - [raw sql] ()
+2025-01-26 13:02:40,751 - INFO - COMMIT
+2025-01-26 13:02:40,768 - WARNING -  * Debugger is active!
+2025-01-26 13:02:40,773 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 13:09:07,540 - INFO -  * Detected change in '/Users/cristinadelaguilamartin/Desktop/proyecto-CC/src/models/resident.py', reloading
+2025-01-26 13:09:07,628 - INFO -  * Restarting with stat
+2025-01-26 13:09:07,932 - INFO - BEGIN (implicit)
+2025-01-26 13:09:07,932 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 13:09:07,932 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 13:09:07,933 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 13:09:07,933 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 13:09:07,933 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 13:09:07,933 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 13:09:07,933 - INFO - [raw sql] ()
+2025-01-26 13:09:07,933 - INFO - COMMIT
+2025-01-26 13:09:07,953 - WARNING -  * Debugger is active!
+2025-01-26 13:09:07,959 - INFO -  * Debugger PIN: 612-225-318
+2025-01-26 14:06:00,228 - INFO - BEGIN (implicit)
+2025-01-26 14:06:00,228 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 14:06:00,228 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 14:06:00,229 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 14:06:00,229 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 14:06:00,229 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 14:06:00,229 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 14:06:00,229 - INFO - [raw sql] ()
+2025-01-26 14:06:00,229 - INFO - COMMIT
+2025-01-26 14:06:00,258 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-26 14:06:00,258 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 14:06:00,259 - INFO -  * Restarting with stat
+2025-01-26 14:06:00,426 - INFO - BEGIN (implicit)
+2025-01-26 14:06:00,426 - INFO - PRAGMA main.table_info("residents")
+2025-01-26 14:06:00,426 - INFO - [raw sql] ()
+2025-01-26 14:06:00,426 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-26 14:06:00,427 - INFO - [raw sql] ()
+2025-01-26 14:06:00,427 - INFO - PRAGMA main.table_info("medications")
+2025-01-26 14:06:00,427 - INFO - [raw sql] ()
+2025-01-26 14:06:00,427 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-26 14:06:00,427 - INFO - [raw sql] ()
+2025-01-26 14:06:00,427 - INFO - PRAGMA main.table_info("activities")
+2025-01-26 14:06:00,427 - INFO - [raw sql] ()
+2025-01-26 14:06:00,427 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-26 14:06:00,427 - INFO - [raw sql] ()
+2025-01-26 14:06:00,427 - INFO - COMMIT
+2025-01-26 14:06:00,440 - WARNING -  * Debugger is active!
+2025-01-26 14:06:00,447 - INFO -  * Debugger PIN: 612-225-318
