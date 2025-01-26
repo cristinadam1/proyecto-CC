@@ -27,7 +27,6 @@ def create_activity():
         logging.error("Faltan datos obligatorios para crear la actividad.")
         return jsonify({"error": "Faltan datos obligatorios"}), 400
     try:
-        # Convertir fecha_hora en un objeto datetime
         fecha_hora = datetime.fromisoformat(fecha_hora)
     except ValueError:
         return jsonify({"error": "Formato de fecha inválido, usa ISO 8601"}), 400
