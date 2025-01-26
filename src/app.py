@@ -7,11 +7,8 @@ from services.medication_service import medication_app
 from services.prescription_service import prescription_app
 from services.activity_service import activity_app
 from db import db
-from flask_cors import CORS
 
 app = Flask(__name__)
-#CORS(app, resources={r"/prescriptions/*": {"origins": "*"}})
-
 
 db_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'db')
 if not os.path.exists(db_folder):
