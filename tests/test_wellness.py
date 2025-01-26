@@ -26,7 +26,7 @@ def test_register_wellness_missing_fields(client):
     data = {
         "residente_id": 1,
         "fecha": "2025-01-01"
-        # Falta "estado_animo" y "energia"
+        # Faltan "estado_animo" y "energia"
     }
     response = client.post('/wellness', data=json.dumps(data), content_type='application/json')
 
@@ -55,7 +55,6 @@ def test_get_wellness_records(client):
         db.session.add(registro2)
         db.session.commit()
 
-    # Hacer una solicitud GET para obtener los registros
     response = client.get('/wellness')
     assert response.status_code == 200
     response_data = response.get_json()
