@@ -7,8 +7,18 @@ from services.medication_service import medication_app
 from services.prescription_service import prescription_app
 from services.activity_service import activity_app
 from db import db
+import logging
 
 app = Flask(__name__)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/api_activity.log"),  
+        logging.StreamHandler()                      
+    ]
+)
 
 db_folder = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'db')
 if not os.path.exists(db_folder):
@@ -45,7 +55,5 @@ if __name__ == '__main__':
     create_db()
     app.run(debug=True, port=5000)
 
-# 1. TESTS
 # 3. Redactar todo
 # 4. Hitos 4 y 5 
-# 5. Cambiar logs

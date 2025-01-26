@@ -45,8 +45,6 @@ def test_create_activity_invalid_date(client):
     assert response.get_json()["error"] == "Formato de fecha inválido, usa ISO 8601"
 
 def test_get_activities(client):
-    """Prueba para obtener actividades."""
-    
     # Limpiar las actividades existentes 
     with client.application.app_context():
         db.session.query(Activity).delete()  # Eliminar todas las actividades previas
@@ -62,12 +60,10 @@ def test_get_activities(client):
             fecha_hora=datetime(2025, 1, 26, 10, 0), duracion=30, ubicacion="Las Gabias"
         )
         db.session.add_all([actividad1, actividad2])
-        db.session.commit()  # Asegura que los datos se guarden en la base de datos
+        db.session.commit()  # Asegurar que los datos se guarden en la base de datos
 
-    # Realizar la solicitud GET
     response = client.get('/activities')
-    
-    # Verificar la respuesta
+
     assert response.status_code == 200
     response_data = response.get_json()
 

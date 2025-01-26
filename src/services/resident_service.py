@@ -4,29 +4,27 @@ import logging
 from models.resident import Resident
 from db import db
 
-# Crear el Blueprint
 resident_app = Blueprint('residents', __name__)
 
-# Configuración avanzada de logs
-if not os.path.exists("logs"):
-    os.makedirs("logs")
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/api_activity.log"),  
-        logging.StreamHandler()                      
-    ]
-)
-
-# Rutas del microservicio
+#### GET (todos) ####
 @resident_app.route('/residents', methods=['GET'])
 def get_residents():
-    """Obtener todos los residentes"""
     residents = Resident.query.all()
     return jsonify([resident.to_dict() for resident in residents]), 200
 
+#### GET (por ID) ####
+@resident_app.route('/residents/<int:prescription_id>', methods=['GET'])
+def get_resident(resident_id):
+    resident = Resident.query.get(resident_id)
+
+    if not resident:
+        logging.error(f"Residente con ID {resident_id} no encontrado.")
+        return jsonify({"error": "Residente no encontrado"}), 404
+
+    logging.info(f"Residente con ID {resident_id} obtenida.")
+    return jsonify(resident.to_dict()), 200
+
+#### POST ####
 @resident_app.route('/residents', methods=['POST'])
 def add_resident():
     """Agregar un nuevo residente"""
@@ -46,6 +44,7 @@ def add_resident():
     logging.info(f"Residente {name} agregado con ID {new_resident.id}.")
     return jsonify({"id": new_resident.id}), 201
 
+#### PUT ####
 @resident_app.route('/residents/<int:resident_id>', methods=['PUT'])
 def update_resident(resident_id):
     """Actualizar un residente"""
@@ -67,6 +66,7 @@ def update_resident(resident_id):
     logging.info(f"Residente con ID {resident_id} actualizado.")
     return jsonify({"message": "Residente actualizado"}), 200
 
+#### DELETE ####
 @resident_app.route('/residents/<int:resident_id>', methods=['DELETE'])
 def remove_resident(resident_id):
     """Eliminar un residente"""

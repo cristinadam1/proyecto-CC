@@ -6,18 +6,13 @@ from models.medication import Medication
 
 medication_app = Blueprint('medications', __name__)
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", handlers=[
-    logging.FileHandler("logs/api_activity.log"),  
-    logging.StreamHandler()
-])
-
-# Rutas de la API para medicamentos (igual que antes)
+#### GET (todas) ####
 @medication_app.route('/medications', methods=['GET'])
 def get_medications():
     medications = Medication.query.all()
     return jsonify([medication.to_dict() for medication in medications]), 200
 
-
+#### POST ####
 @medication_app.route('/medications', methods=['POST'])
 def add_medication():
     data = request.get_json()
@@ -36,7 +31,7 @@ def add_medication():
     logging.info(f"Medicación {name} agregada con ID {new_medication.id}.")
     return jsonify({"id": new_medication.id}), 201
 
-
+#### PUT ####
 @medication_app.route('/medications/<int:medication_id>', methods=['PUT'])
 def update_medication(medication_id):
     data = request.get_json()
@@ -57,7 +52,7 @@ def update_medication(medication_id):
     logging.info(f"Medicación con ID {medication_id} actualizada.")
     return jsonify({"message": "Medicación actualizada"}), 200
 
-
+#### DELETE ####
 @medication_app.route('/medications/<int:medication_id>', methods=['DELETE'])
 def remove_medication(medication_id):
     #medication = Medication.query.get(medication_id)
@@ -72,8 +67,7 @@ def remove_medication(medication_id):
     logging.info(f"Medicación con ID {medication_id} eliminada.")
     return jsonify({"message": "Medicación eliminada"}), 200
 
-
-# Ruta para obtener un medicamento específico por ID
+#### GET (por ID) ####
 @medication_app.route('/medications/<int:medication_id>', methods=['GET'])
 def get_medication(medication_id):
     """Obtener un medicamento específico por su ID."""

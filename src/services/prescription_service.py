@@ -4,22 +4,27 @@ import logging
 from db import db
 from models.prescription import Prescription
 
-# Crear el Blueprint
 prescription_app = Blueprint('prescriptions', __name__)
 
-# Configuración de logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", handlers=[
-    logging.FileHandler("logs/api_activity.log"),  
-    logging.StreamHandler()
-])
-
-# Rutas de la API para prescripciones
+#### GET (todas) ####
 @prescription_app.route('/prescriptions', methods=['GET'])
 def get_prescriptions():
-    """Obtener todas las prescripciones"""
     prescriptions = Prescription.query.all()
     return jsonify([prescription.to_dict() for prescription in prescriptions]), 200
 
+#### GET (por ID) ####
+@prescription_app.route('/prescription/<int:prescription_id>', methods=['GET'])
+def get_prescription(prescription_id):
+    prescription = Prescription.query.get(prescription_id)
+
+    if not prescription:
+        logging.error(f"Prescription con ID {prescription_id} no encontrada.")
+        return jsonify({"error": "Prescription no encontrada"}), 404
+
+    logging.info(f"Prescription con ID {prescription_id} obtenida.")
+    return jsonify(prescription.to_dict()), 200
+
+#### POST ####
 @prescription_app.route('/prescriptions', methods=['POST'])
 def add_prescription():
     """Agregar una nueva prescripción"""
@@ -49,6 +54,7 @@ def add_prescription():
     logging.info(f"Prescripción agregada con ID {new_prescription.id}.")
     return jsonify({"id": new_prescription.id}), 201
 
+#### PUT ####
 @prescription_app.route('/prescriptions/<int:prescription_id>', methods=['PUT'])
 def update_prescription(prescription_id):
     """Actualizar una prescripción"""
@@ -72,6 +78,7 @@ def update_prescription(prescription_id):
     logging.info(f"Prescripción con ID {prescription_id} actualizada.")
     return jsonify({"message": "Prescripción actualizada"}), 200
 
+#### DELETE ####
 @prescription_app.route('/prescriptions/<int:prescription_id>', methods=['DELETE'])
 def remove_prescription(prescription_id):
     """Eliminar una prescripción"""
