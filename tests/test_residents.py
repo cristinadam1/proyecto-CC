@@ -5,7 +5,7 @@ from models.resident import Resident
 from db import db
 
 def test_add_resident(client):
-    """Prueba para agregar un residente."""
+    """Prueba para agregar un residente"""
     data = {"name": "Juan Pérez", "age": 70, "contact": "juan@example.com"}
     response = client.post('/residents', data=json.dumps(data), content_type='application/json')
 
