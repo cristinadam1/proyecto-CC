@@ -47,10 +47,10 @@ def test_create_activity_invalid_date(client):
 def test_get_activities(client):
     """Prueba para obtener actividades."""
     
-    # Limpiar las actividades existentes para asegurar que no haya datos previos
+    # Limpiar las actividades existentes 
     with client.application.app_context():
-        db.session.query(Activity).delete()  # Elimina todas las actividades previas
-        db.session.commit()  # Confirma los cambios en la base de datos
+        db.session.query(Activity).delete()  # Eliminar todas las actividades previas
+        db.session.commit()  # Confirmar los cambios en la base de datos
     
         # Crear actividades para la prueba
         actividad1 = Activity(
