@@ -41,7 +41,7 @@ def add_medication():
 @medication_app.route('/medications/<int:medication_id>', methods=['PUT'])
 def update_medication(medication_id):
     data = request.get_json()
-    medication = Medication.query.get(medication_id)
+    medication = db.session.get(Medication, medication_id)
 
     if not medication:
         logging.error(f"Medicación con ID {medication_id} no encontrada.")
@@ -61,7 +61,8 @@ def update_medication(medication_id):
 
 @medication_app.route('/medications/<int:medication_id>', methods=['DELETE'])
 def remove_medication(medication_id):
-    medication = Medication.query.get(medication_id)
+    #medication = Medication.query.get(medication_id)
+    medication = db.session.get(Medication, medication_id)
 
     if not medication:
         logging.error(f"Medicación con ID {medication_id} no encontrada.")
@@ -71,3 +72,17 @@ def remove_medication(medication_id):
     db.session.commit()
     logging.info(f"Medicación con ID {medication_id} eliminada.")
     return jsonify({"message": "Medicación eliminada"}), 200
+
+
+# Ruta para obtener un medicamento específico por ID
+@medication_app.route('/medications/<int:medication_id>', methods=['GET'])
+def get_medication(medication_id):
+    """Obtener un medicamento específico por su ID."""
+    medication = Medication.query.get(medication_id)
+
+    if not medication:
+        logging.error(f"Medicación con ID {medication_id} no encontrada.")
+        return jsonify({"error": "Medicación no encontrada"}), 404
+
+    logging.info(f"Medicación con ID {medication_id} obtenida.")
+    return jsonify(medication.to_dict()), 200

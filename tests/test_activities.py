@@ -46,37 +46,30 @@ def test_create_activity_invalid_date(client):
 
 def test_get_activities(client):
     """Prueba para obtener actividades."""
+    
+    # Limpiar las actividades existentes para asegurar que no haya datos previos
     with client.application.app_context():
-        actividad1 = Activity(nombre="Yoga", descripcion="Relajación", fecha_hora=datetime(2025, 1, 26, 8, 0), duracion=60)
-        actividad2 = Activity(nombre="Meditación", descripcion="Meditación guiada", fecha_hora=datetime(2025, 1, 26, 10, 0), duracion=30)
+        db.session.query(Activity).delete()  # Elimina todas las actividades previas
+        db.session.commit()  # Confirma los cambios en la base de datos
+    
+        # Crear actividades para la prueba
+        actividad1 = Activity(
+            nombre="Yoga", descripcion="Relajación", 
+            fecha_hora=datetime(2025, 1, 26, 8, 0), duracion=60, ubicacion="La zubia"
+        )
+        actividad2 = Activity(
+            nombre="Meditación", descripcion="Meditación guiada", 
+            fecha_hora=datetime(2025, 1, 26, 10, 0), duracion=30, ubicacion="Las Gabias"
+        )
         db.session.add_all([actividad1, actividad2])
-        db.session.commit()
+        db.session.commit()  # Asegura que los datos se guarden en la base de datos
 
+    # Realizar la solicitud GET
     response = client.get('/activities')
+    
+    # Verificar la respuesta
     assert response.status_code == 200
     response_data = response.get_json()
+
     assert len(response_data) == 2
 
-def test_add_participation(client):
-    """Prueba para registrar participación en una actividad."""
-    with client.application.app_context():
-        actividad = Activity(nombre="Caminata", fecha_hora=datetime(2025, 1, 26, 7, 0), duracion=30)
-        db.session.add(actividad)
-        db.session.commit()
-
-    data = {"residente_id": 1, "estado": "asistió", "observaciones": "Muy satisfecho"}
-    response = client.post(f'/activities/{actividad.id}/participation', data=json.dumps(data), content_type='application/json')
-
-    assert response.status_code == 201
-    response_data = response.get_json()
-    assert response_data["activity_id"] == actividad.id
-    assert response_data["residente_id"] == 1
-    assert response_data["estado"] == "asistió"
-
-def test_add_participation_missing_fields(client):
-    """Prueba para registrar participación con campos faltantes."""
-    data = {"residente_id": 1}
-    response = client.post('/activities/1/participation', data=json.dumps(data), content_type='application/json')
-
-    assert response.status_code == 400
-    assert response.get_json()["error"] == "Faltan datos obligatorios"

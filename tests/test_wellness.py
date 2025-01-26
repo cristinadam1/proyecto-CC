@@ -1,7 +1,5 @@
 from datetime import datetime
 import json
-import sys
-sys.path.append('src')
 from models.wellness import WellnessTracking
 from db import db
 
@@ -38,7 +36,6 @@ def test_register_wellness_missing_fields(client):
 
 def test_get_wellness_records(client):
     """Prueba para obtener todos los registros de bienestar."""
-    # Insertar datos de prueba en la base de datos
     with client.application.app_context():
         registro1 = WellnessTracking(
             residente_id=1,
