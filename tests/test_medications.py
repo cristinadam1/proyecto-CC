@@ -5,7 +5,7 @@ from models.medication import Medication
 from db import db
 
 def test_add_medication(client):
-    """Prueba para agregar un medicamento."""
+    """Prueba para agregar un medicamento"""
     data = {"name": "Paracetamol", "description": "Alivia el dolor", "available_online": True}
     response = client.post('/medications', data=json.dumps(data), content_type='application/json')
 
@@ -28,13 +28,9 @@ def test_remove_medication(client):
         db.session.add(medicamento)
         db.session.commit()
 
-        # Usar `Session.get()` para reconsultar el medicamento
         medicamento = db.session.get(Medication, medicamento.id)
-
-        # Hacer la solicitud DELETE
         response = client.delete(f'/medications/{medicamento.id}')
-
-        # Verificar la respuesta
+        
         assert response.status_code == 200
         assert response.get_json()["message"] == "Medicación eliminada"
 
