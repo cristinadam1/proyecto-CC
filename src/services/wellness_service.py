@@ -49,4 +49,3 @@ def get_wellness_records():
     """Obtener todos los registros de bienestar."""
     registros = WellnessTracking.query.all()
     return jsonify([registro.to_dict() for registro in registros]), 200
-#
