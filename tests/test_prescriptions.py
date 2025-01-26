@@ -5,7 +5,7 @@ from models.prescription import Prescription
 from db import db
 
 def test_add_prescription(client):
-    """Prueba para agregar una prescripción."""
+    """Prueba para agregar una prescripción"""
     data = {
         "resident_id": 1,
         "medication_id": 2,
@@ -20,7 +20,7 @@ def test_add_prescription(client):
     assert response.get_json()["id"] is not None
 
 def test_add_prescription_missing_fields(client):
-    """Prueba para agregar prescripción con campos faltantes."""
+    """Prueba para agregar prescripción con campos faltantes"""
     data = {"resident_id": 1}
     response = client.post('/prescriptions', data=json.dumps(data), content_type='application/json')
 
