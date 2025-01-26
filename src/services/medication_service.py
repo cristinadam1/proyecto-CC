@@ -6,7 +6,6 @@ from models.medication import Medication
 
 medication_app = Blueprint('medications', __name__)
 
-# Configuración de logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", handlers=[
     logging.FileHandler("logs/api_activity.log"),  
     logging.StreamHandler()
