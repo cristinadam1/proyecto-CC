@@ -14,5 +14,6 @@ def clean_db(client):
     """Fixture para limpiar la base de datos antes de cada prueba."""
     with client.application.app_context():
         db.session.remove()
-        db.drop_all()  # Elimina todas las tablas de la base de datos
-        db.create_all()  # Vuelve a crear las tablas vacías
+        db.drop_all()  #Elimina todas las tablas de la base de datos
+        db.create_all()  #Vuelve a crear las tablas vacías
+
