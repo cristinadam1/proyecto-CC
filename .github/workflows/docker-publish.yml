@@ -1,0 +1,22 @@
+name: Build and publish Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Log in to GitHub Docker Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+      
+      - name: Build the Docker image
+        run: docker build -t ghcr.io/<tu-usuario>/<nombre-repo>:latest .
+      
+      - name: Push the Docker image
+        run: docker push ghcr.io/<tu-usuario>/<nombre-repo>:latest
