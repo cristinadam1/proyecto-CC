@@ -1,4 +1,4 @@
-version: "3.9"
+#version: "3.9"
 
 services:
   app: # Contenedor de la aplicación
@@ -16,6 +16,7 @@ services:
       - FLASK_ENV=development
     networks:
       - app-network
+    #platform: linux/arm64/v8
 
   db: # Contenedor para almacenar la base de datos SQLite
     image: nouchka/sqlite3  # Imagen base de SQLite
@@ -25,6 +26,7 @@ services:
       - app-network
     environment:
       - SQLITE_DATABASE=/app/db/database.db  # Ruta al archivo de base de datos dentro del contenedor
+    #platform: linux/arm64/v8
 
   tests: # Contenedor para ejecutar las pruebas
     build:
@@ -33,10 +35,13 @@ services:
     command: pytest --cov=src
     volumes:
       - ./src:/app/src
+      - ./logs:/app/logs
+      - ./tests:/app/tests
     depends_on:
       - app
     networks:
       - app-network
+    #platform: linux/arm64/v8
 
 networks: # Red compartida por los servicios
   app-network:
