@@ -3,14 +3,17 @@ FROM python:3.10-slim
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiamos los archivos del proyecto al contenedor
-COPY . /app
+# Copiar los archivos de requisitos
+COPY requirements.txt requirements.txt
 
-# Instalación de dependencias
+# Instalar las dependencias del proyecto
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Puerto 5000 para la API
+# Copiar el código de la aplicación
+COPY src/ /app/src/
+
+# Exponer el puerto de la API
 EXPOSE 5000
 
-# Ejecutar la aplicación al iniciar el contenedor
+# Comando para ejecutar la aplicación
 CMD ["python", "src/app.py"]
