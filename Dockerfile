@@ -8,6 +8,8 @@ COPY requirements.txt requirements.txt
 
 # Instalar las dependencias del proyecto
 RUN pip install --no-cache-dir -r requirements.txt
+RUN mkdir -p /app/logs
+
 
 # Copiar el código de la aplicación
 COPY src/ /app/src/

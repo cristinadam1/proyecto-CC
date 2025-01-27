@@ -53,7 +53,9 @@ def index():
 # Crear la base de datos y ejecutar el servidor
 if __name__ == '__main__':
     create_db()
-    app.run(debug=True, port=5000)
+    #app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=5000)
 
 # 3. Redactar todo
 # 4. Hitos 4 y 5 
+# mirar tests de docker
