@@ -29244,3 +29244,37 @@ WHERE activities.id = ?
 2025-01-26 22:45:59,338 - INFO - COMMIT
 2025-01-26 22:45:59,353 - WARNING -  * Debugger is active!
 2025-01-26 22:45:59,360 - INFO -  * Debugger PIN: 612-225-318
+2025-01-27 13:06:41,027 - INFO - BEGIN (implicit)
+2025-01-27 13:06:41,027 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 13:06:41,027 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 13:06:41,028 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 13:06:41,028 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 13:06:41,028 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 13:06:41,028 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 13:06:41,028 - INFO - [raw sql] ()
+2025-01-27 13:06:41,028 - INFO - COMMIT
+2025-01-27 13:06:41,056 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-27 13:06:41,057 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-27 13:06:41,057 - INFO -  * Restarting with stat
+2025-01-27 13:06:41,222 - INFO - BEGIN (implicit)
+2025-01-27 13:06:41,222 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 13:06:41,222 - INFO - [raw sql] ()
+2025-01-27 13:06:41,222 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 13:06:41,222 - INFO - [raw sql] ()
+2025-01-27 13:06:41,222 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 13:06:41,223 - INFO - [raw sql] ()
+2025-01-27 13:06:41,223 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 13:06:41,223 - INFO - [raw sql] ()
+2025-01-27 13:06:41,223 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 13:06:41,223 - INFO - [raw sql] ()
+2025-01-27 13:06:41,223 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 13:06:41,223 - INFO - [raw sql] ()
+2025-01-27 13:06:41,223 - INFO - COMMIT
+2025-01-27 13:06:41,234 - WARNING -  * Debugger is active!
+2025-01-27 13:06:41,243 - INFO -  * Debugger PIN: 612-225-318
