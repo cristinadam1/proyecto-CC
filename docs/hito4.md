@@ -119,3 +119,26 @@ El archivo `docker-compose.yml` se encarga de definir la infraestructura del cl�
 
         volumes:
         db-data:
+
+## Implementación y ejecución de tests para validar el funcionamiento del clúster de contenedores
+Para validar el funcionamiento del clúster de contenedores, he configurado un contenedor específico para ejecutar las pruebas. Este contenedor usa la misma imagen base que el de la aplicación (python:3.10-slim) para mantener la consistencia del entorno. En este contenedor, se ejecutan los tests definidos en la carpeta /tests, donde tengo pruebas unitarias y de integración que validan los endpoints de la API y las operaciones de los modelos sobre la base de datos.
+
+El archivo `docker-compose.yml` incluye un servicio llamado tests que depende de los servicios `app` y `db`. De esta forma, aseguro que las pruebas no se ejecuten hasta que el contenedor de la aplicación y el de la base de datos estén listos. Esto evita errores de conexión o problemas relacionados con la inicialización del sistema. Este servicio ejecuta automáticamente los tests con el comando `pytest --cov=src`.
+
+Para validar el clúster, he construido el entorno usando Docker Compose con el comando `docker-compose up`. Para iniciar los contenedores en la red definida y verificar que todos los servicios se conectan correctamente. Una vez que los contenedores estan en ejecución, ejecuto las pruebas desde el contenedor de tests. Los resultados confirmaron que la API respondía correctamente a las solicitudes HTTP, los modelos podían interactuar con la base de datos y las funcionalidades principales funcionan como se esperaba.
+
+Además, para garantizar que las pruebas son reproducibles, he diseñado los tests de manera que se ejecutaran sobre una base de datos limpia. Para esto, he configurado el volumen de la base de datos para que se reinicie antes de cada test, asegurando así que los resultados no se vean afectados por datos residuales.
+
+Por último, he validado todo el flujo automatizando la construcción y ejecución de los tests en el pipeline de integración continua configurado en GitHub Actions. Esto asegura que cualquier cambio en el código desencadene automáticamente las pruebas, confirmando que el clúster sigue funcionando correctamente tras cada actualización.
+
+## Contenedores creados
+
+El primer contenedor es el de la aplicación. Ejecuta la aplicación, que está basada en Flask. En este contenedor, he configurado la aplicación para que escuche en el puerto 5000, de modo que podamos acceder a la API desde el navegador. Además, he incluido un volumen que conecta el código fuente de la aplicación (guardado en la carpeta src) dentro del contenedor, para que se pueda modificar el código sin tener que reconstruir la imagen del contenedor cada vez. Este contenedor depende del contenedor de base de datos, ya que la aplicación necesita acceder a la base de datos para funcionar correctamente.
+
+El segundo contenedor es el que se encarga de almacenar los datos. He usado un contenedor basado en una imagen ligera de SQLite que está configurado para guardar el archivo de la base de datos en un volumen compartido con el contenedor de la aplicación, de modo que la base de datos se mantenga persistente incluso si los contenedores se reinician. Esta base de datos la uso en la aplicación para almacenar la información.
+
+El tercer contenedor está dedicado a ejecutar las pruebas de la aplicación. Este contenedor usa el mismo Dockerfile que el de la aplicación para tener las mismas dependencias instaladas. Al ejecutarse, corre las pruebas definidas en el directorio tests utilizando pytest, lo que permite validar que la aplicación funcione correctamente. Este contenedor depende del contenedor de la aplicación, para asegurarse de que la aplicación esté lista antes de ejecutar las pruebas.
+
+Para que todos estos contenedores puedan comunicarse entre sí, he configurado una red compartida dentro de Docker Compose. De esta manera, los contenedores pueden interactuar sin problemas, como es necesario para que la aplicación y la base de datos funcionen correctamente.
+
+![captura](img/c8.png)

@@ -1,27 +1,32 @@
 version: "3.9"
 
 services:
-  app:
+  app: # Contenedor de la aplicación
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes:
       - ./src:/app/src
+      - ./src/db:/app/db  # Volumen persistente para la base de datos SQLite
     depends_on:
       - db
     environment:
       - FLASK_ENV=development
-
-  db:
-    image: sqlite:latest
-    volumes:
-      - ./src/db/database.db:/data/database.db
     networks:
       - app-network
 
-  tests:
+  db: # Contenedor para almacenar la base de datos SQLite
+    image: nouchka/sqlite3  # Imagen base de SQLite
+    volumes:
+      - ./src/db:/app/db  # Volumen persistente para la base de datos SQLite
+    networks:
+      - app-network
+    environment:
+      - SQLITE_DATABASE=/app/db/database.db  # Ruta al archivo de base de datos dentro del contenedor
+
+  tests: # Contenedor para ejecutar las pruebas
     build:
       context: .
       dockerfile: Dockerfile
@@ -33,7 +38,7 @@ services:
     networks:
       - app-network
 
-networks:
+networks: # Red compartida por los servicios
   app-network:
     driver: bridge
 

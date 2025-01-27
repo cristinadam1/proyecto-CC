@@ -29278,3 +29278,2020 @@ WHERE activities.id = ?
 2025-01-27 13:06:41,223 - INFO - COMMIT
 2025-01-27 13:06:41,234 - WARNING -  * Debugger is active!
 2025-01-27 13:06:41,243 - INFO -  * Debugger PIN: 612-225-318
+2025-01-27 16:51:25,947 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,947 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:25,947 - INFO - [raw sql] ()
+2025-01-27 16:51:25,948 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:25,948 - INFO - [raw sql] ()
+2025-01-27 16:51:25,949 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:25,949 - INFO - [raw sql] ()
+2025-01-27 16:51:25,949 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:25,949 - INFO - [raw sql] ()
+2025-01-27 16:51:25,949 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:25,949 - INFO - [raw sql] ()
+2025-01-27 16:51:25,949 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:25,949 - INFO - [raw sql] ()
+2025-01-27 16:51:25,950 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:25,950 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,951 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:25,951 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,952 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:25,952 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,953 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:25,953 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,953 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:25,953 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,954 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:25,954 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,954 - INFO - COMMIT
+2025-01-27 16:51:25,954 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,954 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,955 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,955 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,955 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,955 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,955 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:25,955 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,956 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:25,956 - INFO - [raw sql] ()
+2025-01-27 16:51:25,957 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,957 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,958 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,958 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,958 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,958 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,959 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,959 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,960 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:25,960 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,961 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:25,961 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,962 - INFO - COMMIT
+2025-01-27 16:51:25,972 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,973 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-27 16:51:25,973 - INFO - [generated in 0.00024s] ('Yoga Matutino', 'Sesión de yoga al aire libre', '2025-01-26 08:00:00.000000', 60, 'Patio central')
+2025-01-27 16:51:25,974 - INFO - COMMIT
+2025-01-27 16:51:25,975 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,977 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-27 16:51:25,977 - INFO - [generated in 0.00013s] (1,)
+2025-01-27 16:51:25,977 - INFO - Actividad Yoga Matutino creada con ID 1.
+2025-01-27 16:51:25,978 - INFO - ROLLBACK
+2025-01-27 16:51:25,979 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,979 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:25,979 - INFO - [raw sql] ()
+2025-01-27 16:51:25,980 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:25,980 - INFO - [raw sql] ()
+2025-01-27 16:51:25,980 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:25,980 - INFO - [raw sql] ()
+2025-01-27 16:51:25,980 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:25,980 - INFO - [raw sql] ()
+2025-01-27 16:51:25,981 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:25,981 - INFO - [raw sql] ()
+2025-01-27 16:51:25,981 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:25,981 - INFO - [raw sql] ()
+2025-01-27 16:51:25,981 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:25,981 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,982 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:25,982 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,983 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:25,983 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,983 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:25,983 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,984 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:25,984 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,985 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:25,985 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,985 - INFO - COMMIT
+2025-01-27 16:51:25,985 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,985 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:25,986 - INFO - [raw sql] ()
+2025-01-27 16:51:25,986 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:25,986 - INFO - [raw sql] ()
+2025-01-27 16:51:25,986 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:25,986 - INFO - [raw sql] ()
+2025-01-27 16:51:25,986 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:25,986 - INFO - [raw sql] ()
+2025-01-27 16:51:25,986 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:25,986 - INFO - [raw sql] ()
+2025-01-27 16:51:25,986 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,987 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,987 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,987 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,987 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,987 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:25,987 - INFO - [raw sql] ()
+2025-01-27 16:51:25,988 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:25,988 - INFO - [raw sql] ()
+2025-01-27 16:51:25,988 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,988 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,989 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,989 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,989 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,989 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,990 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:25,990 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,991 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:25,991 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:25,991 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:25,991 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,992 - INFO - COMMIT
+2025-01-27 16:51:25,992 - ERROR - Faltan datos obligatorios para crear la actividad.
+2025-01-27 16:51:25,993 - INFO - BEGIN (implicit)
+2025-01-27 16:51:25,993 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:25,993 - INFO - [raw sql] ()
+2025-01-27 16:51:25,994 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:25,994 - INFO - [raw sql] ()
+2025-01-27 16:51:25,994 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:25,994 - INFO - [raw sql] ()
+2025-01-27 16:51:25,994 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:25,994 - INFO - [raw sql] ()
+2025-01-27 16:51:25,994 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:25,994 - INFO - [raw sql] ()
+2025-01-27 16:51:25,994 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:25,994 - INFO - [raw sql] ()
+2025-01-27 16:51:25,995 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:25,995 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,995 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:25,995 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:25,996 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:25,996 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:25,996 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:25,996 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:25,998 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:25,998 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:25,999 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:25,999 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,000 - INFO - COMMIT
+2025-01-27 16:51:26,000 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,000 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,000 - INFO - [raw sql] ()
+2025-01-27 16:51:26,000 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,000 - INFO - [raw sql] ()
+2025-01-27 16:51:26,000 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,000 - INFO - [raw sql] ()
+2025-01-27 16:51:26,000 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,000 - INFO - [raw sql] ()
+2025-01-27 16:51:26,000 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,001 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,001 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,001 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,001 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,001 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,001 - INFO - [raw sql] ()
+2025-01-27 16:51:26,002 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,002 - INFO - [raw sql] ()
+2025-01-27 16:51:26,002 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,002 - INFO - [raw sql] ()
+2025-01-27 16:51:26,002 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,002 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,003 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,003 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,004 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,004 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,004 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,004 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,005 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,005 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,008 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,008 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,008 - INFO - COMMIT
+2025-01-27 16:51:26,010 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,010 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,010 - INFO - [raw sql] ()
+2025-01-27 16:51:26,010 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,010 - INFO - [raw sql] ()
+2025-01-27 16:51:26,010 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,010 - INFO - [raw sql] ()
+2025-01-27 16:51:26,010 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,011 - INFO - [raw sql] ()
+2025-01-27 16:51:26,011 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,011 - INFO - [raw sql] ()
+2025-01-27 16:51:26,011 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,011 - INFO - [raw sql] ()
+2025-01-27 16:51:26,011 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,011 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,012 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,012 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,012 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,012 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,013 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,013 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,014 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,014 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,014 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,014 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,015 - INFO - COMMIT
+2025-01-27 16:51:26,015 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,015 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,015 - INFO - [raw sql] ()
+2025-01-27 16:51:26,015 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,015 - INFO - [raw sql] ()
+2025-01-27 16:51:26,015 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,015 - INFO - [raw sql] ()
+2025-01-27 16:51:26,016 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,016 - INFO - [raw sql] ()
+2025-01-27 16:51:26,016 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,016 - INFO - [raw sql] ()
+2025-01-27 16:51:26,016 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,016 - INFO - [raw sql] ()
+2025-01-27 16:51:26,016 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,016 - INFO - [raw sql] ()
+2025-01-27 16:51:26,016 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,016 - INFO - [raw sql] ()
+2025-01-27 16:51:26,017 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,017 - INFO - [raw sql] ()
+2025-01-27 16:51:26,017 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,017 - INFO - [raw sql] ()
+2025-01-27 16:51:26,017 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,017 - INFO - [raw sql] ()
+2025-01-27 16:51:26,017 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,017 - INFO - [raw sql] ()
+2025-01-27 16:51:26,017 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,017 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,018 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,018 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,019 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,019 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,019 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,019 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,021 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,021 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,021 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,021 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,022 - INFO - COMMIT
+2025-01-27 16:51:26,023 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,023 - INFO - DELETE FROM activities
+2025-01-27 16:51:26,023 - INFO - [generated in 0.00010s] ()
+2025-01-27 16:51:26,023 - INFO - COMMIT
+2025-01-27 16:51:26,024 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,024 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?) RETURNING id
+2025-01-27 16:51:26,025 - INFO - [generated in 0.00009s (insertmanyvalues) 1/2 (ordered; batch not supported)] ('Yoga', 'Relajación', '2025-01-26 08:00:00.000000', 60, 'La zubia')
+2025-01-27 16:51:26,025 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?) RETURNING id
+2025-01-27 16:51:26,025 - INFO - [insertmanyvalues 2/2 (ordered; batch not supported)] ('Meditación', 'Meditación guiada', '2025-01-26 10:00:00.000000', 30, 'Las Gabias')
+2025-01-27 16:51:26,025 - INFO - COMMIT
+2025-01-27 16:51:26,026 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,026 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities
+2025-01-27 16:51:26,026 - INFO - [generated in 0.00009s] ()
+2025-01-27 16:51:26,027 - INFO - ROLLBACK
+2025-01-27 16:51:26,028 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,028 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,028 - INFO - [raw sql] ()
+2025-01-27 16:51:26,028 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,028 - INFO - [raw sql] ()
+2025-01-27 16:51:26,028 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,028 - INFO - [raw sql] ()
+2025-01-27 16:51:26,028 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,029 - INFO - [raw sql] ()
+2025-01-27 16:51:26,029 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,029 - INFO - [raw sql] ()
+2025-01-27 16:51:26,029 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,029 - INFO - [raw sql] ()
+2025-01-27 16:51:26,029 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,029 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,030 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,030 - INFO - [no key 0.00013s] ()
+2025-01-27 16:51:26,030 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,030 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,031 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,031 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,032 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,032 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,032 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,032 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,033 - INFO - COMMIT
+2025-01-27 16:51:26,033 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,033 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,033 - INFO - [raw sql] ()
+2025-01-27 16:51:26,033 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,033 - INFO - [raw sql] ()
+2025-01-27 16:51:26,033 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,034 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,034 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,034 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,034 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,034 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,034 - INFO - [raw sql] ()
+2025-01-27 16:51:26,035 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,035 - INFO - [raw sql] ()
+2025-01-27 16:51:26,035 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,035 - INFO - [raw sql] ()
+2025-01-27 16:51:26,035 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,035 - INFO - [raw sql] ()
+2025-01-27 16:51:26,035 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,035 - INFO - [raw sql] ()
+2025-01-27 16:51:26,035 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,035 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,036 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,036 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,037 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,037 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,037 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,037 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,038 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,038 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,038 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,038 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,039 - INFO - COMMIT
+2025-01-27 16:51:26,040 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,040 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-27 16:51:26,040 - INFO - [generated in 0.00013s] ('Paracetamol', 'Alivia el dolor', 1)
+2025-01-27 16:51:26,041 - INFO - COMMIT
+2025-01-27 16:51:26,041 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,042 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-27 16:51:26,042 - INFO - [generated in 0.00010s] (1,)
+2025-01-27 16:51:26,042 - INFO - Medicación Paracetamol agregada con ID 1.
+2025-01-27 16:51:26,042 - INFO - ROLLBACK
+2025-01-27 16:51:26,043 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,043 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,043 - INFO - [raw sql] ()
+2025-01-27 16:51:26,044 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,044 - INFO - [raw sql] ()
+2025-01-27 16:51:26,044 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,044 - INFO - [raw sql] ()
+2025-01-27 16:51:26,044 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,044 - INFO - [raw sql] ()
+2025-01-27 16:51:26,044 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,044 - INFO - [raw sql] ()
+2025-01-27 16:51:26,044 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,044 - INFO - [raw sql] ()
+2025-01-27 16:51:26,045 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,045 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,045 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,045 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,046 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,046 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,046 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,046 - INFO - [no key 0.00016s] ()
+2025-01-27 16:51:26,047 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,047 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,048 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,048 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,048 - INFO - COMMIT
+2025-01-27 16:51:26,048 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,048 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,048 - INFO - [raw sql] ()
+2025-01-27 16:51:26,049 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,049 - INFO - [raw sql] ()
+2025-01-27 16:51:26,049 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,049 - INFO - [raw sql] ()
+2025-01-27 16:51:26,049 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,049 - INFO - [raw sql] ()
+2025-01-27 16:51:26,049 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,049 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,050 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,050 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,050 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,050 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,050 - INFO - [raw sql] ()
+2025-01-27 16:51:26,050 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,051 - INFO - [raw sql] ()
+2025-01-27 16:51:26,051 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,051 - INFO - [raw sql] ()
+2025-01-27 16:51:26,051 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,051 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,052 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,052 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,052 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,052 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,053 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,053 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,055 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,055 - INFO - [no key 0.00010s] ()
+2025-01-27 16:51:26,056 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,056 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,056 - INFO - COMMIT
+2025-01-27 16:51:26,057 - ERROR - Faltan datos en la petición.
+2025-01-27 16:51:26,058 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,058 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,058 - INFO - [raw sql] ()
+2025-01-27 16:51:26,058 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,058 - INFO - [raw sql] ()
+2025-01-27 16:51:26,058 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,058 - INFO - [raw sql] ()
+2025-01-27 16:51:26,058 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,059 - INFO - [raw sql] ()
+2025-01-27 16:51:26,059 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,059 - INFO - [raw sql] ()
+2025-01-27 16:51:26,059 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,059 - INFO - [raw sql] ()
+2025-01-27 16:51:26,059 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,059 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,060 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,060 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,060 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,060 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,061 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,061 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,061 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,061 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,062 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,062 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,062 - INFO - COMMIT
+2025-01-27 16:51:26,062 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,063 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,063 - INFO - [raw sql] ()
+2025-01-27 16:51:26,063 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,063 - INFO - [raw sql] ()
+2025-01-27 16:51:26,063 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,063 - INFO - [raw sql] ()
+2025-01-27 16:51:26,064 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,064 - INFO - [raw sql] ()
+2025-01-27 16:51:26,064 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,064 - INFO - [raw sql] ()
+2025-01-27 16:51:26,064 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,064 - INFO - [raw sql] ()
+2025-01-27 16:51:26,064 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,064 - INFO - [raw sql] ()
+2025-01-27 16:51:26,064 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,064 - INFO - [raw sql] ()
+2025-01-27 16:51:26,065 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,065 - INFO - [raw sql] ()
+2025-01-27 16:51:26,065 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,065 - INFO - [raw sql] ()
+2025-01-27 16:51:26,065 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,065 - INFO - [raw sql] ()
+2025-01-27 16:51:26,065 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,065 - INFO - [raw sql] ()
+2025-01-27 16:51:26,065 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,065 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,066 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,066 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,067 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,067 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,067 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,068 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,068 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,068 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,069 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,069 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,069 - INFO - COMMIT
+2025-01-27 16:51:26,070 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,070 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-27 16:51:26,070 - INFO - [cached since 0.02963s ago] ('Amoxicilina', 'Antibiótico', 0)
+2025-01-27 16:51:26,070 - INFO - COMMIT
+2025-01-27 16:51:26,071 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,071 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-27 16:51:26,071 - INFO - [cached since 0.02936s ago] (1,)
+2025-01-27 16:51:26,073 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions 
+WHERE ? = prescriptions.medication_id
+2025-01-27 16:51:26,073 - INFO - [generated in 0.00012s] (1,)
+2025-01-27 16:51:26,074 - INFO - DELETE FROM medications WHERE medications.id = ?
+2025-01-27 16:51:26,074 - INFO - [generated in 0.00009s] (1,)
+2025-01-27 16:51:26,075 - INFO - COMMIT
+2025-01-27 16:51:26,075 - INFO - Medicación con ID 1 eliminada.
+2025-01-27 16:51:26,075 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,076 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-27 16:51:26,076 - INFO - [generated in 0.00009s] (1,)
+2025-01-27 16:51:26,076 - INFO - ROLLBACK
+2025-01-27 16:51:26,077 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,077 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,077 - INFO - [raw sql] ()
+2025-01-27 16:51:26,077 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,077 - INFO - [raw sql] ()
+2025-01-27 16:51:26,077 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,077 - INFO - [raw sql] ()
+2025-01-27 16:51:26,077 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,078 - INFO - [raw sql] ()
+2025-01-27 16:51:26,078 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,078 - INFO - [raw sql] ()
+2025-01-27 16:51:26,078 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,078 - INFO - [raw sql] ()
+2025-01-27 16:51:26,078 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,078 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,079 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,079 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,079 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,080 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,080 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,080 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,081 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,081 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,082 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,082 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,082 - INFO - COMMIT
+2025-01-27 16:51:26,082 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,082 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,082 - INFO - [raw sql] ()
+2025-01-27 16:51:26,083 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,083 - INFO - [raw sql] ()
+2025-01-27 16:51:26,083 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,083 - INFO - [raw sql] ()
+2025-01-27 16:51:26,083 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,083 - INFO - [raw sql] ()
+2025-01-27 16:51:26,083 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,083 - INFO - [raw sql] ()
+2025-01-27 16:51:26,083 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,083 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,084 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,084 - INFO - [raw sql] ()
+2025-01-27 16:51:26,085 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,085 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,085 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,086 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,086 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,086 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,087 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,087 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,088 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,088 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,089 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,089 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,090 - INFO - COMMIT
+2025-01-27 16:51:26,090 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,090 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-27 16:51:26,090 - INFO - [cached since 0.05015s ago] ('Aspirina', 'Para el dolor', 1)
+2025-01-27 16:51:26,091 - INFO - COMMIT
+2025-01-27 16:51:26,091 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,092 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-27 16:51:26,092 - INFO - [cached since 0.04968s ago] (1,)
+2025-01-27 16:51:26,093 - INFO - UPDATE medications SET description=? WHERE medications.id = ?
+2025-01-27 16:51:26,093 - INFO - [generated in 0.00011s] ('Analgésico actualizado', 1)
+2025-01-27 16:51:26,093 - INFO - COMMIT
+2025-01-27 16:51:26,093 - INFO - Medicación con ID 1 actualizada.
+2025-01-27 16:51:26,094 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,094 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-27 16:51:26,094 - INFO - [cached since 0.05201s ago] (1,)
+2025-01-27 16:51:26,094 - INFO - ROLLBACK
+2025-01-27 16:51:26,095 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,095 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,095 - INFO - [raw sql] ()
+2025-01-27 16:51:26,095 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,095 - INFO - [raw sql] ()
+2025-01-27 16:51:26,096 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,096 - INFO - [raw sql] ()
+2025-01-27 16:51:26,096 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,096 - INFO - [raw sql] ()
+2025-01-27 16:51:26,096 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,096 - INFO - [raw sql] ()
+2025-01-27 16:51:26,096 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,096 - INFO - [raw sql] ()
+2025-01-27 16:51:26,097 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,097 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,097 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,097 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,100 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,100 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,101 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,101 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,102 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,102 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,103 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,103 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,103 - INFO - COMMIT
+2025-01-27 16:51:26,103 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,103 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,103 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,104 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,104 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,104 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,104 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,104 - INFO - [raw sql] ()
+2025-01-27 16:51:26,104 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,105 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,105 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,105 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,105 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,105 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,105 - INFO - [raw sql] ()
+2025-01-27 16:51:26,106 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,106 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,107 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,107 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,107 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,107 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,108 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,108 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,108 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,109 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,109 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,109 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,110 - INFO - COMMIT
+2025-01-27 16:51:26,111 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,111 - INFO - INSERT INTO prescriptions (resident_id, medication_id, dosage, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?, ?)
+2025-01-27 16:51:26,112 - INFO - [generated in 0.00012s] (1, 2, '500mg', 'Cada 8 horas', '2025-01-26', '2025-02-02')
+2025-01-27 16:51:26,112 - INFO - COMMIT
+2025-01-27 16:51:26,113 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,113 - INFO - SELECT prescriptions.id AS prescriptions_id, prescriptions.resident_id AS prescriptions_resident_id, prescriptions.medication_id AS prescriptions_medication_id, prescriptions.dosage AS prescriptions_dosage, prescriptions.frequency AS prescriptions_frequency, prescriptions.start_date AS prescriptions_start_date, prescriptions.end_date AS prescriptions_end_date 
+FROM prescriptions 
+WHERE prescriptions.id = ?
+2025-01-27 16:51:26,113 - INFO - [generated in 0.00011s] (1,)
+2025-01-27 16:51:26,113 - INFO - Prescripción agregada con ID 1.
+2025-01-27 16:51:26,114 - INFO - ROLLBACK
+2025-01-27 16:51:26,115 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,115 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,115 - INFO - [raw sql] ()
+2025-01-27 16:51:26,115 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,115 - INFO - [raw sql] ()
+2025-01-27 16:51:26,115 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,115 - INFO - [raw sql] ()
+2025-01-27 16:51:26,115 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,115 - INFO - [raw sql] ()
+2025-01-27 16:51:26,115 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,116 - INFO - [raw sql] ()
+2025-01-27 16:51:26,116 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,116 - INFO - [raw sql] ()
+2025-01-27 16:51:26,116 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,116 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,117 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,117 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,117 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,118 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,118 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,118 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,119 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,119 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,119 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,120 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,122 - INFO - COMMIT
+2025-01-27 16:51:26,122 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,122 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,122 - INFO - [raw sql] ()
+2025-01-27 16:51:26,122 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,122 - INFO - [raw sql] ()
+2025-01-27 16:51:26,122 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,122 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,123 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,123 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,123 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,123 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,123 - INFO - [raw sql] ()
+2025-01-27 16:51:26,123 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,124 - INFO - [raw sql] ()
+2025-01-27 16:51:26,124 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,124 - INFO - [raw sql] ()
+2025-01-27 16:51:26,124 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,124 - INFO - [raw sql] ()
+2025-01-27 16:51:26,124 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,124 - INFO - [raw sql] ()
+2025-01-27 16:51:26,124 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,124 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,125 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,125 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,126 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,126 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,126 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,126 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,127 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,127 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,127 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,127 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,128 - INFO - COMMIT
+2025-01-27 16:51:26,128 - ERROR - Faltan datos en la petición.
+2025-01-27 16:51:26,130 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,130 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,130 - INFO - [raw sql] ()
+2025-01-27 16:51:26,130 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,130 - INFO - [raw sql] ()
+2025-01-27 16:51:26,130 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,130 - INFO - [raw sql] ()
+2025-01-27 16:51:26,130 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,131 - INFO - [raw sql] ()
+2025-01-27 16:51:26,131 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,131 - INFO - [raw sql] ()
+2025-01-27 16:51:26,131 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,131 - INFO - [raw sql] ()
+2025-01-27 16:51:26,131 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,131 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,132 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,132 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,133 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,133 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,133 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,133 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,134 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,134 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,134 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,134 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,135 - INFO - COMMIT
+2025-01-27 16:51:26,135 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,135 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,135 - INFO - [raw sql] ()
+2025-01-27 16:51:26,135 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,135 - INFO - [raw sql] ()
+2025-01-27 16:51:26,135 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,135 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,136 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,136 - INFO - [raw sql] ()
+2025-01-27 16:51:26,137 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,137 - INFO - [raw sql] ()
+2025-01-27 16:51:26,137 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,137 - INFO - [raw sql] ()
+2025-01-27 16:51:26,137 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,137 - INFO - [raw sql] ()
+2025-01-27 16:51:26,137 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,137 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,138 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,138 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,139 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,139 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,139 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,139 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,140 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,140 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,142 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,142 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,142 - INFO - COMMIT
+2025-01-27 16:51:26,143 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,144 - INFO - INSERT INTO residents (name, age, contact) VALUES (?, ?, ?)
+2025-01-27 16:51:26,144 - INFO - [generated in 0.00011s] ('Juan Pérez', 70, 'juan@example.com')
+2025-01-27 16:51:26,144 - INFO - COMMIT
+2025-01-27 16:51:26,145 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,145 - INFO - SELECT residents.id AS residents_id, residents.name AS residents_name, residents.age AS residents_age, residents.contact AS residents_contact 
+FROM residents 
+WHERE residents.id = ?
+2025-01-27 16:51:26,145 - INFO - [generated in 0.00010s] (1,)
+2025-01-27 16:51:26,146 - INFO - Residente Juan Pérez agregado con ID 1.
+2025-01-27 16:51:26,146 - INFO - ROLLBACK
+2025-01-27 16:51:26,147 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,147 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,147 - INFO - [raw sql] ()
+2025-01-27 16:51:26,147 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,147 - INFO - [raw sql] ()
+2025-01-27 16:51:26,147 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,148 - INFO - [raw sql] ()
+2025-01-27 16:51:26,148 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,148 - INFO - [raw sql] ()
+2025-01-27 16:51:26,148 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,148 - INFO - [raw sql] ()
+2025-01-27 16:51:26,148 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,148 - INFO - [raw sql] ()
+2025-01-27 16:51:26,148 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,148 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,149 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,149 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,150 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,150 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,150 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,150 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,151 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,151 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,152 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,152 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,153 - INFO - COMMIT
+2025-01-27 16:51:26,153 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,153 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,153 - INFO - [raw sql] ()
+2025-01-27 16:51:26,153 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,153 - INFO - [raw sql] ()
+2025-01-27 16:51:26,153 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,153 - INFO - [raw sql] ()
+2025-01-27 16:51:26,153 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,153 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,154 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,154 - INFO - [raw sql] ()
+2025-01-27 16:51:26,155 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,155 - INFO - [raw sql] ()
+2025-01-27 16:51:26,155 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,155 - INFO - [raw sql] ()
+2025-01-27 16:51:26,155 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,155 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,156 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,156 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,156 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,156 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,157 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,157 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,158 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,158 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,158 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,158 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,159 - INFO - COMMIT
+2025-01-27 16:51:26,160 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,160 - INFO - INSERT INTO wellness_tracking (residente_id, fecha, estado_animo, energia, notas) VALUES (?, ?, ?, ?, ?)
+2025-01-27 16:51:26,160 - INFO - [generated in 0.00012s] (1, '2025-01-01', 'Feliz', 8, 'Todo bien.')
+2025-01-27 16:51:26,161 - INFO - COMMIT
+2025-01-27 16:51:26,161 - INFO - Bienestar registrado para residente 1 en la fecha 2025-01-01 00:00:00.
+2025-01-27 16:51:26,161 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,162 - INFO - SELECT wellness_tracking.id AS wellness_tracking_id, wellness_tracking.residente_id AS wellness_tracking_residente_id, wellness_tracking.fecha AS wellness_tracking_fecha, wellness_tracking.estado_animo AS wellness_tracking_estado_animo, wellness_tracking.energia AS wellness_tracking_energia, wellness_tracking.notas AS wellness_tracking_notas 
+FROM wellness_tracking 
+WHERE wellness_tracking.id = ?
+2025-01-27 16:51:26,162 - INFO - [generated in 0.00010s] (1,)
+2025-01-27 16:51:26,162 - INFO - ROLLBACK
+2025-01-27 16:51:26,164 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,164 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,164 - INFO - [raw sql] ()
+2025-01-27 16:51:26,164 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,164 - INFO - [raw sql] ()
+2025-01-27 16:51:26,164 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,164 - INFO - [raw sql] ()
+2025-01-27 16:51:26,164 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,164 - INFO - [raw sql] ()
+2025-01-27 16:51:26,165 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,165 - INFO - [raw sql] ()
+2025-01-27 16:51:26,165 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,165 - INFO - [raw sql] ()
+2025-01-27 16:51:26,165 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,165 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,166 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,166 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,167 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,167 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,167 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,167 - INFO - [no key 0.00006s] ()
+2025-01-27 16:51:26,168 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,168 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,168 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,168 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,169 - INFO - COMMIT
+2025-01-27 16:51:26,169 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,169 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,169 - INFO - [raw sql] ()
+2025-01-27 16:51:26,169 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,169 - INFO - [raw sql] ()
+2025-01-27 16:51:26,169 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,169 - INFO - [raw sql] ()
+2025-01-27 16:51:26,169 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,170 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,170 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,170 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,170 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,170 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,170 - INFO - [raw sql] ()
+2025-01-27 16:51:26,171 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,171 - INFO - [raw sql] ()
+2025-01-27 16:51:26,171 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,171 - INFO - [raw sql] ()
+2025-01-27 16:51:26,171 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,171 - INFO - [raw sql] ()
+2025-01-27 16:51:26,171 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,171 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,205 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,206 - INFO - [no key 0.00169s] ()
+2025-01-27 16:51:26,214 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,215 - INFO - [no key 0.00091s] ()
+2025-01-27 16:51:26,221 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,221 - INFO - [no key 0.00020s] ()
+2025-01-27 16:51:26,223 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,223 - INFO - [no key 0.00013s] ()
+2025-01-27 16:51:26,225 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,225 - INFO - [no key 0.00036s] ()
+2025-01-27 16:51:26,227 - INFO - COMMIT
+2025-01-27 16:51:26,228 - ERROR - Faltan datos obligatorios para registrar el bienestar.
+2025-01-27 16:51:26,231 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,232 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,232 - INFO - [raw sql] ()
+2025-01-27 16:51:26,233 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,234 - INFO - [raw sql] ()
+2025-01-27 16:51:26,234 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,234 - INFO - [raw sql] ()
+2025-01-27 16:51:26,235 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,235 - INFO - [raw sql] ()
+2025-01-27 16:51:26,235 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,235 - INFO - [raw sql] ()
+2025-01-27 16:51:26,235 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,235 - INFO - [raw sql] ()
+2025-01-27 16:51:26,236 - INFO - 
+DROP TABLE activity_participation
+2025-01-27 16:51:26,236 - INFO - [no key 0.00015s] ()
+2025-01-27 16:51:26,238 - INFO - 
+DROP TABLE prescriptions
+2025-01-27 16:51:26,238 - INFO - [no key 0.00010s] ()
+2025-01-27 16:51:26,240 - INFO - 
+DROP TABLE activities
+2025-01-27 16:51:26,240 - INFO - [no key 0.00010s] ()
+2025-01-27 16:51:26,241 - INFO - 
+DROP TABLE medications
+2025-01-27 16:51:26,241 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,242 - INFO - 
+DROP TABLE wellness_tracking
+2025-01-27 16:51:26,242 - INFO - [no key 0.00013s] ()
+2025-01-27 16:51:26,244 - INFO - 
+DROP TABLE residents
+2025-01-27 16:51:26,244 - INFO - [no key 0.00009s] ()
+2025-01-27 16:51:26,244 - INFO - COMMIT
+2025-01-27 16:51:26,244 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,244 - INFO - PRAGMA main.table_info("residents")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,245 - INFO - PRAGMA temp.table_info("residents")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,245 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,245 - INFO - PRAGMA temp.table_info("wellness_tracking")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,245 - INFO - PRAGMA main.table_info("medications")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,245 - INFO - PRAGMA temp.table_info("medications")
+2025-01-27 16:51:26,245 - INFO - [raw sql] ()
+2025-01-27 16:51:26,246 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-27 16:51:26,246 - INFO - [raw sql] ()
+2025-01-27 16:51:26,246 - INFO - PRAGMA temp.table_info("prescriptions")
+2025-01-27 16:51:26,246 - INFO - [raw sql] ()
+2025-01-27 16:51:26,246 - INFO - PRAGMA main.table_info("activities")
+2025-01-27 16:51:26,246 - INFO - [raw sql] ()
+2025-01-27 16:51:26,246 - INFO - PRAGMA temp.table_info("activities")
+2025-01-27 16:51:26,246 - INFO - [raw sql] ()
+2025-01-27 16:51:26,247 - INFO - PRAGMA main.table_info("activity_participation")
+2025-01-27 16:51:26,247 - INFO - [raw sql] ()
+2025-01-27 16:51:26,247 - INFO - PRAGMA temp.table_info("activity_participation")
+2025-01-27 16:51:26,247 - INFO - [raw sql] ()
+2025-01-27 16:51:26,247 - INFO - 
+CREATE TABLE residents (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	age INTEGER NOT NULL, 
+	contact VARCHAR(100) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,247 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,248 - INFO - 
+CREATE TABLE wellness_tracking (
+	id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	fecha DATE NOT NULL, 
+	estado_animo VARCHAR(50) NOT NULL, 
+	energia INTEGER NOT NULL, 
+	notas VARCHAR(255), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,248 - INFO - [no key 0.00014s] ()
+2025-01-27 16:51:26,250 - INFO - 
+CREATE TABLE medications (
+	id INTEGER NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	description VARCHAR(255), 
+	available_online BOOLEAN, 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,250 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,250 - INFO - 
+CREATE TABLE activities (
+	id INTEGER NOT NULL, 
+	nombre VARCHAR(100) NOT NULL, 
+	descripcion VARCHAR(255), 
+	fecha_hora DATETIME NOT NULL, 
+	duracion INTEGER NOT NULL, 
+	ubicacion VARCHAR(100), 
+	PRIMARY KEY (id)
+)
+
+
+2025-01-27 16:51:26,250 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,251 - INFO - 
+CREATE TABLE prescriptions (
+	id INTEGER NOT NULL, 
+	resident_id INTEGER NOT NULL, 
+	medication_id INTEGER NOT NULL, 
+	dosage VARCHAR(100) NOT NULL, 
+	frequency VARCHAR(100) NOT NULL, 
+	start_date VARCHAR(10) NOT NULL, 
+	end_date VARCHAR(10), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(resident_id) REFERENCES residents (id), 
+	FOREIGN KEY(medication_id) REFERENCES medications (id)
+)
+
+
+2025-01-27 16:51:26,251 - INFO - [no key 0.00008s] ()
+2025-01-27 16:51:26,252 - INFO - 
+CREATE TABLE activity_participation (
+	id INTEGER NOT NULL, 
+	activity_id INTEGER NOT NULL, 
+	residente_id INTEGER NOT NULL, 
+	estado VARCHAR(50) NOT NULL, 
+	observaciones VARCHAR(255), 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(activity_id) REFERENCES activities (id)
+)
+
+
+2025-01-27 16:51:26,252 - INFO - [no key 0.00007s] ()
+2025-01-27 16:51:26,252 - INFO - COMMIT
+2025-01-27 16:51:26,253 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,254 - INFO - INSERT INTO wellness_tracking (residente_id, fecha, estado_animo, energia, notas) VALUES (?, ?, ?, ?, ?) RETURNING id
+2025-01-27 16:51:26,254 - INFO - [generated in 0.00007s (insertmanyvalues) 1/2 (ordered; batch not supported)] (1, '2025-01-01', 'Feliz', 8, 'Todo bien.')
+2025-01-27 16:51:26,254 - INFO - INSERT INTO wellness_tracking (residente_id, fecha, estado_animo, energia, notas) VALUES (?, ?, ?, ?, ?) RETURNING id
+2025-01-27 16:51:26,254 - INFO - [insertmanyvalues 2/2 (ordered; batch not supported)] (2, '2025-01-02', 'Triste', 5, 'Se siente cansado.')
+2025-01-27 16:51:26,254 - INFO - COMMIT
+2025-01-27 16:51:26,255 - INFO - BEGIN (implicit)
+2025-01-27 16:51:26,255 - INFO - SELECT wellness_tracking.id AS wellness_tracking_id, wellness_tracking.residente_id AS wellness_tracking_residente_id, wellness_tracking.fecha AS wellness_tracking_fecha, wellness_tracking.estado_animo AS wellness_tracking_estado_animo, wellness_tracking.energia AS wellness_tracking_energia, wellness_tracking.notas AS wellness_tracking_notas 
+FROM wellness_tracking
+2025-01-27 16:51:26,255 - INFO - [generated in 0.00009s] ()
+2025-01-27 16:51:26,256 - INFO - ROLLBACK
