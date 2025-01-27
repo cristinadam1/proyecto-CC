@@ -1,6 +1,5 @@
 FROM python:3.10-slim
 
-# Directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copiar los archivos de requisitos
