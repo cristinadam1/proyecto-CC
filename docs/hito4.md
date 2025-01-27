@@ -38,3 +38,25 @@ El uso de un contenedor separado para las pruebas permite aislar este proceso de
 
 ### Justificación del uso de contenedores base
 La elección de imágenes base ligeras como `python:3.10-slim` y `sqlite:latest` tiene como objetivo optimizar el tamaño de los contenedores y reducir los tiempos de construcción. Estas imágenes se usan mucho y estn muy bien documentadas, lo que facilita su configuración y mantenimiento. Además, aseguran la compatibilidad con las dependencias del proyecto y proporcionan un entorno estable para ejecutar la aplicación, la base de datos y las pruebas.
+
+## Documentación del Dockerfile
+El archivo [Dockerfile]("Dockerfile") describe los pasos necesarios para crear un entorno consistente donde se ejecuta la API y todas sus dependencias.
+
+En primer lugar, el [Dockerfile]("Dockerfile") comienza definiendo la imagen base, `python:3.10-slim` ya que proporciona un entorno compatible con todas las dependencias del proyecto. A continuación, he actualizado los paquetes del sistema y he instalado las herramientas básicas necesarias para la instalación de dependencias, como pip. Para que la aplicación pueda gestionar correctamente las bibliotecas necesarias.
+
+Después en el [Dockerfile]("Dockerfile") copia los archivos del proyecto desde el sistema anfitrión al contenedor. Este proceso incluye todos los archivos de la carpeta `src`, que contiene la lógica de los modelos, servicios y el archivo principal `app.py`, que actúa como el punto de entrada de la aplicación. Los archivos se copian en el directorio de trabajo dentro del contenedor, para que todo el código necesario esté disponible en el entorno.
+
+Después de copiar los archivos, he instalado las dependencias del archivo `requirements.txt`. Que incluye bibliotecas como `Flask`, `Flask-RESTful`, `Flask-SQLAlchemy` y herramientas de desarrollo como `pytest` y `flake8`. Estas dependencias permiten que la API funcione correctamente y facilitan las pruebas y el mantenimiento del código. El archivo se puede acceder[aqui]("requirements.txt")
+
+Por último, el [Dockerfile]("Dockerfile") especifica el comando para iniciar la aplicación cuando se ejecuta el contenedor. Esto se hace configurando el comando CMD para que ejecute python `src/app.py`. Este paso sirve para que al iniciar el contenedor, la API esté disponible y lista para recibir peticiones.
+
+## Contenedor subido correctamente a GitHub Packages
+El contenedor que contiene la lógica de la aplicación lo he configurado para que se suba automáticamente a GitHub Packages cada vez que se actualiza el repositorio, para que siempre se disponga de una versión actualizada del contenedor, y así facilitar su despliegue en diferentes entornos sin necesidad de reconstruirlo manualmente.
+
+En el archivo `.github/workflows/docker-publish.yml` ([docker-publish.yml](".github/workflows/docker-publish.yml")), he definido el flujo de trabajo que construye el contenedor a partir del archivo [Dockerfile]("Dockerfile") y lo publica en GitHub Packages. Este flujo de trabajo incluye pasos como la autenticación en Docker Hub, la construcción del contenedor y la subida al registro.
+
+La autenticación se hace mediante los secretos `DOCKER_USERNAME` y `DOCKER_PASSWORD`, que los he configurado en la sección "Secrets and variables" del repositorio. Estos secretos contienen las credenciales necesarias para acceder a Docker Hub. 
+![captura](docs/img/c7.png)
+Una vez autenticado, el flujo de trabajo usa el comando `docker build` para construir el contenedor y el comando `docker push` para subirlo al registro de GitHub Packages. La etiqueta del contenedor incluye tanto el número de versión como la etiqueta latest para facilitar el acceso a la versión más reciente.
+
+Cada vez que se realiza un cambio en el repositorio, este flujo de trabajo se ejecuta automáticamente. Para que cualquier actualización en el código fuente o en la configuración de la aplicación se refleje inmediatamente en la imagen del contenedor publicada.
