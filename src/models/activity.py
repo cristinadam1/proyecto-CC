@@ -20,7 +20,7 @@ class Activity(db.Model):
             "ubicacion": self.ubicacion
         }
 
-# Modelo de Participación en Actividades
+
 class ActivityParticipation(db.Model):
     __tablename__ = 'activity_participation'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
