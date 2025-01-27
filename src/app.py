@@ -58,4 +58,3 @@ if __name__ == '__main__':
 
 # 3. Redactar todo
 # 4. Hitos 4 y 5 
-# mirar tests de docker
