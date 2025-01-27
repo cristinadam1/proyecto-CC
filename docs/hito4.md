@@ -62,3 +62,60 @@ La autenticación se hace mediante los secretos `DOCKER_USERNAME` y `DOCKER_PASS
 Una vez autenticado, el flujo de trabajo usa el comando `docker build` para construir el contenedor y el comando `docker push` para subirlo al registro de GitHub Packages. La etiqueta del contenedor incluye tanto el número de versión como la etiqueta latest para facilitar el acceso a la versión más reciente.
 
 Cada vez que se realiza un cambio en el repositorio, este flujo de trabajo se ejecuta automáticamente. Para que cualquier actualización en el código fuente o en la configuración de la aplicación se refleje inmediatamente en la imagen del contenedor publicada.
+
+## Fichero de composición del clúster de contenedores `docker-compose.yml`
+El archivo `docker-compose.yml` se encarga de definir la infraestructura del clúster de contenedores. En este archivo se describen los contenedores que componen el sistema, las redes a las que están conectados y cómo interactúan entre sí. La configuración de este archivo permite que los contenedores se inicien de forma ordenada y que la comunicación entre ellos sea posible. A continuación, explico cada una de las secciones de este archivo.
+
+1. Versión de Docker Compose: primero he definido la versión de Docker Compose que se va a usar, en este caso, `3.8`. 
+2. Servicios: Los servicios que he definido en el archivo son los contenedores que forman el clúster. En este caso, tenemos tres servicios: app, db y test.
+- app: es el contenedor principal, que ejecuta la aplicación Flask. El contenedor se construye usando el Dockerfile del proyecto, que contiene la lógica de la aplicación. El servicio mapea el puerto `5000` del contenedor al puerto `5000` de la máquina anfitriona, lo que permite acceder a la API desde el exterior. Además, este servicio depende de los contenedores db y test.
+
+        app:
+            build:
+            context: .
+            dockerfile: Dockerfile
+            ports:
+            - "5000:5000"
+            networks:
+            - app-network
+            depends_on:
+            - db
+            - test
+            environment:
+            - FLASK_APP=src/app.py
+            - FLASK_ENV=development
+
+- db: en este servicio uso la imagen de `sqlite:latest` para crear un contenedor con la base de datos. Los datos de la base de datos se almacenan de manera persistente usando un volumen `db-data`. Esto garantiza que los datos no se pierdan incluso si el contenedor se reinicia. Este servicio está en la misma red app-network que el contenedor app, lo que permite que la aplicación acceda a la base de datos.
+
+        db:
+            image: sqlite:latest
+            volumes:
+            - db-data:/data
+            networks:
+            - app-network
+            environment:
+            - DB_PATH=/data/database.db
+
+3. test: el contenedor de pruebas usa el mismo Dockerfile que el contenedor app y ejecuta los tests definidos en el proyecto. Este servicio depende de los contenedores `app` y `db` para asegurarse de que la aplicación esté lista y la base de datos esté disponible antes de ejecutar las pruebas. Uso el comando `pytest` para ejecutar las pruebas automáticamente al iniciar el contenedor.
+
+        test:
+            build:
+            context: .
+            dockerfile: Dockerfile
+            networks:
+            - app-network
+            depends_on:
+            - app
+            - db
+            command: pytest
+
+4. Redes: he definido una red que se llama `app-network`, a la cual están conectados todos los contenedores del clúster. La red bridge es la opción predeterminada y asegura que los contenedores puedan comunicarse entre sí de forma segura.
+
+        networks:
+        app-network:
+            driver: bridge
+
+5. Volúmenes: uso el volumen `db-data` para almacenar de manera persistente los datos de la base de datos en el contenedor db. Al usar un volumen, los datos no se perderán si el contenedor se detiene o reinicia.
+
+        volumes:
+        db-data:
