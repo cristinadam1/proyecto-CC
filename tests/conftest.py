@@ -17,3 +17,7 @@ def clean_db(client):
         db.drop_all()  #Elimina todas las tablas de la base de datos
         db.create_all()  #Vuelve a crear las tablas vacías
 
+# def test_health_check(client):
+#     response = client.get('/health')
+#     assert response.status_code == 200
+#     assert response.json == {"status": "ok"}
