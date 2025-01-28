@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
+import sys
+sys.path.append('src')
 from services.resident_service import resident_app
 from services.wellness_service import wellness_app
 from services.medication_service import medication_app
@@ -8,6 +10,10 @@ from services.prescription_service import prescription_app
 from services.activity_service import activity_app
 from db import db
 import logging
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -53,8 +59,8 @@ def index():
 # Crear la base de datos y ejecutar el servidor
 if __name__ == '__main__':
     create_db()
-    #app.run(debug=True, port=5000)
-    app.run(host='0.0.0.0', port=5000)
+    #app.run(host='0.0.0.0', port=5000)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 # 3. Redactar todo
 # 4. Hito 5 

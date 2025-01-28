@@ -17,4 +17,5 @@ COPY src/ /app/src/
 EXPOSE 5000
 
 # Comando para ejecutar la aplicación
-CMD ["python", "src/app.py"]
+#CMD ["python", "src/app.py"]
+CMD ["gunicorn", "src.app:app", "--bind", "0.0.0.0:5000"]
