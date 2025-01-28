@@ -67,6 +67,7 @@ Cada vez que se realiza un cambio en el repositorio, este flujo de trabajo se ej
 El archivo `docker-compose.yml` se encarga de definir la infraestructura del clúster de contenedores. En este archivo se describen los contenedores que componen el sistema, las redes a las que están conectados y cómo interactúan entre sí. La configuración de este archivo permite que los contenedores se inicien de forma ordenada y que la comunicación entre ellos sea posible. A continuación, explico cada una de las secciones de este archivo.
 
 1. Versión de Docker Compose: primero he definido la versión de Docker Compose que se va a usar, en este caso, `3.8`. 
+
 2. Servicios: Los servicios que he definido en el archivo son los contenedores que forman el clúster. En este caso, tenemos tres servicios: app, db y test.
 - app: es el contenedor principal, que ejecuta la aplicación Flask. El contenedor se construye usando el Dockerfile del proyecto, que contiene la lógica de la aplicación. El servicio mapea el puerto `5000` del contenedor al puerto `5000` de la máquina anfitriona, lo que permite acceder a la API desde el exterior. Además, este servicio depende de los contenedores db y test.
 
