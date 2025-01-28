@@ -19,10 +19,15 @@ En primer lugar, he ajustado el archivo `app.py` para permitir que la aplicació
             app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 Esto permite que la aplicación sea accesible a través de la URL proporcionada por el PaaS, evitando que se ejecute únicamente en el entorno local.
+
 2. Creación del archivo `Procfile`:
 Para que el PaaS reconozca cómo iniciar la aplicación, he creado el archivo `Procfile` en el directorio raíz del proyecto. Este archivo lo usan las plataformas como Render o Heroku para determinar cómo iniciar la aplicación. 
 
         web: gunicorn src.app:app
+
+3. Revisión y actualización del archivo `requirements.txt`
+He verificado que el archivo `requirements.txt` estuviese actualizado con todas las dependencias necesarias para ejecutar la aplicación en producción. Posteriormente me he dado cuenta de que faltaba una.
+He añadido `gunicorn`, que es el servidor de aplicaciones recomendado para entornos de producción en plataformas como Render. Sustituye al servidor de desarrollo de Flask para manejar más eficientemente las solicitudes en producción.
 
 ### Configuración en Render
 La primera herramienta que he usado ha sido GitHub, que como he mencionado antes ofrece integración directa con el PaaS Render, lo que me permite hacer el despliegue de manera automatizada. Esta integración facilita que, con un solo comando o un "push" a la rama principal, la aplicación se despliegue automáticamente en el servidor de Render.

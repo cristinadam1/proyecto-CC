@@ -9,7 +9,8 @@ from services.wellness_service import wellness_app
 from services.medication_service import medication_app
 from services.prescription_service import prescription_app
 from services.activity_service import activity_app
-#from services.swagger_config import configure_swagger
+from flasgger import Swagger
+
 from db import db
 import logging
 from dotenv import load_dotenv
@@ -17,7 +18,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-#configure_swagger(app)
+
+Swagger(app)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -64,5 +66,3 @@ if __name__ == '__main__':
     #app.run(host='0.0.0.0', port=5000)
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
-# 3. Redactar todo
-# 6. Añadir tests para que la cobertura sea del 100%

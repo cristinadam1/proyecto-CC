@@ -2,14 +2,13 @@ import logging
 from flask import Blueprint, jsonify, request
 from datetime import datetime
 from db import db
-from models.activity import Activity#, ActivityParticipation
+from models.activity import Activity
 
 activity_app = Blueprint('activities', __name__)
 
 #### POST ####
 @activity_app.route('/activities', methods=['POST'])
 def create_activity():
-    """Crear una nueva actividad"""
     data = request.get_json()
     nombre = data.get('nombre')
     descripcion = data.get('descripcion')
@@ -44,7 +43,6 @@ def get_activities():
 #### GET (por ID) ####
 @activity_app.route('/activities/<int:activity_id>', methods=['GET'])
 def get_activity(activity_id):
-    #actividad = Activity.query.get(activity_id)
     actividad = db.session.get(Activity, activity_id)
     if not actividad:
         logging.error(f"Actividad con ID {activity_id} no encontrada.")
@@ -92,7 +90,6 @@ def update_activity(activity_id):
 #### DELETE ####
 @activity_app.route('/activities/<int:activity_id>', methods=['DELETE'])
 def delete_activity(activity_id):
-    #actividad = Activity.query.get(activity_id)
     actividad = db.session.get(Activity, activity_id)
     if not actividad:
         logging.error(f"Actividad con ID {activity_id} no encontrada para eliminación.")

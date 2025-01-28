@@ -5,3 +5,6 @@ Durante el proceso de configuración, he tenido problemas relacionados con la fa
 
 
 El problema lo he resuelto añadiendo el paquete a `requirements.txt`, haciendo `commit` de los cambios y luego forzando el despliegue manualmente en Render.
+
+#actividad = Activity.query.get(activity_id)
+actividad = db.session.get(Activity, activity_id)
