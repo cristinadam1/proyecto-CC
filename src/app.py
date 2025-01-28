@@ -9,7 +9,9 @@ from services.wellness_service import wellness_app
 from services.medication_service import medication_app
 from services.prescription_service import prescription_app
 from services.activity_service import activity_app
-from flasgger import Swagger
+#from flasgger import Swagger
+from flask import Flask, jsonify
+from flask_swagger_ui import get_swaggerui_blueprint
 
 from db import db
 import logging
@@ -41,9 +43,10 @@ app.config['SQLALCHEMY_ECHO'] = True  # Para depurar las consultas SQL
 
 db.init_app(app)
 
-swagger = Swagger(app, template_file='swagger.yaml')
-
 #swagger = Swagger(app, template_file='swagger.yaml')
+SWAGGER_URL = '/api/docs'
+API_URL = '/static/swagger.json'
+swagger_blueprint = get_swaggerui_blueprint(SWAGGER_URL, API_URL)
 
 app.register_blueprint(resident_app)
 app.register_blueprint(medication_app)
