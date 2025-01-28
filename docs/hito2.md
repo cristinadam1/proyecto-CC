@@ -129,12 +129,6 @@ Los tests que he implementado se encuentran en el directorio tests. Para estos t
 
     make test
 
-Ver exactamente las lineas que no estan cubiertas
-
-    coverage report -m
-
-
-
 - (Análisis del dominio del problema) ["EA.md"]  
 - (Arquitectura)["arquitectura.md"]
     
