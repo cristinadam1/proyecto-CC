@@ -5,6 +5,7 @@ En primer lugar he preparado mi entorno de desarrollo, clonando el repositorio d
 ### 1. Clonación del repositorio
     git clone https://github.com/usuario/proyecto-CC.git
     cd proyecto-CC
+    
 ### 2. Creación y activación del entorno virtual
 Para crear el entorno virtual, he ejecutado el siguiente comando en la terminal
 
@@ -127,7 +128,7 @@ Al hacer un push a mi repositorio en GitHub, la integración continua se activa 
 ## Crear Tests de Lógica de Negocio
 Los tests que he implementado se encuentran en el directorio tests. Para estos tests, he creado el archivo logic.py que contiene la lógica de negocio y el archivo test_logic.py para realizar las pruebas. Para ejecutarlos, uso el siguiente comando:
 
-    make test
+    make test 
 
 - (Análisis del dominio del problema) ["EA.md"]  
 - (Arquitectura)["arquitectura.md"]
