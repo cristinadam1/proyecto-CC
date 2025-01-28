@@ -57379,3 +57379,72 @@ WHERE residents.id = ?
 2025-01-28 19:09:07,787 - INFO - [generated in 0.00128s] (2,)
 2025-01-28 19:09:07,789 - INFO - Residente Susana Gomez agregado con ID 2.
 2025-01-28 19:09:07,790 - INFO - ROLLBACK
+2025-01-28 21:54:49,778 - INFO - BEGIN (implicit)
+2025-01-28 21:54:49,778 - INFO - PRAGMA main.table_info("residents")
+2025-01-28 21:54:49,778 - INFO - [raw sql] ()
+2025-01-28 21:54:49,779 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-28 21:54:49,779 - INFO - [raw sql] ()
+2025-01-28 21:54:49,779 - INFO - PRAGMA main.table_info("medications")
+2025-01-28 21:54:49,779 - INFO - [raw sql] ()
+2025-01-28 21:54:49,779 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-28 21:54:49,779 - INFO - [raw sql] ()
+2025-01-28 21:54:49,779 - INFO - PRAGMA main.table_info("activities")
+2025-01-28 21:54:49,779 - INFO - [raw sql] ()
+2025-01-28 21:54:49,779 - INFO - COMMIT
+2025-01-28 21:54:50,008 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-28 21:54:50,009 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-28 22:10:10,995 - INFO - BEGIN (implicit)
+2025-01-28 22:10:10,995 - INFO - PRAGMA main.table_info("residents")
+2025-01-28 22:10:10,995 - INFO - [raw sql] ()
+2025-01-28 22:10:10,995 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-28 22:10:10,995 - INFO - [raw sql] ()
+2025-01-28 22:10:10,996 - INFO - PRAGMA main.table_info("medications")
+2025-01-28 22:10:10,996 - INFO - [raw sql] ()
+2025-01-28 22:10:10,996 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-28 22:10:10,996 - INFO - [raw sql] ()
+2025-01-28 22:10:10,996 - INFO - PRAGMA main.table_info("activities")
+2025-01-28 22:10:10,996 - INFO - [raw sql] ()
+2025-01-28 22:10:10,996 - INFO - COMMIT
+2025-01-28 22:10:11,134 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-28 22:10:11,134 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-28 22:33:36,578 - INFO - BEGIN (implicit)
+2025-01-28 22:33:36,578 - INFO - PRAGMA main.table_info("residents")
+2025-01-28 22:33:36,578 - INFO - [raw sql] ()
+2025-01-28 22:33:36,579 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-28 22:33:36,579 - INFO - [raw sql] ()
+2025-01-28 22:33:36,579 - INFO - PRAGMA main.table_info("medications")
+2025-01-28 22:33:36,579 - INFO - [raw sql] ()
+2025-01-28 22:33:36,579 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-28 22:33:36,579 - INFO - [raw sql] ()
+2025-01-28 22:33:36,579 - INFO - PRAGMA main.table_info("activities")
+2025-01-28 22:33:36,579 - INFO - [raw sql] ()
+2025-01-28 22:33:36,579 - INFO - COMMIT
+2025-01-28 22:34:06,613 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-28 22:34:06,614 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-28 22:34:10,283 - INFO - BEGIN (implicit)
+2025-01-28 22:34:10,286 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications
+2025-01-28 22:34:10,286 - INFO - [generated in 0.00031s] ()
+2025-01-28 22:34:10,288 - INFO - ROLLBACK
+2025-01-28 22:34:10,288 - INFO - 127.0.0.1 - - [28/Jan/2025 22:34:10] "GET /medications HTTP/1.1" 200 -
+2025-01-28 22:34:12,473 - INFO - BEGIN (implicit)
+2025-01-28 22:34:12,477 - INFO - INSERT INTO medications (name, description, available_online) VALUES (?, ?, ?)
+2025-01-28 22:34:12,477 - INFO - [generated in 0.00033s] ('Paracetamol', 'Analgésico y antipirético', 1)
+2025-01-28 22:34:12,487 - INFO - COMMIT
+2025-01-28 22:34:12,491 - INFO - BEGIN (implicit)
+2025-01-28 22:34:12,492 - INFO - SELECT medications.id AS medications_id, medications.name AS medications_name, medications.description AS medications_description, medications.available_online AS medications_available_online 
+FROM medications 
+WHERE medications.id = ?
+2025-01-28 22:34:12,492 - INFO - [generated in 0.00013s] (1,)
+2025-01-28 22:34:12,492 - INFO - Medicación Paracetamol agregada con ID 1.
+2025-01-28 22:34:12,492 - INFO - ROLLBACK
+2025-01-28 22:34:12,492 - INFO - 127.0.0.1 - - [28/Jan/2025 22:34:12] "[35m[1mPOST /medications HTTP/1.1[0m" 201 -

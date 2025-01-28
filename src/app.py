@@ -2,20 +2,22 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
 import sys
+
 sys.path.append('src')
 from services.resident_service import resident_app
 from services.wellness_service import wellness_app
 from services.medication_service import medication_app
 from services.prescription_service import prescription_app
 from services.activity_service import activity_app
+#from services.swagger_config import configure_swagger
 from db import db
 import logging
 from dotenv import load_dotenv
 
-# Cargar variables de entorno
 load_dotenv()
 
 app = Flask(__name__)
+#configure_swagger(app)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -37,21 +39,21 @@ app.config['SQLALCHEMY_ECHO'] = True  # Para depurar las consultas SQL
 
 db.init_app(app)
 
-# Registrar los blueprints
+#swagger = Swagger(app, template_file='swagger.yaml')
+
 app.register_blueprint(resident_app)
 app.register_blueprint(medication_app)
 app.register_blueprint(prescription_app)
 app.register_blueprint(activity_app)
 app.register_blueprint(wellness_app)
 
-# Crear las tablas en la base de datos
+# Tablas en la base de datos
 def create_db():
     with app.app_context():
         print("Creando las tablas en la base de datos...")
         db.create_all()  # Solo crea las tablas en la base de datos principal
         print("Tablas creadas correctamente.")
 
-# Ruta principal
 @app.route('/')
 def index():
     return "Servidor Flask funcionando correctamente con todos los microservicios."
@@ -63,6 +65,4 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 # 3. Redactar todo
-# 4. Hito 5 
-# 5. Terminar de probar docker
 # 6. Añadir tests para que la cobertura sea del 100%
