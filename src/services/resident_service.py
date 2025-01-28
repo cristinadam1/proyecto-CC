@@ -13,9 +13,10 @@ def get_residents():
     return jsonify([resident.to_dict() for resident in residents]), 200
 
 #### GET (por ID) ####
-@resident_app.route('/residents/<int:prescription_id>', methods=['GET'])
+@resident_app.route('/residents/<int:resident_id>', methods=['GET'])
 def get_resident(resident_id):
-    resident = Resident.query.get(resident_id)
+    #resident = Resident.query.get(resident_id)
+    resident = db.session.get(Resident, resident_id)
 
     if not resident:
         logging.error(f"Residente con ID {resident_id} no encontrado.")
@@ -49,7 +50,8 @@ def add_resident():
 def update_resident(resident_id):
     """Actualizar un residente"""
     data = request.get_json()
-    resident = Resident.query.get(resident_id)
+    #resident = Resident.query.get(resident_id)
+    resident = db.session.get(Resident, resident_id)
 
     if not resident:
         logging.error(f"Residente con ID {resident_id} no encontrado.")
@@ -70,7 +72,8 @@ def update_resident(resident_id):
 @resident_app.route('/residents/<int:resident_id>', methods=['DELETE'])
 def remove_resident(resident_id):
     """Eliminar un residente"""
-    resident = Resident.query.get(resident_id)
+    #resident = Resident.query.get(resident_id)
+    resident = db.session.get(Resident, resident_id)
 
     if not resident:
         logging.error(f"Residente con ID {resident_id} no encontrado.")
@@ -78,5 +81,9 @@ def remove_resident(resident_id):
 
     db.session.delete(resident)
     db.session.commit()
+
     logging.info(f"Residente con ID {resident_id} eliminado.")
     return jsonify({"message": "Residente eliminado"}), 200
+
+    
+    

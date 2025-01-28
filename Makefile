@@ -4,7 +4,7 @@ install:
 
 # Tarea para ejecutar los tests del proyecto
 test:
-	pytest --cov=proyecto_cc tests/
+	pytest --cov=src tests/
 
 # Tarea para verificar el estilo del código
 lint:

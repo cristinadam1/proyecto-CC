@@ -23,7 +23,7 @@ def add_medication():
     if not name or not description or available_online is None:
         logging.error("Faltan datos en la petición.")
         return jsonify({"error": "Faltan datos"}), 400
-
+    
     new_medication = Medication(name=name, description=description, available_online=available_online)
     db.session.add(new_medication)
     db.session.commit()
@@ -71,7 +71,8 @@ def remove_medication(medication_id):
 @medication_app.route('/medications/<int:medication_id>', methods=['GET'])
 def get_medication(medication_id):
     """Obtener un medicamento específico por su ID."""
-    medication = Medication.query.get(medication_id)
+    #medication = Medication.query.get(medication_id)
+    medication = db.session.get(Medication, medication_id)
 
     if not medication:
         logging.error(f"Medicación con ID {medication_id} no encontrada.")

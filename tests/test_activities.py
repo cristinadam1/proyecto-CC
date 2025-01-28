@@ -69,3 +69,73 @@ def test_get_activities(client):
 
     assert len(response_data) == 2
 
+def test_update_activity(client):
+    """Prueba para actualizar una actividad existente."""
+    # Primero, creamos una actividad
+    data = {
+        "nombre": "Yoga Matutino",
+        "descripcion": "Sesión de yoga al aire libre",
+        "fecha_hora": "2025-01-26T08:00:00",
+        "duracion": 60,
+        "ubicacion": "Patio central"
+    }
+    response = client.post('/activities', data=json.dumps(data), content_type='application/json')
+    activity_id = response.get_json()["id"]
+
+    # Ahora, intentamos actualizar la actividad
+    updated_data = {
+        "nombre": "Yoga Nocturno",
+        "descripcion": "Sesión de yoga para relajación",
+        "fecha_hora": "2025-01-26T20:00:00",
+        "duracion": 90,
+        "ubicacion": "Patio trasero"
+    }
+    response = client.put(f'/activities/{activity_id}', data=json.dumps(updated_data), content_type='application/json')
+    assert response.status_code == 200
+    response_data = response.get_json()
+    assert response_data["nombre"] == "Yoga Nocturno"
+    assert response_data["descripcion"] == "Sesión de yoga para relajación"
+    assert response_data["fecha_hora"] == "2025-01-26T20:00:00"
+
+def test_update_activity_not_found(client):
+    """Prueba para actualizar una actividad que no existe."""
+    updated_data = {
+        "nombre": "Yoga Nocturno",
+        "descripcion": "Sesión de yoga para relajación",
+        "fecha_hora": "2025-01-26T20:00:00",
+        "duracion": 90,
+        "ubicacion": "Patio trasero"
+    }
+    response = client.put('/activities/9999', data=json.dumps(updated_data), content_type='application/json')
+    assert response.status_code == 404
+    assert response.get_json()["error"] == "Actividad no encontrada"
+
+def test_delete_activity(client):
+    """Prueba para eliminar una actividad existente."""
+    # Primero, creamos una actividad
+    data = {
+        "nombre": "Yoga Matutino",
+        "descripcion": "Sesión de yoga al aire libre",
+        "fecha_hora": "2025-01-26T08:00:00",
+        "duracion": 60,
+        "ubicacion": "Patio central"
+    }
+    response = client.post('/activities', data=json.dumps(data), content_type='application/json')
+    activity_id = response.get_json()["id"]
+
+    # Ahora, intentamos eliminar la actividad
+    response = client.delete(f'/activities/{activity_id}')
+    assert response.status_code == 200
+    assert response.get_json()["message"] == "Actividad eliminada exitosamente"
+
+    # Verificamos que la actividad ya no existe
+    response = client.get(f'/activities/{activity_id}')
+    assert response.status_code == 404
+    assert response.get_json()["error"] == "Actividad no encontrada"
+
+def test_delete_activity_not_found(client):
+    """Prueba para eliminar una actividad que no existe."""
+    response = client.delete('/activities/9999')  
+    assert response.status_code == 404
+    assert response.get_json()["error"] == "Actividad no encontrada"
+

@@ -114,7 +114,7 @@ Luego, he creado el archivo .github/workflows/ci.yml con la configuración del f
     
         - name: Run tests
           run: |
-            pytest --cov=proyecto_cc tests/
+            pytest --cov=src tests/
 
 ### 3. Actualización
 Después de crear la configuración de GitHub Actions, hago un commit para subir la estructura y la configuración al repositorio
@@ -128,6 +128,12 @@ Al hacer un push a mi repositorio en GitHub, la integración continua se activa 
 Los tests que he implementado se encuentran en el directorio tests. Para estos tests, he creado el archivo logic.py que contiene la lógica de negocio y el archivo test_logic.py para realizar las pruebas. Para ejecutarlos, uso el siguiente comando:
 
     make test
+
+Ver exactamente las lineas que no estan cubiertas
+
+    coverage report -m
+
+
 
 - (Análisis del dominio del problema) ["EA.md"]  
 - (Arquitectura)["arquitectura.md"]

@@ -14,7 +14,7 @@ class Prescription(db.Model):
 
     resident = db.relationship('Resident', backref=db.backref('prescriptions', lazy=True))
     medication = db.relationship('Medication', backref=db.backref('prescriptions', lazy=True))
-
+    
     def to_dict(self):
         return {
             "id": self.id,
@@ -27,3 +27,5 @@ class Prescription(db.Model):
             "resident_name": self.resident.name,
             "medication_name": self.medication.name
         }
+    
+    
