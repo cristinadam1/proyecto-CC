@@ -1,0 +1,134 @@
+swagger: "2.0"
+info:
+  title: "API de Actividades"
+  version: "1.0.0"
+  description: "Documentación de la API para gestionar actividades."
+
+host: "localhost:5000"
+schemes:
+  - "http"
+
+paths:
+  /activities:
+    get:
+      summary: "Obtener todas las actividades"
+      description: "Devuelve una lista de todas las actividades."
+      responses:
+        200:
+          description: "Lista de actividades"
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Activity"
+    post:
+      summary: "Crear una nueva actividad"
+      description: "Crea una nueva actividad con los datos proporcionados."
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ActivityInput"
+      responses:
+        201:
+          description: "Actividad creada exitosamente"
+          schema:
+            $ref: "#/definitions/Activity"
+
+  /activities/{activity_id}:
+    get:
+      summary: "Obtener una actividad por ID"
+      description: "Devuelve una actividad específica según su ID."
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          type: integer
+          description: "ID de la actividad"
+      responses:
+        200:
+          description: "Actividad encontrada"
+          schema:
+            $ref: "#/definitions/Activity"
+        404:
+          description: "Actividad no encontrada"
+
+    put:
+      summary: "Actualizar una actividad"
+      description: "Actualiza los datos de una actividad específica."
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          type: integer
+          description: "ID de la actividad"
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: "#/definitions/ActivityInput"
+      responses:
+        200:
+          description: "Actividad actualizada exitosamente"
+          schema:
+            $ref: "#/definitions/Activity"
+        404:
+          description: "Actividad no encontrada"
+
+    delete:
+      summary: "Eliminar una actividad"
+      description: "Elimina una actividad específica según su ID."
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          type: integer
+          description: "ID de la actividad"
+      responses:
+        200:
+          description: "Actividad eliminada exitosamente"
+        404:
+          description: "Actividad no encontrada"
+
+definitions:
+  Activity:
+    type: object
+    properties:
+      id:
+        type: integer
+        example: 1
+      nombre:
+        type: string
+        example: "Clase de yoga"
+      descripcion:
+        type: string
+        example: "Clase de yoga al aire libre"
+      fecha_hora:
+        type: string
+        format: date-time
+        example: "2025-01-28T10:00:00"
+      duracion:
+        type: integer
+        example: 60
+      ubicacion:
+        type: string
+        example: "Parque central"
+  ActivityInput:
+    type: object
+    properties:
+      nombre:
+        type: string
+        example: "Clase de yoga"
+      descripcion:
+        type: string
+        example: "Clase de yoga al aire libre"
+      fecha_hora:
+        type: string
+        format: date-time
+        example: "2025-01-28T10:00:00"
+      duracion:
+        type: integer
+        example: 60
+      ubicacion:
+        type: string
+        example: "Parque central"

@@ -19,7 +19,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-Swagger(app)
+#Swagger(app)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,6 +40,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True  # Para depurar las consultas SQL
 
 db.init_app(app)
+
+swagger = Swagger(app, template_file='swagger.yaml')
 
 #swagger = Swagger(app, template_file='swagger.yaml')
 
