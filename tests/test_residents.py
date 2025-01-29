@@ -5,7 +5,6 @@ from models.resident import Resident
 from db import db
 
 def test_add_resident(client):
-    """Prueba para agregar un residente"""
     data = {"name": "Juan Pérez", "age": 70, "contact": "juan@example.com"}
     response = client.post('/residents', data=json.dumps(data), content_type='application/json')
 
@@ -31,7 +30,6 @@ def test_get_residents(client):
 
 
 def test_add_resident_missing_data(client):
-    # Intentar agregar un residente sin algunos datos
     data = {"name": "Laura", "age": 50}  # Falta el campo "contact"
     response = client.post('/residents', data=json.dumps(data), content_type='application/json')
 
@@ -39,7 +37,6 @@ def test_add_resident_missing_data(client):
     assert response.json["error"] == "Faltan datos"
 
 def test_delete_resident(client):
-    """Prueba para eliminar un residente."""
     # Crear un residente primero
     data = {"name": "Juan Pérez", "age": 70, "contact": "juan@example.com"}
     response = client.post('/residents', data=json.dumps(data), content_type='application/json')
@@ -57,7 +54,6 @@ def test_delete_resident(client):
     assert response.get_json()["error"] == "Residente no encontrado"
 
 def test_update_resident(client):
-    """Prueba para actualizar los datos de un residente."""
     # Crear un residente
     data = {"name": "Juan Pérez", "age": 70, "contact": "juan@example.com"}
     response = client.post('/residents', data=json.dumps(data), content_type='application/json')
