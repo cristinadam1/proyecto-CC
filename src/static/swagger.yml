@@ -39,10 +39,13 @@ paths:
               properties:
                 name:
                   type: string
+                  default: "Sonia Sanchez Ruiz"
                 age:
                   type: integer
+                  default: 75
                 contact:
                   type: string
+                  default: "609 786 345"
       responses:
         201:
           description: Residente agregado exitosamente
@@ -83,10 +86,13 @@ paths:
               properties:
                 name:
                   type: string
+                  default: "Sonia Sanchez Ruiz"
                 age:
                   type: integer
+                  default: "76"
                 contact:
                   type: string
+                  default: "609 666 231"
       responses:
         200:
           description: Residente actualizado
@@ -128,15 +134,20 @@ paths:
               properties:
                 nombre:
                   type: string
+                  default: "Clase de Yoga"
                 descripcion:
                   type: string
+                  default: "Ayuda a relajarse y empezar el dia motivado"
                 fecha_hora:
                   type: string
                   format: date-time
+                  default: "2025-01-29T16:00:00Z"
                 duracion:
                   type: integer
+                  default: 40
                 ubicacion:
                   type: string
+                  default: "Las Gabias"
       responses:
         201:
           description: Actividad creada exitosamente
@@ -228,10 +239,13 @@ paths:
               properties:
                 name:
                   type: string
+                  default: "Ibuprofeno"
                 description:
                   type: string
+                  default: "Aliviar el dolor"
                 available_online:
                   type: boolean
+                  defalult: true
       responses:
         201:
           description: Medicación creada exitosamente
@@ -272,10 +286,13 @@ paths:
               properties:
                 name:
                   type: string
+                  defalut: "Ibuprofeno"
                 description:
                   type: string
+                  default: "Aliviar el dolor"
                 available_online:
                   type: boolean
+                  default: false
       responses:
         200:
           description: Medicación actualizada
@@ -318,18 +335,24 @@ paths:
               properties:
                 resident_id:
                   type: integer
+                  defalult: 1
                 medication_id:
                   type: integer
+                  default: 1
                 dosage:
                   type: string
+                  defalult: "500mg"
                 frequency:
                   type: string
+                  defalut: "Cada 8 horas"
                 start_date:
                   type: string
                   format: date
+                  defalut: 2025-01-30
                 end_date:
                   type: string
                   format: date
+                  defalut: 2025-02-10
       responses:
         201:
           description: Prescripción agregada exitosamente
@@ -370,6 +393,7 @@ paths:
               properties:
                 dosage:
                   type: string
+                  default: "500 mg"
                 frequency:
                   type: string
                 start_date:
@@ -378,6 +402,7 @@ paths:
                 end_date:
                   type: string
                   format: date
+
       responses:
         200:
           description: Prescripción actualizada
@@ -420,15 +445,20 @@ paths:
               properties:
                 residente_id:
                   type: integer
+                  defalut: 1
                 fecha:
                   type: string
                   format: date
+                  defalut: 2025-01-29
                 estado_animo:
                   type: string
+                  defalut: "contento"
                 energia:
                   type: integer
+                  defalut: 8
                 notas:
                   type: string
+                  defalut: "se encuentra cansado"
       responses:
         201:
           description: Registro de bienestar creado exitosamente
