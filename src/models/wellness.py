@@ -6,7 +6,7 @@ class WellnessTracking(db.Model):
     residente_id = db.Column(db.Integer, nullable=False)  # Relación con residente
     fecha = db.Column(db.Date, nullable=False)
     estado_animo = db.Column(db.String(50), nullable=False)
-    energia = db.Column(db.Integer, nullable=False)  # Escala del 1 al 10
+    energia = db.Column(db.Integer, nullable=False)  # Del 1 al 10
     notas = db.Column(db.String(255), nullable=True)
 
     def to_dict(self):
