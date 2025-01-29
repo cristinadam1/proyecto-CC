@@ -1,0 +1,451 @@
+openapi: 3.0.0
+info:
+  title: SeniorCare
+  description: API para gestionar residentes, prescripciones, actividades, medicación y bienestar.
+  version: 1.0.0
+
+tags:
+  - name: "Residentes"
+    description: "Gestión de los residentes"
+  - name: "Actividades"
+    description: "Gestión de actividades"
+  - name: "Medicación"
+    description: "Gestión de medicamentos"
+  - name: "Prescripciones"
+    description: "Gestión de prescripciones médicas"
+  - name: "Bienestar"
+    description: "Registro del bienestar de los residentes"
+
+paths:
+  /residents:
+    get:
+      summary: Obtener todos los residentes
+      tags:
+        - "Residentes"
+      responses:
+        200:
+          description: Lista de residentes
+
+    post:
+      summary: Agregar un nuevo residente
+      tags:
+        - "Residentes"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                age:
+                  type: integer
+                contact:
+                  type: string
+      responses:
+        201:
+          description: Residente agregado exitosamente
+
+  /residents/{resident_id}:
+    get:
+      summary: Obtener un residente por ID
+      tags:
+        - "Residentes"
+      parameters:
+        - name: resident_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Información del residente
+        404:
+          description: Residente no encontrado
+
+    put:
+      summary: Actualizar un residente
+      tags:
+        - "Residentes"
+      parameters:
+        - name: resident_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                age:
+                  type: integer
+                contact:
+                  type: string
+      responses:
+        200:
+          description: Residente actualizado
+
+    delete:
+      summary: Eliminar un residente
+      tags:
+        - "Residentes"
+      parameters:
+        - name: resident_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Residente eliminado
+        404:
+          description: Residente no encontrado
+  /activities:
+    get:
+      summary: Obtener todas las actividades
+      tags:
+        - "Actividades"
+      responses:
+        200:
+          description: Lista de actividades
+
+    post:
+      summary: Agregar una nueva actividad
+      tags:
+        - "Actividades"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                descripcion:
+                  type: string
+                fecha_hora:
+                  type: string
+                  format: date-time
+                duracion:
+                  type: integer
+                ubicacion:
+                  type: string
+      responses:
+        201:
+          description: Actividad creada exitosamente
+
+  /activities/{activity_id}:
+    get:
+      summary: Obtener una actividad por ID
+      tags:
+        - "Actividades"
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Información de la actividad
+        404:
+          description: Actividad no encontrada
+
+    put:
+      summary: Actualizar una actividad
+      tags:
+        - "Actividades"
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                descripcion:
+                  type: string
+                fecha_hora:
+                  type: string
+                  format: date-time
+                duracion:
+                  type: integer
+                ubicacion:
+                  type: string
+      responses:
+        200:
+          description: Actividad actualizada
+
+    delete:
+      summary: Eliminar una actividad
+      tags:
+        - "Actividades"
+      parameters:
+        - name: activity_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Actividad eliminada
+        404:
+          description: Actividad no encontrada
+
+  /medications:
+    get:
+      summary: Obtener todas las medicaciones
+      tags:
+        - "Medicación"
+      responses:
+        200:
+          description: Lista de medicamentos
+
+    post:
+      summary: Agregar una nueva medicación
+      tags:
+        - "Medicación"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                available_online:
+                  type: boolean
+      responses:
+        201:
+          description: Medicación creada exitosamente
+
+  /medications/{medication_id}:
+    get:
+      summary: Obtener un medicamento por ID
+      tags:
+        - "Medicación"
+      parameters:
+        - name: medication_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Información del medicamento
+        404:
+          description: Medicación no encontrada
+
+    put:
+      summary: Actualizar un medicamento
+      tags:
+        - "Medicación"
+      parameters:
+        - name: medication_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                available_online:
+                  type: boolean
+      responses:
+        200:
+          description: Medicación actualizada
+
+    delete:
+      summary: Eliminar un medicamento
+      tags:
+        - "Medicación"
+      parameters:
+        - name: medication_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Medicación eliminada
+        404:
+          description: Medicación no encontrada
+  
+  /prescriptions:
+    get:
+      summary: Obtener todas las prescripciones
+      tags:
+        - "Prescripciones"
+      responses:
+        200:
+          description: Lista de prescripciones
+
+    post:
+      summary: Agregar una nueva prescripción
+      tags:
+        - "Prescripciones"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                resident_id:
+                  type: integer
+                medication_id:
+                  type: integer
+                dosage:
+                  type: string
+                frequency:
+                  type: string
+                start_date:
+                  type: string
+                  format: date
+                end_date:
+                  type: string
+                  format: date
+      responses:
+        201:
+          description: Prescripción agregada exitosamente
+
+  /prescription/{prescription_id}:
+    get:
+      summary: Obtener una prescripción por ID
+      tags:
+        - "Prescripciones"
+      parameters:
+        - name: prescription_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Información de la prescripción
+        404:
+          description: Prescripción no encontrada
+
+    put:
+      summary: Actualizar una prescripción
+      tags:
+        - "Prescripciones"
+      parameters:
+        - name: prescription_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dosage:
+                  type: string
+                frequency:
+                  type: string
+                start_date:
+                  type: string
+                  format: date
+                end_date:
+                  type: string
+                  format: date
+      responses:
+        200:
+          description: Prescripción actualizada
+
+    delete:
+      summary: Eliminar una prescripción
+      tags:
+        - "Prescripciones"
+      parameters:
+        - name: prescription_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Prescripción eliminada
+        404:
+          description: Prescripción no encontrada
+
+  /wellness:
+    get:
+      summary: Obtener todos los registros de bienestar
+      tags:
+        - "Bienestar"
+      responses:
+        200:
+          description: Lista de registros de bienestar
+
+    post:
+      summary: Registrar un nuevo estado de bienestar
+      tags:
+        - "Bienestar"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                residente_id:
+                  type: integer
+                fecha:
+                  type: string
+                  format: date
+                estado_animo:
+                  type: string
+                energia:
+                  type: integer
+                notas:
+                  type: string
+      responses:
+        201:
+          description: Registro de bienestar creado exitosamente
+
+  /wellness/{resident_id}:
+    delete:
+      summary: Eliminar registros de bienestar de un residente
+      tags:
+        - "Bienestar"
+      parameters:
+        - name: resident_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Wellness eliminado
+        404:
+          description: Residente no encontrado
