@@ -45,7 +45,7 @@ db.init_app(app)
 
 #swagger = Swagger(app, template_file='swagger.yaml')
 SWAGGER_URL = '/api/docs'
-API_URL = '/static/swagger.json'
+API_URL = '/src/swagger.json'
 swagger_blueprint = get_swaggerui_blueprint(SWAGGER_URL, API_URL)
 
 app.register_blueprint(resident_app)
