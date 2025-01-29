@@ -4,7 +4,6 @@ from models.wellness import WellnessTracking
 from db import db
 
 def test_register_wellness(client):
-    """Prueba para registrar un nuevo seguimiento de bienestar."""
     data = {
         "residente_id": 1,
         "fecha": "2025-01-01",
@@ -22,7 +21,6 @@ def test_register_wellness(client):
     assert response_data["notas"] == "Todo bien."
 
 def test_register_wellness_missing_fields(client):
-    """Prueba para registrar un seguimiento con campos faltantes."""
     data = {
         "residente_id": 1,
         "fecha": "2025-01-01"
@@ -35,7 +33,6 @@ def test_register_wellness_missing_fields(client):
     assert "error" in response_data
 
 def test_get_wellness_records(client):
-    """Prueba para obtener todos los registros de bienestar."""
     with client.application.app_context():
         registro1 = WellnessTracking(
             residente_id=1,
