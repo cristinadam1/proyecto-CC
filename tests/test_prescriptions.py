@@ -5,7 +5,6 @@ from models.prescription import Prescription
 from db import db
 
 def test_add_prescription(client):
-    """Prueba para agregar una prescripción"""
     data = {
         "resident_id": 1,
         "medication_id": 2,
@@ -34,16 +33,15 @@ def test_add_prescription_invalid_dates(client):
         "medication_id": 2,
         "dosage": "500mg",
         "frequency": "Cada 8 horas",
-        "start_date": "2025-02-30",  # Fecha inválida (no existe el 30 de febrero)
-        "end_date": "2025-02-31"      # Fecha inválida (no existe el 31 de febrero)
+        "start_date": "2025-02-30",  # no existe el 30 de febrero
+        "end_date": "2025-02-31"      # no existe el 31 de febrero
     }
     response = client.post('/prescriptions', data=json.dumps(data), content_type='application/json')
 
     assert response.status_code == 400
-    assert response.get_json()["error"] == "Fecha de inicio inválida"  # Verifica que el error sea el esperado
+    assert response.get_json()["error"] == "Fecha de inicio inválida"  # Verificar que el error sea el esperado
 
 def test_remove_prescription(client):
-    """Prueba para eliminar una prescripción"""
     # Primero agregamos una prescripción
     data = {
         "resident_id": 1,
@@ -69,20 +67,17 @@ def test_remove_prescription(client):
 
 
 def test_get_prescription_not_found(client):
-    """Prueba para obtener una prescripción que no existe"""
-    response = client.get('/prescription/9999')  # Asumimos que el ID 9999 no existe
+    response = client.get('/prescription/9999')  
     assert response.status_code == 404
     assert response.get_json()["error"] == "Prescripción no encontrada"
 
 
 def test_get_all_prescriptions(client):
-    """Prueba para obtener todas las prescripciones"""
     response = client.get('/prescriptions')
     assert response.status_code == 200
-    assert isinstance(response.get_json(), list)  # Debe devolver una lista
+    assert isinstance(response.get_json(), list)  
 
 def test_update_prescription_not_found(client):
-    """Prueba para actualizar una prescripción que no existe"""
     data = {
         "dosage": "1000mg",
         "frequency": "Cada 12 horas"
@@ -116,38 +111,3 @@ def test_update_prescription_invalid_data(client):
     # Verificamos que el código de estado sea 400 (Bad Request)
     assert response.status_code == 400
     assert response.get_json()["error"] == "El campo 'dosage' no puede estar vacío"
-
-# def test_update_prescription_valid_data(client):
-#     """Prueba para actualizar una prescripción con datos válidos."""
-#     # Crear una prescripción
-#     data = {
-#         "resident_id": 1,
-#         "medication_id": 2,
-#         "dosage": "500mg",
-#         "frequency": "Cada 8 horas",
-#         "start_date": "2025-01-26",
-#         "end_date": "2025-02-02"
-#     }
-#     response = client.post('/prescriptions', data=json.dumps(data), content_type='application/json')
-#     prescription_id = response.get_json()["id"]
-
-#     # Actualizar la prescripción con nuevos datos
-#     update_data = {
-#         "dosage": "750mg",  # Actualizando la dosis
-#         "frequency": "Cada 6 horas",  # Actualizando la frecuencia
-#         "start_date": "2025-02-01",  # Actualizando la fecha de inicio
-#         "end_date": "2025-02-15"  # Actualizando la fecha de fin
-#     }
-#     response = client.put(f'/prescriptions/{prescription_id}', data=json.dumps(update_data), content_type='application/json')
-
-#     assert response.status_code == 200
-#     assert response.get_json()["message"] == "Prescripción actualizada"
-
-#     # Verificar que los datos se han actualizado
-#     response = client.get(f'/prescription/{prescription_id}')
-#     assert response.status_code == 200
-#     prescription = response.get_json()
-#     assert prescription["dosage"] == "750mg"
-#     assert prescription["frequency"] == "Cada 6 horas"
-#     assert prescription["start_date"] == "2025-02-01"
-#     assert prescription["end_date"] == "2025-02-15"
