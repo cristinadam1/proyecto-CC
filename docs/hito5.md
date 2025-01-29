@@ -1,6 +1,6 @@
 # Hito 5
 ## Criterios de selección del PaaS para el despliegue 
-He elegido el PaaS para el despliegue de mi aplicación basándome en varios criterios. El primero de ellos ha sido la facilidad de uso de la plataforma. Es importante que la plataforma elegida sea fácil de configurar y que me permita realizar el despliegue sin complicaciones técnicas. Como parte de este proceso, he buscado una plataforma que ofreciera compatibilidad con GitHub, para poder realizar despliegues automáticos directamente desde el repositorio de mi aplicación. Esta característica es esencial para agilizar el flujo de trabajo y evitar tener que hacer despliegues manuales.
+He elegido Render para el despliegue de mi aplicación basándome en varios criterios. El primero de ellos ha sido la facilidad de uso de la plataforma. Es importante que la plataforma elegida sea fácil de configurar y que me permita realizar el despliegue sin complicaciones técnicas. Como parte de este proceso, he buscado una plataforma que ofreciera compatibilidad con GitHub, para poder realizar despliegues automáticos directamente desde el repositorio de mi aplicación. Esta característica es esencial para agilizar el flujo de trabajo y evitar tener que hacer despliegues manuales.
 
 También he tenido en cuenta la oferta gratuita y precios asequibles de las plataformas. He preferido elegir plataformas que ofrezcan una capa gratuita que cubriera las necesidades básicas del proyecto, pero que también tuvieran opciones de pago escalables en caso de necesitar más recursos más adelante.
 
