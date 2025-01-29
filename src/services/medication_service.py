@@ -55,7 +55,6 @@ def update_medication(medication_id):
 #### DELETE ####
 @medication_app.route('/medications/<int:medication_id>', methods=['DELETE'])
 def remove_medication(medication_id):
-    #medication = Medication.query.get(medication_id)
     medication = db.session.get(Medication, medication_id)
 
     if not medication:
@@ -70,7 +69,6 @@ def remove_medication(medication_id):
 #### GET (por ID) ####
 @medication_app.route('/medications/<int:medication_id>', methods=['GET'])
 def get_medication(medication_id):
-    """Obtener un medicamento específico por su ID."""
     #medication = Medication.query.get(medication_id)
     medication = db.session.get(Medication, medication_id)
 
