@@ -43,16 +43,22 @@ app.config['SQLALCHEMY_ECHO'] = True  # Para depurar las consultas SQL
 
 db.init_app(app)
 
-#swagger = Swagger(app, template_file='swagger.yaml')
-SWAGGER_URL = '/api/docs'
-API_URL = '/src/swagger.json'
-swagger_blueprint = get_swaggerui_blueprint(SWAGGER_URL, API_URL)
-
 app.register_blueprint(resident_app)
 app.register_blueprint(medication_app)
 app.register_blueprint(prescription_app)
 app.register_blueprint(activity_app)
 app.register_blueprint(wellness_app)
+
+# Swagger UI Configuration
+SWAGGER_URL = "/seniorcare"
+API_URL = "/static/swagger.yml"
+
+swagger_ui_blueprint = get_swaggerui_blueprint(
+    SWAGGER_URL, API_URL,
+    config={"app_name": "SeniorCare"}
+)
+
+app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 
 # Tablas en la base de datos
 def create_db():
