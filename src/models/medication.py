@@ -1,7 +1,6 @@
 from db import db
 
 class Medication(db.Model):
-    #__bind_key__ = 'medications'
     __tablename__ = 'medications'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
