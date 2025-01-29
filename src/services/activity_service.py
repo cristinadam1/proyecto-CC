@@ -53,7 +53,6 @@ def get_activity(activity_id):
 #### PUT ####
 @activity_app.route('/activities/<int:activity_id>', methods=['PUT'])
 def update_activity(activity_id):
-    #actividad = Activity.query.get(activity_id)
     actividad = db.session.get(Activity, activity_id)
     if not actividad:
         logging.error(f"Actividad con ID {activity_id} no encontrada para actualización.")
