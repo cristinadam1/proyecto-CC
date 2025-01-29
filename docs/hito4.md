@@ -143,3 +143,4 @@ El tercer contenedor está dedicado a ejecutar las pruebas de la aplicación. Es
 Para que todos estos contenedores puedan comunicarse entre sí, he configurado una red compartida dentro de Docker Compose. De esta manera, los contenedores pueden interactuar sin problemas, como es necesario para que la aplicación y la base de datos funcionen correctamente.
 
 ![captura](img/c8.png)
+

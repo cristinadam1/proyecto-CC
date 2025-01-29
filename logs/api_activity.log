@@ -61922,3 +61922,598 @@ FROM residents
  * Running on http://127.0.0.1:5001
  * Running on http://192.168.0.29:5001
 2025-01-29 01:04:22,737 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 01:58:31,312 - INFO - BEGIN (implicit)
+2025-01-29 01:58:31,312 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 01:58:31,312 - INFO - [raw sql] ()
+2025-01-29 01:58:31,313 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 01:58:31,313 - INFO - [raw sql] ()
+2025-01-29 01:58:31,313 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 01:58:31,313 - INFO - [raw sql] ()
+2025-01-29 01:58:31,313 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 01:58:31,313 - INFO - [raw sql] ()
+2025-01-29 01:58:31,313 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 01:58:31,313 - INFO - [raw sql] ()
+2025-01-29 01:58:31,313 - INFO - COMMIT
+2025-01-29 01:58:31,496 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 01:58:31,496 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:00:41,189 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "[32mGET /swagger HTTP/1.1[0m" 308 -
+2025-01-29 02:00:41,201 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:00:41,251 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-01-29 02:00:41,251 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/index.css HTTP/1.1" 200 -
+2025-01-29 02:00:41,251 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/swagger-ui.css HTTP/1.1" 200 -
+2025-01-29 02:00:41,252 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-01-29 02:00:41,364 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /static/swagger.json HTTP/1.1" 200 -
+2025-01-29 02:00:41,453 - INFO - 127.0.0.1 - - [29/Jan/2025 02:00:41] "GET /swagger/favicon-32x32.png HTTP/1.1" 200 -
+2025-01-29 02:03:57,095 - INFO - BEGIN (implicit)
+2025-01-29 02:03:57,096 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:03:57,096 - INFO - [raw sql] ()
+2025-01-29 02:03:57,096 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:03:57,096 - INFO - [raw sql] ()
+2025-01-29 02:03:57,096 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:03:57,096 - INFO - [raw sql] ()
+2025-01-29 02:03:57,096 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:03:57,096 - INFO - [raw sql] ()
+2025-01-29 02:03:57,096 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:03:57,096 - INFO - [raw sql] ()
+2025-01-29 02:03:57,096 - INFO - COMMIT
+2025-01-29 02:03:57,278 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:03:57,278 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:04:03,137 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:04:03,198 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:04:03,198 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:04:03,199 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:04:03,199 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:04:03,293 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:03] "GET /static/swagger.json HTTP/1.1" 200 -
+2025-01-29 02:04:33,003 - INFO - BEGIN (implicit)
+2025-01-29 02:04:33,006 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-29 02:04:33,006 - INFO - [generated in 0.00021s] ('yoga', 'hacer yoga', '2025-01-29 01:04:04.814000', 50, 'la zubia')
+2025-01-29 02:04:33,009 - INFO - COMMIT
+2025-01-29 02:04:33,011 - INFO - BEGIN (implicit)
+2025-01-29 02:04:33,013 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:04:33,013 - INFO - [generated in 0.00013s] (1,)
+2025-01-29 02:04:33,013 - INFO - Actividad yoga creada con ID 1.
+2025-01-29 02:04:33,013 - INFO - ROLLBACK
+2025-01-29 02:04:33,014 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:33] "[35m[1mPOST /activities HTTP/1.1[0m" 201 -
+2025-01-29 02:04:34,629 - INFO - BEGIN (implicit)
+2025-01-29 02:04:34,629 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-29 02:04:34,629 - INFO - [cached since 1.623s ago] ('yoga', 'hacer yoga', '2025-01-29 01:04:04.814000', 50, 'la zubia')
+2025-01-29 02:04:34,630 - INFO - COMMIT
+2025-01-29 02:04:34,631 - INFO - BEGIN (implicit)
+2025-01-29 02:04:34,632 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:04:34,632 - INFO - [cached since 1.619s ago] (2,)
+2025-01-29 02:04:34,632 - INFO - Actividad yoga creada con ID 2.
+2025-01-29 02:04:34,632 - INFO - ROLLBACK
+2025-01-29 02:04:34,633 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:34] "[35m[1mPOST /activities HTTP/1.1[0m" 201 -
+2025-01-29 02:04:52,968 - INFO - BEGIN (implicit)
+2025-01-29 02:04:52,971 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities
+2025-01-29 02:04:52,972 - INFO - [generated in 0.00041s] ()
+2025-01-29 02:04:52,974 - INFO - ROLLBACK
+2025-01-29 02:04:52,975 - INFO - 127.0.0.1 - - [29/Jan/2025 02:04:52] "GET /activities HTTP/1.1" 200 -
+2025-01-29 02:05:06,916 - INFO - BEGIN (implicit)
+2025-01-29 02:05:06,917 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:06,917 - INFO - [generated in 0.00022s] (1,)
+2025-01-29 02:05:06,918 - INFO - ROLLBACK
+2025-01-29 02:05:06,918 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:06] "GET /activities/1 HTTP/1.1" 200 -
+2025-01-29 02:05:25,060 - INFO - BEGIN (implicit)
+2025-01-29 02:05:25,061 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:25,061 - INFO - [cached since 18.14s ago] (1,)
+2025-01-29 02:05:25,074 - INFO - UPDATE activities SET nombre=?, descripcion=?, fecha_hora=?, ubicacion=? WHERE activities.id = ?
+2025-01-29 02:05:25,074 - INFO - [generated in 0.00170s] ('hacer yoga', 'string', '2025-01-29 01:05:12.576000', 'string', 1)
+2025-01-29 02:05:25,076 - INFO - COMMIT
+2025-01-29 02:05:25,077 - INFO - Actividad con ID 1 actualizada.
+2025-01-29 02:05:25,078 - INFO - BEGIN (implicit)
+2025-01-29 02:05:25,078 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:25,078 - INFO - [cached since 52.07s ago] (1,)
+2025-01-29 02:05:25,080 - INFO - ROLLBACK
+2025-01-29 02:05:25,080 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:25] "PUT /activities/1 HTTP/1.1" 200 -
+2025-01-29 02:05:25,921 - INFO - BEGIN (implicit)
+2025-01-29 02:05:25,921 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:25,921 - INFO - [cached since 19s ago] (1,)
+2025-01-29 02:05:25,922 - INFO - UPDATE activities SET fecha_hora=? WHERE activities.id = ?
+2025-01-29 02:05:25,922 - INFO - [generated in 0.00018s] ('2025-01-29 01:05:12.576000', 1)
+2025-01-29 02:05:25,923 - INFO - COMMIT
+2025-01-29 02:05:25,923 - INFO - Actividad con ID 1 actualizada.
+2025-01-29 02:05:25,923 - INFO - BEGIN (implicit)
+2025-01-29 02:05:25,923 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:25,923 - INFO - [cached since 52.91s ago] (1,)
+2025-01-29 02:05:25,924 - INFO - ROLLBACK
+2025-01-29 02:05:25,924 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:25] "PUT /activities/1 HTTP/1.1" 200 -
+2025-01-29 02:05:38,071 - INFO - BEGIN (implicit)
+2025-01-29 02:05:38,074 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:38,074 - INFO - [cached since 31.16s ago] (1,)
+2025-01-29 02:05:38,075 - INFO - ROLLBACK
+2025-01-29 02:05:38,078 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:38] "GET /activities/1 HTTP/1.1" 200 -
+2025-01-29 02:05:49,162 - INFO - BEGIN (implicit)
+2025-01-29 02:05:49,163 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:49,163 - INFO - [cached since 42.25s ago] (1,)
+2025-01-29 02:05:49,165 - INFO - DELETE FROM activities WHERE activities.id = ?
+2025-01-29 02:05:49,165 - INFO - [generated in 0.00025s] (1,)
+2025-01-29 02:05:49,180 - INFO - COMMIT
+2025-01-29 02:05:49,181 - INFO - Actividad con ID 1 eliminada.
+2025-01-29 02:05:49,182 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:49] "DELETE /activities/1 HTTP/1.1" 200 -
+2025-01-29 02:05:50,387 - INFO - BEGIN (implicit)
+2025-01-29 02:05:50,387 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:05:50,387 - INFO - [cached since 43.47s ago] (1,)
+2025-01-29 02:05:50,388 - ERROR - Actividad con ID 1 no encontrada para eliminación.
+2025-01-29 02:05:50,388 - INFO - ROLLBACK
+2025-01-29 02:05:50,388 - INFO - 127.0.0.1 - - [29/Jan/2025 02:05:50] "[33mDELETE /activities/1 HTTP/1.1[0m" 404 -
+2025-01-29 02:06:08,260 - INFO - BEGIN (implicit)
+2025-01-29 02:06:08,261 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-29 02:06:08,261 - INFO - [cached since 95.26s ago] ('yoga', 'hacer yoga', '2025-01-29 01:04:04.814000', 50, 'la zubia')
+2025-01-29 02:06:08,262 - INFO - COMMIT
+2025-01-29 02:06:08,264 - INFO - BEGIN (implicit)
+2025-01-29 02:06:08,264 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:06:08,264 - INFO - [cached since 95.25s ago] (3,)
+2025-01-29 02:06:08,264 - INFO - Actividad yoga creada con ID 3.
+2025-01-29 02:06:08,265 - INFO - ROLLBACK
+2025-01-29 02:06:08,265 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:08] "[35m[1mPOST /activities HTTP/1.1[0m" 201 -
+2025-01-29 02:06:14,080 - INFO - BEGIN (implicit)
+2025-01-29 02:06:14,081 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:06:14,081 - INFO - [cached since 67.16s ago] (1,)
+2025-01-29 02:06:14,081 - ERROR - Actividad con ID 1 no encontrada para eliminación.
+2025-01-29 02:06:14,081 - INFO - ROLLBACK
+2025-01-29 02:06:14,081 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:14] "[33mDELETE /activities/1 HTTP/1.1[0m" 404 -
+2025-01-29 02:06:29,695 - INFO - BEGIN (implicit)
+2025-01-29 02:06:29,697 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-29 02:06:29,697 - INFO - [cached since 116.7s ago] ('yoga', 'hacer yoga', '2025-01-29 01:04:04.814000', 50, 'la zubia')
+2025-01-29 02:06:29,697 - INFO - COMMIT
+2025-01-29 02:06:29,699 - INFO - BEGIN (implicit)
+2025-01-29 02:06:29,699 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:06:29,699 - INFO - [cached since 116.7s ago] (4,)
+2025-01-29 02:06:29,699 - INFO - Actividad yoga creada con ID 4.
+2025-01-29 02:06:29,699 - INFO - ROLLBACK
+2025-01-29 02:06:29,700 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:29] "[35m[1mPOST /activities HTTP/1.1[0m" 201 -
+2025-01-29 02:06:33,008 - INFO - BEGIN (implicit)
+2025-01-29 02:06:33,009 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities
+2025-01-29 02:06:33,009 - INFO - [cached since 100s ago] ()
+2025-01-29 02:06:33,010 - INFO - ROLLBACK
+2025-01-29 02:06:33,010 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:33] "GET /activities HTTP/1.1" 200 -
+2025-01-29 02:06:41,030 - INFO - BEGIN (implicit)
+2025-01-29 02:06:41,031 - INFO - INSERT INTO activities (nombre, descripcion, fecha_hora, duracion, ubicacion) VALUES (?, ?, ?, ?, ?)
+2025-01-29 02:06:41,031 - INFO - [cached since 128s ago] ('yoga2', 'hacer yoga', '2025-01-29 01:04:04.814000', 50, 'la zubia')
+2025-01-29 02:06:41,032 - INFO - COMMIT
+2025-01-29 02:06:41,034 - INFO - BEGIN (implicit)
+2025-01-29 02:06:41,034 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:06:41,034 - INFO - [cached since 128s ago] (5,)
+2025-01-29 02:06:41,035 - INFO - Actividad yoga2 creada con ID 5.
+2025-01-29 02:06:41,035 - INFO - ROLLBACK
+2025-01-29 02:06:41,035 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:41] "[35m[1mPOST /activities HTTP/1.1[0m" 201 -
+2025-01-29 02:06:43,920 - INFO - BEGIN (implicit)
+2025-01-29 02:06:43,920 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities
+2025-01-29 02:06:43,921 - INFO - [cached since 110.9s ago] ()
+2025-01-29 02:06:43,922 - INFO - ROLLBACK
+2025-01-29 02:06:43,922 - INFO - 127.0.0.1 - - [29/Jan/2025 02:06:43] "GET /activities HTTP/1.1" 200 -
+2025-01-29 02:07:03,758 - INFO - BEGIN (implicit)
+2025-01-29 02:07:03,761 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:07:03,761 - INFO - [cached since 116.8s ago] (4,)
+2025-01-29 02:07:03,762 - INFO - ROLLBACK
+2025-01-29 02:07:03,762 - INFO - 127.0.0.1 - - [29/Jan/2025 02:07:03] "GET /activities/4 HTTP/1.1" 200 -
+2025-01-29 02:07:07,998 - INFO - BEGIN (implicit)
+2025-01-29 02:07:07,998 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:07:07,998 - INFO - [cached since 121.1s ago] (40,)
+2025-01-29 02:07:07,999 - ERROR - Actividad con ID 40 no encontrada.
+2025-01-29 02:07:07,999 - INFO - ROLLBACK
+2025-01-29 02:07:07,999 - INFO - 127.0.0.1 - - [29/Jan/2025 02:07:07] "[33mGET /activities/40 HTTP/1.1[0m" 404 -
+2025-01-29 02:07:15,688 - INFO - BEGIN (implicit)
+2025-01-29 02:07:15,689 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:07:15,689 - INFO - [cached since 128.8s ago] (2,)
+2025-01-29 02:07:15,690 - INFO - DELETE FROM activities WHERE activities.id = ?
+2025-01-29 02:07:15,690 - INFO - [cached since 86.53s ago] (2,)
+2025-01-29 02:07:15,691 - INFO - COMMIT
+2025-01-29 02:07:15,693 - INFO - Actividad con ID 2 eliminada.
+2025-01-29 02:07:15,693 - INFO - 127.0.0.1 - - [29/Jan/2025 02:07:15] "DELETE /activities/2 HTTP/1.1" 200 -
+2025-01-29 02:07:22,485 - INFO - BEGIN (implicit)
+2025-01-29 02:07:22,486 - INFO - SELECT activities.id AS activities_id, activities.nombre AS activities_nombre, activities.descripcion AS activities_descripcion, activities.fecha_hora AS activities_fecha_hora, activities.duracion AS activities_duracion, activities.ubicacion AS activities_ubicacion 
+FROM activities 
+WHERE activities.id = ?
+2025-01-29 02:07:22,486 - INFO - [cached since 135.6s ago] (4,)
+2025-01-29 02:07:22,488 - INFO - DELETE FROM activities WHERE activities.id = ?
+2025-01-29 02:07:22,488 - INFO - [cached since 93.32s ago] (4,)
+2025-01-29 02:07:22,488 - INFO - COMMIT
+2025-01-29 02:07:22,489 - INFO - Actividad con ID 4 eliminada.
+2025-01-29 02:07:22,490 - INFO - 127.0.0.1 - - [29/Jan/2025 02:07:22] "DELETE /activities/4 HTTP/1.1" 200 -
+2025-01-29 02:13:11,322 - INFO - BEGIN (implicit)
+2025-01-29 02:13:11,322 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:13:11,322 - INFO - [raw sql] ()
+2025-01-29 02:13:11,322 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:13:11,322 - INFO - [raw sql] ()
+2025-01-29 02:13:11,322 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:13:11,322 - INFO - [raw sql] ()
+2025-01-29 02:13:11,322 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:13:11,323 - INFO - [raw sql] ()
+2025-01-29 02:13:11,323 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:13:11,323 - INFO - [raw sql] ()
+2025-01-29 02:13:11,323 - INFO - COMMIT
+2025-01-29 02:13:11,528 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:13:11,528 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:13:19,701 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:13:19,764 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:13:19,766 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:13:19,766 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:13:19,766 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:13:19,862 - INFO - 127.0.0.1 - - [29/Jan/2025 02:13:19] "GET /static/swagger.json HTTP/1.1" 200 -
+2025-01-29 02:15:45,224 - INFO - BEGIN (implicit)
+2025-01-29 02:15:45,224 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:15:45,224 - INFO - [raw sql] ()
+2025-01-29 02:15:45,224 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:15:45,224 - INFO - [raw sql] ()
+2025-01-29 02:15:45,225 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:15:45,225 - INFO - [raw sql] ()
+2025-01-29 02:15:45,225 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:15:45,225 - INFO - [raw sql] ()
+2025-01-29 02:15:45,225 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:15:45,225 - INFO - [raw sql] ()
+2025-01-29 02:15:45,225 - INFO - COMMIT
+2025-01-29 02:15:45,455 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:15:45,455 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:15:52,944 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:52] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:15:52,997 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:52] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:15:52,997 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:52] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:15:52,998 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:52] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:15:52,998 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:52] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:15:53,062 - INFO - 127.0.0.1 - - [29/Jan/2025 02:15:53] "[33mGET /static/swagger.json HTTP/1.1[0m" 404 -
+2025-01-29 02:16:17,419 - INFO - BEGIN (implicit)
+2025-01-29 02:16:17,419 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:16:17,419 - INFO - [raw sql] ()
+2025-01-29 02:16:17,419 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:16:17,419 - INFO - [raw sql] ()
+2025-01-29 02:16:17,419 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:16:17,419 - INFO - [raw sql] ()
+2025-01-29 02:16:17,420 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:16:17,420 - INFO - [raw sql] ()
+2025-01-29 02:16:17,420 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:16:17,420 - INFO - [raw sql] ()
+2025-01-29 02:16:17,420 - INFO - COMMIT
+2025-01-29 02:16:17,425 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:16:17,425 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:16:21,403 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:16:21,437 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:16:21,439 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:16:21,440 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:16:21,441 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:16:21,474 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:16:21,554 - INFO - 127.0.0.1 - - [29/Jan/2025 02:16:21] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:19:17,266 - INFO - BEGIN (implicit)
+2025-01-29 02:19:17,266 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:19:17,266 - INFO - [raw sql] ()
+2025-01-29 02:19:17,266 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:19:17,266 - INFO - [raw sql] ()
+2025-01-29 02:19:17,266 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:19:17,267 - INFO - [raw sql] ()
+2025-01-29 02:19:17,267 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:19:17,267 - INFO - [raw sql] ()
+2025-01-29 02:19:17,267 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:19:17,267 - INFO - [raw sql] ()
+2025-01-29 02:19:17,267 - INFO - COMMIT
+2025-01-29 02:19:17,466 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:19:17,466 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:19:23,797 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:19:23,860 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:19:23,861 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:19:23,863 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:19:23,864 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:19:23,897 - INFO - 127.0.0.1 - - [29/Jan/2025 02:19:23] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:20:39,596 - INFO - BEGIN (implicit)
+2025-01-29 02:20:39,596 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:20:39,596 - INFO - [raw sql] ()
+2025-01-29 02:20:39,597 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:20:39,597 - INFO - [raw sql] ()
+2025-01-29 02:20:39,597 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:20:39,597 - INFO - [raw sql] ()
+2025-01-29 02:20:39,597 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:20:39,597 - INFO - [raw sql] ()
+2025-01-29 02:20:39,597 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:20:39,597 - INFO - [raw sql] ()
+2025-01-29 02:20:39,597 - INFO - COMMIT
+2025-01-29 02:20:39,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:20:39,617 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:20:45,206 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:20:45,253 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:20:45,253 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:20:45,253 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:20:45,253 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:20:45,301 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:45] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:20:51,751 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:20:51,778 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:20:51,779 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:20:51,780 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:20:51,780 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:20:51,809 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /static/swagger.yml HTTP/1.1[0m" 304 -
+2025-01-29 02:20:51,884 - INFO - 127.0.0.1 - - [29/Jan/2025 02:20:51] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:21:11,921 - INFO - BEGIN (implicit)
+2025-01-29 02:21:11,921 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:21:11,921 - INFO - [raw sql] ()
+2025-01-29 02:21:11,921 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:21:11,921 - INFO - [raw sql] ()
+2025-01-29 02:21:11,921 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:21:11,921 - INFO - [raw sql] ()
+2025-01-29 02:21:11,922 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:21:11,922 - INFO - [raw sql] ()
+2025-01-29 02:21:11,922 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:21:11,922 - INFO - [raw sql] ()
+2025-01-29 02:21:11,922 - INFO - COMMIT
+2025-01-29 02:21:11,929 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:21:11,929 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:21:15,339 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:21:15,385 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:21:15,388 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:21:15,390 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:21:15,391 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:21:15,417 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:21:15,488 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:15] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:21:43,973 - INFO - BEGIN (implicit)
+2025-01-29 02:21:43,973 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:21:43,973 - INFO - [raw sql] ()
+2025-01-29 02:21:43,973 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:21:43,973 - INFO - [raw sql] ()
+2025-01-29 02:21:43,973 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:21:43,973 - INFO - [raw sql] ()
+2025-01-29 02:21:43,973 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:21:43,973 - INFO - [raw sql] ()
+2025-01-29 02:21:43,973 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:21:43,973 - INFO - [raw sql] ()
+2025-01-29 02:21:43,973 - INFO - COMMIT
+2025-01-29 02:21:43,979 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:21:43,979 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:21:46,764 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:21:46,811 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:21:46,811 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:21:46,812 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:21:46,814 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:21:46,841 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:21:46,913 - INFO - 127.0.0.1 - - [29/Jan/2025 02:21:46] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:22:31,614 - INFO - BEGIN (implicit)
+2025-01-29 02:22:31,614 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:22:31,614 - INFO - [raw sql] ()
+2025-01-29 02:22:31,614 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:22:31,614 - INFO - [raw sql] ()
+2025-01-29 02:22:31,614 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:22:31,614 - INFO - [raw sql] ()
+2025-01-29 02:22:31,614 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:22:31,614 - INFO - [raw sql] ()
+2025-01-29 02:22:31,614 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:22:31,614 - INFO - [raw sql] ()
+2025-01-29 02:22:31,615 - INFO - COMMIT
+2025-01-29 02:22:31,620 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:22:31,620 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:22:34,975 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:34] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:22:35,027 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:22:35,027 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:22:35,027 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:22:35,028 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:22:35,068 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:22:35,149 - INFO - 127.0.0.1 - - [29/Jan/2025 02:22:35] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:26:00,128 - INFO - BEGIN (implicit)
+2025-01-29 02:26:00,128 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:26:00,128 - INFO - [raw sql] ()
+2025-01-29 02:26:00,128 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:26:00,128 - INFO - [raw sql] ()
+2025-01-29 02:26:00,128 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:26:00,128 - INFO - [raw sql] ()
+2025-01-29 02:26:00,128 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:26:00,129 - INFO - [raw sql] ()
+2025-01-29 02:26:00,129 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:26:00,129 - INFO - [raw sql] ()
+2025-01-29 02:26:00,129 - INFO - COMMIT
+2025-01-29 02:26:00,286 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:26:00,286 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:26:04,502 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:26:04,545 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:26:04,546 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:26:04,547 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:26:04,547 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:26:04,596 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:26:04,679 - INFO - 127.0.0.1 - - [29/Jan/2025 02:26:04] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:29:26,180 - INFO - BEGIN (implicit)
+2025-01-29 02:29:26,180 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:29:26,180 - INFO - [raw sql] ()
+2025-01-29 02:29:26,181 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:29:26,181 - INFO - [raw sql] ()
+2025-01-29 02:29:26,181 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:29:26,181 - INFO - [raw sql] ()
+2025-01-29 02:29:26,181 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:29:26,181 - INFO - [raw sql] ()
+2025-01-29 02:29:26,181 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:29:26,181 - INFO - [raw sql] ()
+2025-01-29 02:29:26,181 - INFO - COMMIT
+2025-01-29 02:29:26,319 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:29:26,319 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:29:33,744 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:29:33,787 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:29:33,787 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:29:33,787 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:29:33,788 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:29:33,831 - INFO - 127.0.0.1 - - [29/Jan/2025 02:29:33] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:30:15,746 - INFO - BEGIN (implicit)
+2025-01-29 02:30:15,747 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:30:15,747 - INFO - [raw sql] ()
+2025-01-29 02:30:15,747 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:30:15,747 - INFO - [raw sql] ()
+2025-01-29 02:30:15,747 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:30:15,747 - INFO - [raw sql] ()
+2025-01-29 02:30:15,747 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:30:15,747 - INFO - [raw sql] ()
+2025-01-29 02:30:15,747 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:30:15,747 - INFO - [raw sql] ()
+2025-01-29 02:30:15,747 - INFO - COMMIT
+2025-01-29 02:30:15,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:30:15,760 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:30:22,708 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:30:22,760 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:30:22,760 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:30:22,762 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:30:22,762 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:30:22,815 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:30:22,898 - INFO - 127.0.0.1 - - [29/Jan/2025 02:30:22] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:31:23,680 - INFO - BEGIN (implicit)
+2025-01-29 02:31:23,681 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:31:23,681 - INFO - [raw sql] ()
+2025-01-29 02:31:23,681 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:31:23,681 - INFO - [raw sql] ()
+2025-01-29 02:31:23,681 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:31:23,681 - INFO - [raw sql] ()
+2025-01-29 02:31:23,681 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:31:23,681 - INFO - [raw sql] ()
+2025-01-29 02:31:23,681 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:31:23,681 - INFO - [raw sql] ()
+2025-01-29 02:31:23,681 - INFO - COMMIT
+2025-01-29 02:31:23,688 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:31:23,688 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:31:31,963 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:31] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:31:32,004 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:31:32,006 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:31:32,008 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:31:32,009 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:31:32,045 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:31:32,126 - INFO - 127.0.0.1 - - [29/Jan/2025 02:31:32] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:31:54,815 - INFO - BEGIN (implicit)
+2025-01-29 02:31:54,815 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:31:54,815 - INFO - [raw sql] ()
+2025-01-29 02:31:54,815 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:31:54,815 - INFO - [raw sql] ()
+2025-01-29 02:31:54,815 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:31:54,815 - INFO - [raw sql] ()
+2025-01-29 02:31:54,815 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:31:54,815 - INFO - [raw sql] ()
+2025-01-29 02:31:54,815 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:31:54,815 - INFO - [raw sql] ()
+2025-01-29 02:31:54,816 - INFO - COMMIT
+2025-01-29 02:31:54,821 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:31:54,821 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:32:02,223 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:32:02,257 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:32:02,258 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:32:02,258 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:32:02,259 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:32:02,300 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:32:02,389 - INFO - 127.0.0.1 - - [29/Jan/2025 02:32:02] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:32:57,703 - INFO - BEGIN (implicit)
+2025-01-29 02:32:57,704 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:32:57,704 - INFO - [raw sql] ()
+2025-01-29 02:32:57,704 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:32:57,704 - INFO - [raw sql] ()
+2025-01-29 02:32:57,704 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:32:57,704 - INFO - [raw sql] ()
+2025-01-29 02:32:57,704 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:32:57,704 - INFO - [raw sql] ()
+2025-01-29 02:32:57,704 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:32:57,704 - INFO - [raw sql] ()
+2025-01-29 02:32:57,704 - INFO - COMMIT
+2025-01-29 02:32:57,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:32:57,722 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:33:07,261 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "GET /swagger/ HTTP/1.1" 200 -
+2025-01-29 02:33:07,296 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-01-29 02:33:07,297 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2025-01-29 02:33:07,298 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-01-29 02:33:07,299 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-01-29 02:33:07,334 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "GET /static/swagger.yml HTTP/1.1" 200 -
+2025-01-29 02:33:07,431 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:07] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-01-29 02:33:39,884 - INFO - BEGIN (implicit)
+2025-01-29 02:33:39,884 - INFO - PRAGMA main.table_info("residents")
+2025-01-29 02:33:39,884 - INFO - [raw sql] ()
+2025-01-29 02:33:39,884 - INFO - PRAGMA main.table_info("wellness_tracking")
+2025-01-29 02:33:39,884 - INFO - [raw sql] ()
+2025-01-29 02:33:39,884 - INFO - PRAGMA main.table_info("medications")
+2025-01-29 02:33:39,884 - INFO - [raw sql] ()
+2025-01-29 02:33:39,884 - INFO - PRAGMA main.table_info("prescriptions")
+2025-01-29 02:33:39,884 - INFO - [raw sql] ()
+2025-01-29 02:33:39,884 - INFO - PRAGMA main.table_info("activities")
+2025-01-29 02:33:39,885 - INFO - [raw sql] ()
+2025-01-29 02:33:39,885 - INFO - COMMIT
+2025-01-29 02:33:40,061 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.29:5001
+2025-01-29 02:33:40,062 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 02:33:47,989 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:47] "GET /seniorcare/ HTTP/1.1" 200 -
+2025-01-29 02:33:48,046 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "GET /seniorcare/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-01-29 02:33:48,046 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "GET /seniorcare/index.css HTTP/1.1" 200 -
+2025-01-29 02:33:48,046 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "GET /seniorcare/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-01-29 02:33:48,047 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "GET /seniorcare/swagger-ui.css HTTP/1.1" 200 -
+2025-01-29 02:33:48,147 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "[36mGET /static/swagger.yml HTTP/1.1[0m" 304 -
+2025-01-29 02:33:48,244 - INFO - 127.0.0.1 - - [29/Jan/2025 02:33:48] "GET /seniorcare/favicon-32x32.png HTTP/1.1" 200 -
