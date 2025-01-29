@@ -78,3 +78,26 @@ El código modificado en requirements.txt es el siguiente:
 Después de esto el despliegue ha sido exitoso
 
 ![captura](img/c15.png)
+
+## Funcionamiento correcto del despliegue en el PaaS
+Para facilitar la visualización y prueba de los endpoints, he integrado Swagger, para tener una interfaz interactiva donde se puedan consultar, enviar y probar solicitudes directamente desde el navegador. Haciendo que la documentación se más clara y accesible de la API (https://seniorcare-rhxe.onrender.com/seniorcare/)
+
+![captura](img/c20.png)
+
+Por ejemplo, voy a crear un residente:
+
+![captura](img/c21.png)
+![captura](img/c22.png)
+
+Si hago una solicitud `GET`, obtengo:
+
+![captura](img/c23.png)
+![captura](img/c24.png)
+
+También puedo eliminarlo (ya que está pensado para que lo utilicen los trabajadores de la residencia)
+
+![captura](img/c25.png)
+
+Así al hacer la petición `GET`, observamos que el residente ya no está
+
+![captura](img/c26.png)
