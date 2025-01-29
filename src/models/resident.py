@@ -1,5 +1,4 @@
 from db import db
-
 class Resident(db.Model):
     __tablename__ = 'residents'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
