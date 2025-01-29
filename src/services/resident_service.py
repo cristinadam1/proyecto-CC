@@ -15,7 +15,6 @@ def get_residents():
 #### GET (por ID) ####
 @resident_app.route('/residents/<int:resident_id>', methods=['GET'])
 def get_resident(resident_id):
-    #resident = Resident.query.get(resident_id)
     resident = db.session.get(Resident, resident_id)
 
     if not resident:
@@ -28,7 +27,6 @@ def get_resident(resident_id):
 #### POST ####
 @resident_app.route('/residents', methods=['POST'])
 def add_resident():
-    """Agregar un nuevo residente"""
     data = request.get_json()
     name = data.get("name")
     age = data.get("age")
@@ -48,9 +46,7 @@ def add_resident():
 #### PUT ####
 @resident_app.route('/residents/<int:resident_id>', methods=['PUT'])
 def update_resident(resident_id):
-    """Actualizar un residente"""
     data = request.get_json()
-    #resident = Resident.query.get(resident_id)
     resident = db.session.get(Resident, resident_id)
 
     if not resident:
@@ -71,8 +67,6 @@ def update_resident(resident_id):
 #### DELETE ####
 @resident_app.route('/residents/<int:resident_id>', methods=['DELETE'])
 def remove_resident(resident_id):
-    """Eliminar un residente"""
-    #resident = Resident.query.get(resident_id)
     resident = db.session.get(Resident, resident_id)
 
     if not resident:
