@@ -7,13 +7,11 @@ SeniorCare es una aplicación diseñada para optimizar la gestión del cuidado d
 
 Este proyecto está distribuido bajo la licencia [MIT](LICENSE). Para más detalles, revisa el archivo ⁠[LICENSE](LICENSE).
 
-# Enlace a documentación adicional
-Información sobre entidades y atributos [aqui](docs/EA.md)
-
-Despliegue en https://seniorcare-rhxe.onrender.com/seniorcare/ 
 # Hitos
 - [Hito 1](docs/hito1.md)
 - [Hito 2](docs/hito2.md)
 - [Hito 3](docs/hito3.md)
 - [Hito 4](docs/hito4.md)
 - [Hito 5](docs/hito5.md)
+
+Despliegue en https://seniorcare-rhxe.onrender.com/seniorcare/ 
