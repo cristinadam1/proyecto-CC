@@ -6,7 +6,6 @@ from models.activity import Activity
 from db import db
 
 def test_create_activity(client):
-    """Prueba para crear una actividad."""
     data = {
         "nombre": "Yoga Matutino",
         "descripcion": "Sesión de yoga al aire libre",
@@ -45,7 +44,6 @@ def test_create_activity_invalid_date(client):
     assert response.get_json()["error"] == "Formato de fecha inválido, usa ISO 8601"
 
 def test_get_activities(client):
-    # Limpiar las actividades existentes 
     with client.application.app_context():
         db.session.query(Activity).delete()  # Eliminar todas las actividades previas
         db.session.commit()  # Confirmar los cambios en la base de datos
@@ -60,7 +58,7 @@ def test_get_activities(client):
             fecha_hora=datetime(2025, 1, 26, 10, 0), duracion=30, ubicacion="Las Gabias"
         )
         db.session.add_all([actividad1, actividad2])
-        db.session.commit()  # Asegurar que los datos se guarden en la base de datos
+        db.session.commit()  
 
     response = client.get('/activities')
 
@@ -70,7 +68,6 @@ def test_get_activities(client):
     assert len(response_data) == 2
 
 def test_update_activity(client):
-    """Prueba para actualizar una actividad existente."""
     # Primero, creamos una actividad
     data = {
         "nombre": "Yoga Matutino",
