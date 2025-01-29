@@ -91,21 +91,21 @@ paths:
         200:
           description: Residente actualizado
 
-    delete:
-      summary: Eliminar un residente
-      tags:
-        - "Residentes"
-      parameters:
-        - name: resident_id
-          in: path
-          required: true
-          schema:
-            type: integer
-      responses:
-        200:
-          description: Residente eliminado
-        404:
-          description: Residente no encontrado
+    # delete:
+    #   summary: Eliminar un residente
+    #   tags:
+    #     - "Residentes"
+    #   parameters:
+    #     - name: resident_id
+    #       in: path
+    #       required: true
+    #       schema:
+    #         type: integer
+    #   responses:
+    #     200:
+    #       description: Residente eliminado
+    #     404:
+    #       description: Residente no encontrado
   /activities:
     get:
       summary: Obtener todas las actividades
