@@ -125,13 +125,10 @@ Después de crear la configuración de GitHub Actions, hago un commit para subir
 
 Al hacer un push a mi repositorio en GitHub, la integración continua se activa automáticamente y ejecuta los tests que he definido. Cada vez que se hace un cambio, GitHub Actions verifica si el código funciona correctamente.
 
-## Crear Tests de Lógica de Negocio
-Los tests que he implementado se encuentran en el directorio tests. Para estos tests, he creado el archivo logic.py que contiene la lógica de negocio y el archivo test_logic.py para realizar las pruebas. Para ejecutarlos, uso el siguiente comando:
+Para ejecutar los test usamos el comando:
 
     make test 
 
-- (Análisis del dominio del problema) ["EA.md"]  
-- (Arquitectura)["arquitectura.md"]
     
 
 
